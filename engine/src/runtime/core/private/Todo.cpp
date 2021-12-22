@@ -1,4 +1,0 @@
-void tsdfgds()
-{
-    return;
-}

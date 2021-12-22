@@ -1,8 +1,8 @@
 #pragma once
 
-#include "core/math/vector3.hpp"
+#include "core/math/float3.hpp"
 #include "core/math/quaternion.hpp"
-#include "core/math/matrix4x4.hpp"
+#include "core/math/float4x4.hpp"
 
 namespace openworld
 {
@@ -12,12 +12,12 @@ namespace openworld
         constexpr transform()
         {}
 
-        const vector3& get_scale() const
+        const float3& get_scale() const
         {
             return m_scale;
         }
 
-        void set_scale(const vector3& new_scale)
+        void set_scale(const float3& new_scale)
         {
             m_scale = new_scale;
             m_cache_refresh = true;
@@ -50,12 +50,12 @@ namespace openworld
             m_cache_refresh = true;
         }
 
-        const vector3& get_translation() const
+        const float3& get_translation() const
         {
             return m_translation;
         }
 
-        void set_translation(const vector3& new_translation)
+        void set_translation(const float3& new_translation)
         {
             m_translation = new_translation;
             m_cache_refresh = true;
@@ -69,7 +69,7 @@ namespace openworld
             m_cache_refresh = true;
         }
 
-        const matrix4x4& matrix() const
+        const float4x4& matrix() const
         {
             if (m_cache_refresh)
             {
@@ -80,10 +80,10 @@ namespace openworld
         }
 
     private:
-        vector3 m_scale;
+        float3 m_scale;
         quaternion m_rotation;
-        vector3 m_translation;
-        matrix4x4 m_cached_matrix;
+        float3 m_translation;
+        float4x4 m_cached_matrix;
         mutable bool m_cache_refresh = false;
 
         void compute_matrix() const

@@ -20,4 +20,16 @@ namespace openworld
             w(w)
         {}
     };
+
+    static_assert(sizeof(quaternion) == (4 * sizeof(float)));
+
+    constexpr bool operator ==(const quaternion& lhs, const quaternion& rhs)
+    {
+        return (lhs.x == rhs.x) && (lhs.y == rhs.y) && (lhs.z == rhs.z) && (lhs.w == rhs.w);
+    }
+
+    constexpr bool operator !=(const quaternion& lhs, const quaternion& rhs)
+    {
+        return (lhs.x != rhs.x) || (lhs.y != rhs.y) || (lhs.z != rhs.z) || (lhs.w != rhs.w);
+    }
 }

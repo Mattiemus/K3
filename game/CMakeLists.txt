@@ -4,4 +4,9 @@ add_executable(K3 "K3.cpp")
 
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 
-target_link_libraries(${PROJECT_NAME} PRIVATE openworld_engine_runtime_core openworld_engine_runtime_data_model)
+target_link_libraries(${PROJECT_NAME} PRIVATE
+	libglew_static
+	openworld_engine_runtime_core
+	openworld_engine_runtime_ecs
+	openworld_engine_runtime_graphics
+	openworld_engine_runtime_graphics_gl)
