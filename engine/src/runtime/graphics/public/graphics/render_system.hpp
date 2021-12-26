@@ -9,13 +9,33 @@ namespace openworld
 {
     class render_context;
 
-    class render_system
+    class render_system final
     {
     public:
-        virtual ~render_system() = 0 {};
+        render_system();
+        render_system(const render_system&) = delete;
+        render_system(render_system&& other) noexcept :
+            m_pimpl(other.m_pimpl)
+        {
+            other.m_pimpl = nullptr;
+        }
+        ~render_system();
 
-        virtual std::string platform() = 0;
-        virtual render_context& immediate_context() = 0;
+        render_system& operator =(const render_system&) = delete;
+        render_system& operator =(render_system&& other) noexcept
+        {
+            m_pimpl = other.m_pimpl;
+            other.m_pimpl = nullptr;
+            return *this;
+        }
+
+        constexpr void* pimpl() const noexcept
+        {
+            return m_pimpl;
+        }
+
+        std::string platform();
+        render_context& immediate_context();
         //IGraphicsAdapter Adapter{ get; }
         //bool AreCommandListsSupported{ get; }
         //IPredefinedBlendStateProvider PredefinedBlendStates{ get; }
@@ -24,8 +44,9 @@ namespace openworld
         //IPredefinedSamplerStateProvider PredefinedSamplerStates{ get; }
         //StandardEffectLibrary StandardEffects{ get; }
         //IDeferredRenderContext CreateDeferredRenderContext();
-        //T GetImplementationFactory<T>() where T : IGraphicsResourceImplFactory;
-        //bool TryGetImplementationFactory<T>(out T implementationFactory) where T : IGraphicsResourceImplFactory;
         //bool IsSupported<T>() where T : GraphicsResource;
+
+    private:
+        void* m_pimpl = nullptr;
     };
 }

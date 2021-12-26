@@ -6,6 +6,10 @@ namespace openworld
     class array_component_storage final
     {
     public:
+        array_component_storage()
+        {
+        }
+
         constexpr size_t size() const
         {
             return m_size;

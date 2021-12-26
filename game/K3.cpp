@@ -7,6 +7,10 @@
 #include "core/platform/window.hpp"
 #include "core/platform/win32/win32_platform_service.hpp"
 #include "graphics/vertex_structures.hpp"
+#include "graphics/render_system.hpp"
+#include "graphics/render_context.hpp"
+#include "graphics/vertex_buffer.hpp"
+#include "graphics/shader.hpp"
 
 #include "graphics_gl.hpp"
 
@@ -58,7 +62,7 @@ int main()
 
     engine::initialize();
     engine::services().make_service<platform_service, win32_platform_service>(hinst);
-    engine::services().make_service<render_system, gl_render_system>();
+    engine::services().make_service<render_system, render_system>();
 
     auto host = std::make_shared<application_host>();
     auto win = host->create_window(true);
@@ -66,56 +70,55 @@ int main()
     gl_swap_chain swap_chain{ win };
 
     auto render_sys = engine::services().get_service<render_system>();
-    auto& gl_ctx = render_sys->immediate_context();
+    auto& ctx = render_sys->immediate_context();
 
-    gl_shader vertex_shader(
+
+
+    shader vertex_shader(
+        shader_language::glsl_source,
+        shader_stage::vertex_shader,
         "#version 400\n"
         "layout(location = 0) in vec3 vertex_position;\n"
-        "layout(location = 1) in vec3 vertex_colour;\n"
-        "out vec3 colour;\n"
+        "layout(location = 1) in vec4 vertex_colour;\n"
+        "out vec4 colour;\n"
         "void main() {\n"
         "    colour = vertex_colour;\n"
         "    gl_Position = vec4(vertex_position, 1.0);\n"
-        "}\n",
-        shader_stage::vertex_shader);
+        "}\n");
 
-    gl_shader frag_shader(
+    shader frag_shader(
+        shader_language::glsl_source,
+        shader_stage::pixel_shader,
         "#version 400\n"
-        "in vec3 colour;\n"
+        "in vec4 colour;\n"
         "out vec4 frag_colour;\n"
         "void main() {\n"
-        "  frag_colour = vec4(colour, 1.0);\n"
-        "}\n",
-        shader_stage::pixel_shader);
+        "  frag_colour = colour;\n"
+        "}\n");
 
     gl_shader_group shader_group({ vertex_shader, frag_shader });
 
+
+
+
     std::vector<vertex_position_color> vertices{
-        { { 0.0f,  0.5f,  0.0f }, { 1.0f, 0.0f,  0.0f } },
-        { { 0.5f, -0.5f,  0.0f }, { 0.0f, 1.0f,  0.0f } },
-        { { -0.5f, -0.5f,  0.0f }, { 0.0f, 0.0f,  1.0f } },
+        { { 0.0f,  0.5f,  0.0f }, { 255, 0,  0, 255 } },
+        { { 0.5f, -0.5f,  0.0f }, { 0, 255,  0, 255 } },
+        { { -0.5f, -0.5f,  0.0f }, { 0, 0,  255, 255 } },
     };
     const auto& vertices_layout = vertex_position_color::vertex_layout;
 
-    gl_vertex_buffer vertex_buffer;
-    vertex_buffer.set_data(
-        gl_ctx,
-        std::as_bytes(std::span(vertices)),
-        vertices.size(),
-        sizeof(vertex_position_color),
-        0,
-        vertices_layout.vertex_stride(),
-        data_write_options::none);
+    vertex_buffer vertex_buff(vertices_layout, std::as_bytes(std::span(vertices)));
 
-    gl_ctx.set_vertex_buffer(vertex_buffer_binding(vertex_buffer));
+    ctx.set_vertex_buffer(vertex_buffer_binding(vertex_buff));
 
     return host->run(
         [&]()
         {
-            gl_ctx.clear(color::green());
+            ctx.clear(color::green());
 
-            shader_group.apply(gl_ctx);
-            gl_ctx.draw(primitive_type::triangle_list, 3, 0);
+            shader_group.apply(ctx);
+            ctx.draw(primitive_type::triangle_list, 3, 0);
 
             swap_chain.present();
         });

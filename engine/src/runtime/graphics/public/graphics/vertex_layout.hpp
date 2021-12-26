@@ -18,12 +18,12 @@ namespace openworld
         static size_t calculate_offsets_and_get_vertex_stride(const std::span<vertex_element>& elements);
         static void validate_vertex_elements(size_t vertex_stride, const std::span<const vertex_element>& elements);
 
-        const std::vector<vertex_element>& vertex_elements() const
+        const std::vector<vertex_element>& vertex_elements() const noexcept
         {
             return m_elements;
         }
 
-        constexpr size_t vertex_stride() const
+        constexpr size_t vertex_stride() const noexcept
         {
             return m_vertex_stride;
         }

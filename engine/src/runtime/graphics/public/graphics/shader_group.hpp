@@ -1,5 +1,7 @@
 #pragma once
 
+#include "graphics/shader.hpp"
+
 namespace openworld
 {
     class render_context;

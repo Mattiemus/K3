@@ -6,12 +6,32 @@
 
 namespace openworld
 {
-    class render_context
+    class render_context final
     {
     public:
-        virtual ~render_context() = 0 {};
+        render_context();
+        render_context(const render_context&) = delete;
+        render_context(render_context&& other) noexcept :
+            m_pimpl(other.m_pimpl)
+        {
+            other.m_pimpl = nullptr;
+        }
+        ~render_context();
 
-        virtual bool is_immediate_context() = 0;
+        render_context& operator =(const render_context&) = delete;
+        render_context& operator =(render_context&& other) noexcept
+        {
+            m_pimpl = other.m_pimpl;
+            other.m_pimpl = nullptr;
+            return *this;
+        }
+
+        constexpr void* pimpl() const noexcept
+        {
+            return m_pimpl;
+        }
+
+        bool is_immediate_context();
 
         //IRenderSystem RenderSystem{ get; }
         //BlendState BlendState{ get; set; }
@@ -33,7 +53,7 @@ namespace openworld
         //bool IsExtensionSupported<T>() where T : IRenderContextExtension;
         //void ExecuteCommandList(ICommandList commandList, bool restoreImmediateContextState);
         //void SetIndexBuffer(IndexBuffer indexBuffer);
-        virtual void set_vertex_buffer(const vertex_buffer_binding& vertex_buffer) = 0;
+        void set_vertex_buffer(const vertex_buffer_binding& vertex_buffer);
         //void SetVertexBuffers(params VertexBufferBinding[] vertexBuffers);
         //void SetStreamOutputTarget(StreamOutputBufferBinding streamOutputBuffer);
         //void SetStreamOutputTargets(params StreamOutputBufferBinding[] streamOutputBuffers);
@@ -45,42 +65,45 @@ namespace openworld
         //IRenderTarget[] GetRenderTargets();
         //void ClearState();
 
-        virtual void clear(const color& clear_color) = 0;
+        void clear(const color& clear_color);
 
-        virtual void clear(
+        void clear(
             clear_options options,
             const color& clear_color,
             float depth,
-            int stencil) = 0;
+            int stencil);
 
-        virtual void draw(
+        void draw(
             primitive_type prim_type,
             size_t vertex_count,
-            size_t start_vertex_index) = 0;
+            size_t start_vertex_index);
 
-        virtual void draw_indexed(
+        void draw_indexed(
             primitive_type prim_type,
             size_t index_count,
             size_t start_index,
-            size_t base_vertex_offset) = 0;
+            size_t base_vertex_offset);
 
-        virtual void draw_indexed_instanced(
+        void draw_indexed_instanced(
             primitive_type prim_type,
             size_t index_count_per_instance,
             size_t instance_count,
             size_t start_index,
             size_t base_vertex_offset,
-            size_t start_instance_offset) = 0;
+            size_t start_instance_offset);
         
-        virtual void draw_instanced(
+        void draw_instanced(
             primitive_type prim_type,
             size_t vertex_count_per_instance,
             size_t instance_count,
             size_t base_vertex_offset,
-            size_t start_instance_offset) = 0;
+            size_t start_instance_offset);
         
-        virtual void draw_auto(primitive_type prim_type) = 0;
+        void draw_auto(primitive_type prim_type);
 
-        virtual void flush() = 0;
+        void flush();
+
+    private:
+        void* m_pimpl;
     };
 }

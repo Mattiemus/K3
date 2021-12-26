@@ -2,9 +2,46 @@
 
 #include "graphics_gl.hpp"
 #include "graphics/vertex_element.hpp"
+#include "graphics/render_context.hpp"
 
 namespace openworld
 {
+    struct gl_render_system_impl
+    {
+        render_context immediate_ctx;
+    };
+
+    struct gl_render_context_impl
+    {
+        GLuint vao;
+    };
+
+    template <typename Impl>
+    inline void* to_pimpl(Impl* ptr)
+    {
+        return static_cast<void*>(ptr);
+    }
+
+    inline void* to_pimpl(GLuint value)
+    {
+        auto ptr_value = static_cast<uintptr_t>(value);
+        auto ptr = reinterpret_cast<void*>(ptr_value);
+        return ptr;
+    }
+
+    template <typename Impl>
+    inline Impl* from_pimpl(void* pimpl)
+    {
+        return static_cast<Impl*>(pimpl);
+    }
+
+    inline GLuint from_pimpl(void* pimpl)
+    {
+        auto pimpl_value = reinterpret_cast<uintptr_t>(pimpl);
+        auto value = static_cast<GLuint>(pimpl_value);
+        return value;
+    }
+
     constexpr GLenum to_gl_enum(shader_stage stage)
     {
         switch (stage)

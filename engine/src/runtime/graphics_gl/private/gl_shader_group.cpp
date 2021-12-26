@@ -1,22 +1,24 @@
 #include "graphics_gl.hpp"
+#include "gl_helpers.hpp"
+#include "graphics/shader.hpp"
 
 using namespace openworld;
 
-gl_shader_group::gl_shader_group(const std::vector<std::reference_wrapper<gl_shader>>& stages) :
+gl_shader_group::gl_shader_group(const std::vector<std::reference_wrapper<shader>>& stages) :
     m_program_id(0)
 {
     m_program_id = glCreateProgram();
 
     for (const auto& stage : stages)
     {
-        glAttachShader(m_program_id, stage.get().id());
+        glAttachShader(m_program_id, from_pimpl(stage.get().pimpl()));
     }
 
     glLinkProgram(m_program_id);
 
     for (const auto& stage : stages)
     {
-        glDetachShader(m_program_id, stage.get().id());
+        glDetachShader(m_program_id, from_pimpl(stage.get().pimpl()));
     }
 
     auto success = GL_FALSE;

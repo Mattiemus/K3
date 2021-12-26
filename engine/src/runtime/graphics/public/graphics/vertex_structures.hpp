@@ -1,5 +1,6 @@
 #pragma once
 
+#include "core/math/color.hpp"
 #include "core/math/float3.hpp"
 #include "graphics/vertex_layout.hpp"
 
@@ -11,12 +12,12 @@ namespace openworld
         static const vertex_layout vertex_layout;
 
         float3 position;
-        float3 color;
+        openworld::color color;
 
-        constexpr vertex_position_color()
+        constexpr vertex_position_color() noexcept
         {}
 
-        constexpr vertex_position_color(const float3& position, const float3& color) :
+        constexpr vertex_position_color(const float3& position, const openworld::color& color) noexcept :
             position(position),
             color(color)
         {}
@@ -24,14 +25,14 @@ namespace openworld
 
     constexpr bool operator ==(
         const vertex_position_color& lhs,
-        const vertex_position_color& rhs)
+        const vertex_position_color& rhs) noexcept
     {
         return (lhs.position == rhs.position) && (lhs.color == rhs.color);
     }
 
     constexpr bool operator !=(
         const vertex_position_color& lhs,
-        const vertex_position_color& rhs)
+        const vertex_position_color& rhs) noexcept
     {
         return (lhs.position != rhs.position) || (lhs.color != rhs.color);
     }

@@ -1,30 +1,42 @@
 #include "graphics_gl.hpp"
 #include "gl_helpers.hpp"
 
+#include "graphics/render_context.hpp"
 #include "graphics/vertex_structures.hpp"
 
 using namespace openworld;
 
-gl_render_context::gl_render_context() :
-    m_vao(-1)
+render_context::render_context()
 {
+    auto* impl = new gl_render_context_impl{ 0 };
+    m_pimpl = to_pimpl(impl);
 }
 
-gl_render_context::~gl_render_context()
+render_context::~render_context()
 {
-    // No-op
+    auto* impl = from_pimpl<gl_render_context_impl>(m_pimpl);
+
+    delete impl;
+    m_pimpl = nullptr;
 }
 
-void gl_render_context::set_vertex_buffer(const vertex_buffer_binding& vertex_buffer)
+bool render_context::is_immediate_context()
 {
-    if (m_vao == -1)
+    return true;
+}
+
+void render_context::set_vertex_buffer(const vertex_buffer_binding& vertex_buffer)
+{
+    auto* impl = from_pimpl<gl_render_context_impl>(m_pimpl);
+
+    if (impl->vao == 0)
     {
-        glGenVertexArrays(1, &m_vao);
-        glBindVertexArray(m_vao);
+        glGenVertexArrays(1, &impl->vao);
+        glBindVertexArray(impl->vao);
     }
 
-    auto vertex_layout = vertex_position_color::vertex_layout;
-    auto& gl_vertex_buff = dynamic_cast<gl_vertex_buffer&>(vertex_buffer.buffer);
+    auto& vertex_buff = vertex_buffer.buffer;
+    const auto& vertex_layout = vertex_buff.layout();
 
     GLuint idx = 0;
     for (const auto& vertex_elem : vertex_layout.vertex_elements())
@@ -54,7 +66,7 @@ void gl_render_context::set_vertex_buffer(const vertex_buffer_binding& vertex_bu
 
         glBindVertexBuffer(
             idx,
-            gl_vertex_buff.id(),
+            from_pimpl(vertex_buff.pimpl()),
             vertex_elem.offset,
             static_cast<GLsizei>(vertex_layout.vertex_stride()));
 
@@ -62,12 +74,12 @@ void gl_render_context::set_vertex_buffer(const vertex_buffer_binding& vertex_bu
     }
 }
 
-void gl_render_context::clear(const color& clear_color)
+void render_context::clear(const color& clear_color)
 {
     clear(clear_options::all, clear_color, 1.0f, 0);
 }
 
-void gl_render_context::clear(
+void render_context::clear(
     clear_options options,
     const color& clear_color,
     float depth,
@@ -93,7 +105,7 @@ void gl_render_context::clear(
     glClear(clear_bits);
 }
 
-void gl_render_context::draw(
+void render_context::draw(
     primitive_type prim_type,
     size_t vertex_count,
     size_t start_vertex_index)
@@ -106,7 +118,7 @@ void gl_render_context::draw(
         static_cast<GLsizei>(vertex_count));
 }
 
-void gl_render_context::draw_indexed(
+void render_context::draw_indexed(
     primitive_type prim_type,
     size_t index_count,
     size_t start_index,
@@ -123,7 +135,7 @@ void gl_render_context::draw_indexed(
         static_cast<GLint>(base_vertex_offset));
 }
 
-void gl_render_context::draw_indexed_instanced(
+void render_context::draw_indexed_instanced(
     primitive_type prim_type,
     size_t index_count_per_instance,
     size_t instance_count,
@@ -143,7 +155,7 @@ void gl_render_context::draw_indexed_instanced(
         static_cast<GLuint>(base_vertex_offset));
 }
 
-void gl_render_context::draw_instanced(
+void render_context::draw_instanced(
     primitive_type prim_type,
     size_t vertex_count_per_instance,
     size_t instance_count,
@@ -160,14 +172,14 @@ void gl_render_context::draw_instanced(
         static_cast<GLuint>(start_instance_offset));
 }
 
-void gl_render_context::draw_auto(primitive_type prim_type)
+void render_context::draw_auto(primitive_type prim_type)
 {
     auto draw_mode = to_gl_enum(prim_type);
 
     glDrawTransformFeedback(draw_mode, 0);
 }
 
-void gl_render_context::flush()
+void render_context::flush()
 {
     glFlush();
 }

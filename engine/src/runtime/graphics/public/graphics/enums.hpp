@@ -28,10 +28,19 @@ namespace openworld
         immutable = 2
     };
 
+    enum class shader_language
+    {
+        glsl_source
+    };
+
     enum class shader_stage
     {
         vertex_shader,
-        pixel_shader
+        hull_shader,
+        domain_shader,
+        geometry_shader,
+        pixel_shader,
+        compute_shader
     };
 
     enum class clear_options
@@ -163,4 +172,11 @@ namespace openworld
             return 0;
         }
     }
+
+    enum class data_write_options
+    {
+        none,
+        discard,
+        no_overwrite
+    };
 }
