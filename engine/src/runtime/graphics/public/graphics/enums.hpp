@@ -4,12 +4,19 @@
 #include "core/math/float2.hpp"
 #include "core/math/float3.hpp"
 #include "core/math/float4.hpp"
+#include "core/math/short2.hpp"
+#include "core/math/short4.hpp"
+#include "core/math/ushort2.hpp"
+#include "core/math/ushort4.hpp"
 #include "core/math/int2.hpp"
 #include "core/math/int3.hpp"
 #include "core/math/int4.hpp"
 #include "core/math/uint2.hpp"
 #include "core/math/uint3.hpp"
 #include "core/math/uint4.hpp"
+#include "core/math/half.hpp"
+#include "core/math/half2.hpp"
+#include "core/math/half4.hpp"
 #include "core/utilities/enums.hpp"
 
 namespace openworld
@@ -98,7 +105,7 @@ namespace openworld
         float4 = 27
     };
 
-    constexpr size_t format_size(vertex_format format)
+    constexpr size_t format_size(vertex_format format) noexcept
     {
         switch (format)
         {
@@ -112,16 +119,16 @@ namespace openworld
             return sizeof(short);
         case vertex_format::ushort2:
         case vertex_format::normalized_ushort2:
-            return sizeof(unsigned short) * 2;
+            return sizeof(ushort2);
         case vertex_format::short2:
         case vertex_format::normalized_short2:
-            return sizeof(short) * 2;
+            return sizeof(short2);
         case vertex_format::ushort4:
         case vertex_format::normalized_ushort4:
-            return sizeof(unsigned short) * 4;
+            return sizeof(ushort4);
         case vertex_format::short4:
         case vertex_format::normalized_short4:
-            return sizeof(short) * 4;
+            return sizeof(short4);
         case vertex_format::uint:
             return sizeof(unsigned int);
         case vertex_format::int_:
@@ -138,12 +145,12 @@ namespace openworld
             return sizeof(uint4);
         case vertex_format::int4:
             return sizeof(int4);
-        //case vertex_format::half:
-        //    return sizeof(half);
-        //case vertex_format::half2:
-        //    return sizeof(vector2h);
-        //case vertex_format::half4:
-        //    return sizeof(vector4h);
+        case vertex_format::half:
+            return sizeof(half);
+        case vertex_format::half2:
+            return sizeof(half2);
+        case vertex_format::half4:
+            return sizeof(half4);
         case vertex_format::float_:
             return sizeof(float);
         case vertex_format::float2:

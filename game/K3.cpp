@@ -35,8 +35,6 @@ int main()
     entity e2 = pool.create_entity();
     pool.set_component<test_component2>(e2, { 5 });
     
-
-
     auto m = matcher::all_of<test_component1, test_component2>();
 
     for (auto it = pool.begin(m); it != pool.end(); ++it)

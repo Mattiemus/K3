@@ -16,11 +16,10 @@ namespace openworld
                 uint8_t b;
                 uint8_t a;
             };
-            uint32_t packed;
+            uint32_t packed_value = 0;
         };
 
-        constexpr color() :
-            packed(0)
+        constexpr color()
         {}
 
         constexpr color(uint8_t r, uint8_t g, uint8_t b, uint8_t a) :
@@ -29,7 +28,6 @@ namespace openworld
             b(b),
             a(a)
         {}
-
 
         static constexpr color black()
         {
