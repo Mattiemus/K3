@@ -4,7 +4,8 @@ project(openworld_engine_runtime_graphics VERSION 0.1.0)
 
 add_library(${PROJECT_NAME} STATIC
     "private/vertex_layout.cpp"
-    "private/vertex_structures.cpp")
+    "private/vertex_structures.cpp"
+     "private/vertex_buffer.cpp"  "private/graphics_resource.cpp")
 
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 

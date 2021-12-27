@@ -1,5 +1,4 @@
-#include "graphics/vertex_layout.hpp"
-#include "graphics/exceptions.hpp"
+#include "graphics.hpp"
 
 using namespace openworld;
 

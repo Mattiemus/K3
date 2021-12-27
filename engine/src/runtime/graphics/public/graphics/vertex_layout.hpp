@@ -1,11 +1,5 @@
 #pragma once
 
-#include <vector>
-#include <span>
-#include <initializer_list>
-
-#include "graphics/vertex_element.hpp"
-
 namespace openworld
 {
     class vertex_layout final

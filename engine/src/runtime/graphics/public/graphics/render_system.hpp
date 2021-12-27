@@ -1,41 +1,17 @@
 #pragma once
 
-#include <string>
-
-#include "core/math/color.hpp"
-#include "graphics/enums.hpp"
-
 namespace openworld
 {
     class render_context;
 
-    class render_system final
+    class render_system
     {
     public:
-        render_system();
-        render_system(const render_system&) = delete;
-        render_system(render_system&& other) noexcept :
-            m_pimpl(other.m_pimpl)
-        {
-            other.m_pimpl = nullptr;
-        }
-        ~render_system();
+        virtual ~render_system() = 0 {}
 
-        render_system& operator =(const render_system&) = delete;
-        render_system& operator =(render_system&& other) noexcept
-        {
-            m_pimpl = other.m_pimpl;
-            other.m_pimpl = nullptr;
-            return *this;
-        }
+        virtual std::string platform() = 0;
+        virtual render_context& immediate_context() = 0;
 
-        constexpr void* pimpl() const noexcept
-        {
-            return m_pimpl;
-        }
-
-        std::string platform();
-        render_context& immediate_context();
         //IGraphicsAdapter Adapter{ get; }
         //bool AreCommandListsSupported{ get; }
         //IPredefinedBlendStateProvider PredefinedBlendStates{ get; }
@@ -44,9 +20,31 @@ namespace openworld
         //IPredefinedSamplerStateProvider PredefinedSamplerStates{ get; }
         //StandardEffectLibrary StandardEffects{ get; }
         //IDeferredRenderContext CreateDeferredRenderContext();
-        //bool IsSupported<T>() where T : GraphicsResource;
 
-    private:
-        void* m_pimpl = nullptr;
+        virtual graphics_resource_impl_factory& get_impl_factory(
+            graphics_resource_type resource_type) = 0;
+
+        virtual bool is_supported(
+            graphics_resource_type resource_type) = 0;
+
+        template <typename Resource>
+        typename graphics_resource_traits<Resource>::impl_factory& get_impl_factory()
+        {
+            auto& factory = get_impl_factory(graphics_resource_traits<Resource>::resource_type);
+            return dynamic_cast<graphics_resource_traits<Resource>::impl_factory&>(factory);
+        }
+
+        template <typename Resource>
+        typename bool is_supported()
+        {
+            return is_supported(graphics_resource_traits<Resource>::resource_type);
+        }
+
+        template<typename Resource, typename... Args>
+        std::unique_ptr<typename graphics_resource_traits<Resource>::impl> make_impl(Args&&... args)
+        {
+            auto& impl_factory = get_impl_factory<Resource>();
+            return impl_factory.create_impl(args...);
+        }
     };
 }

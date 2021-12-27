@@ -1,6 +1,5 @@
 #include "graphics_gl.hpp"
 #include "gl_helpers.hpp"
-#include "graphics/shader.hpp"
 
 using namespace openworld;
 

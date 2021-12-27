@@ -1,4 +1,4 @@
-#include "graphics/vertex_structures.hpp"
+#include "graphics.hpp"
 
 using namespace openworld;
 

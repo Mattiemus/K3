@@ -1,7 +1,5 @@
 #pragma once
 
-#include "graphics/vertex_buffer.hpp"
-
 namespace openworld
 {
     class vertex_buffer;

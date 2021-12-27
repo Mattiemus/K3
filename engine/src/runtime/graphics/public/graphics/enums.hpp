@@ -1,26 +1,12 @@
 #pragma once
 
-#include "core/math/color.hpp"
-#include "core/math/float2.hpp"
-#include "core/math/float3.hpp"
-#include "core/math/float4.hpp"
-#include "core/math/short2.hpp"
-#include "core/math/short4.hpp"
-#include "core/math/ushort2.hpp"
-#include "core/math/ushort4.hpp"
-#include "core/math/int2.hpp"
-#include "core/math/int3.hpp"
-#include "core/math/int4.hpp"
-#include "core/math/uint2.hpp"
-#include "core/math/uint3.hpp"
-#include "core/math/uint4.hpp"
-#include "core/math/half.hpp"
-#include "core/math/half2.hpp"
-#include "core/math/half4.hpp"
-#include "core/utilities/enums.hpp"
-
 namespace openworld
 {
+    enum class graphics_resource_type
+    {
+        vertex_buffer
+    };
+
     enum class resource_usage
     {
         static_usage = 0,

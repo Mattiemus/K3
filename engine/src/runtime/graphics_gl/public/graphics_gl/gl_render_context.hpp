@@ -2,14 +2,14 @@
 
 namespace openworld
 {
-    class vertex_buffer_binding;
-
-    class render_context
-    {
+	class gl_render_context final :
+		public render_context
+	{
     public:
-        virtual ~render_context() = 0 {}
+        gl_render_context();
+        virtual ~gl_render_context();
 
-        virtual bool is_immediate_context() = 0;
+        virtual bool is_immediate_context() override;
 
         //IRenderSystem RenderSystem{ get; }
         //BlendState BlendState{ get; set; }
@@ -31,7 +31,7 @@ namespace openworld
         //bool IsExtensionSupported<T>() where T : IRenderContextExtension;
         //void ExecuteCommandList(ICommandList commandList, bool restoreImmediateContextState);
         //void SetIndexBuffer(IndexBuffer indexBuffer);
-        virtual void set_vertex_buffer(const vertex_buffer_binding& vertex_buffer) = 0;
+        virtual void set_vertex_buffer(const vertex_buffer_binding& vertex_buffer) override;
         //void SetVertexBuffers(params VertexBufferBinding[] vertexBuffers);
         //void SetStreamOutputTarget(StreamOutputBufferBinding streamOutputBuffer);
         //void SetStreamOutputTargets(params StreamOutputBufferBinding[] streamOutputBuffers);
@@ -43,24 +43,24 @@ namespace openworld
         //IRenderTarget[] GetRenderTargets();
         //void ClearState();
 
-        virtual void clear(const color& clear_color) = 0;
+        virtual void clear(const color& clear_color) override;
 
         virtual void clear(
             clear_options options,
             const color& clear_color,
             float depth,
-            int stencil) = 0;
+            int stencil) override;
 
         virtual void draw(
             primitive_type prim_type,
             size_t vertex_count,
-            size_t start_vertex_index) = 0;
+            size_t start_vertex_index) override;
 
         virtual void draw_indexed(
             primitive_type prim_type,
             size_t index_count,
             size_t start_index,
-            size_t base_vertex_offset) = 0;
+            size_t base_vertex_offset) override;
 
         virtual void draw_indexed_instanced(
             primitive_type prim_type,
@@ -68,17 +68,20 @@ namespace openworld
             size_t instance_count,
             size_t start_index,
             size_t base_vertex_offset,
-            size_t start_instance_offset) = 0;
-        
+            size_t start_instance_offset) override;
+
         virtual void draw_instanced(
             primitive_type prim_type,
             size_t vertex_count_per_instance,
             size_t instance_count,
             size_t base_vertex_offset,
-            size_t start_instance_offset) = 0;
-        
-        virtual void draw_auto(primitive_type prim_type) = 0;
+            size_t start_instance_offset) override;
 
-        virtual void flush() = 0;
-    };
+        virtual void draw_auto(primitive_type prim_type) override;
+
+        virtual void flush() override;
+
+    private:
+        GLuint m_vao;
+	};
 }

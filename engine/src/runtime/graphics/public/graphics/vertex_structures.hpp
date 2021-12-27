@@ -1,9 +1,5 @@
 #pragma once
 
-#include "core/math/color.hpp"
-#include "core/math/float3.hpp"
-#include "graphics/vertex_layout.hpp"
-
 namespace openworld
 {
     class vertex_position_color final

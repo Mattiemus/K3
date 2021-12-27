@@ -1,7 +1,5 @@
 #pragma once
 
-#include "graphics/enums.hpp"
-
 namespace openworld
 {
     class shader final

@@ -5,10 +5,10 @@ project(openworld_engine_runtime_graphics_gl VERSION 0.1.0)
 add_library(${PROJECT_NAME} STATIC
     "private/shader.cpp"
     "private/gl_shader_group.cpp" 
-    "private/render_context.cpp"
-    "private/render_system.cpp"
-    "private/vertex_buffer.cpp"
-    "private/win32/gl_swap_chain.cpp")
+    "private/gl_render_context.cpp"
+    "private/gl_render_system.cpp"
+    "private/win32/gl_swap_chain.cpp"
+    "private/impl/gl_vertex_buffer_impl.cpp")
 
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 

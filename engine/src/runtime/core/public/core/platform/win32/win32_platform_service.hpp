@@ -9,7 +9,7 @@ namespace openworld
         public platform_service
     {
     public:
-        win32_platform_service(HINSTANCE hinst) :
+        win32_platform_service(HINSTANCE hinst = GetModuleHandle(NULL)) :
             m_hinst(hinst)
         {}
 

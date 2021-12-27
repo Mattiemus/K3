@@ -1,6 +1,5 @@
 #include "graphics_gl.hpp"
 #include "gl_helpers.hpp"
-#include "graphics/shader.hpp"
 
 using namespace openworld;
 
@@ -13,7 +12,7 @@ shader::shader(shader_language language, shader_stage stage, const std::string& 
     m_pimpl = to_pimpl(shader_id);
 
     auto source_buffer = source.c_str();
-    auto source_size = static_cast<int>(source.size());
+    auto source_size = static_cast<GLint>(source.size());
 
     glShaderSource(shader_id, 1, &source_buffer, &source_size);
     glCompileShader(shader_id);
