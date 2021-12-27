@@ -8,7 +8,8 @@ add_library(${PROJECT_NAME} STATIC
     "private/gl_render_context.cpp"
     "private/gl_render_system.cpp"
     "private/win32/gl_swap_chain.cpp"
-    "private/impl/gl_vertex_buffer_impl.cpp")
+    "private/impl/gl_vertex_buffer_impl.cpp"
+    "private/impl/gl_index_buffer_impl.cpp")
 
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 

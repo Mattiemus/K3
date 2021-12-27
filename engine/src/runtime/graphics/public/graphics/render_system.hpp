@@ -10,6 +10,7 @@ namespace openworld
         virtual ~render_system() = 0 {}
 
         virtual std::string platform() = 0;
+
         virtual render_context& immediate_context() = 0;
 
         //IGraphicsAdapter Adapter{ get; }

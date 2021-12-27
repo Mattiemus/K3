@@ -32,6 +32,17 @@ namespace openworld
         return gl_impl->gl_buffer_id();
     }
 
+    inline GLuint to_gl_index_buffer_id(const index_buffer& ib)
+    {
+        auto gl_impl = dynamic_cast<gl_index_buffer_impl*>(ib.impl());
+        if (gl_impl == nullptr)
+        {
+            throw std::exception("invalid impl type");
+        }
+
+        return gl_impl->gl_buffer_id();
+    }
+
 
 
 

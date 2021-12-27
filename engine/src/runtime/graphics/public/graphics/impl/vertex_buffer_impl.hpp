@@ -14,6 +14,13 @@ namespace openworld
 		virtual size_t vertex_count() const = 0;
 		virtual resource_usage usage() const = 0;
 
+		virtual void get_interleaved_data(
+			const std::span<const std::span<std::byte>>& data) = 0;
+
+		virtual void set_interleaved_data(
+			render_context& render_ctx,
+			const std::span<const std::span<const std::byte>>& data) = 0;
+
 		virtual void get_data(
 			const std::span<std::byte>& data,
 			size_t element_count,

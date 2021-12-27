@@ -8,10 +8,7 @@ namespace openworld
 	class graphics_resource
 	{
 	public:
-		graphics_resource() :
-			m_name("<no name>"), m_tag(nullptr)
-		{}
-
+		graphics_resource();
 		virtual ~graphics_resource() = 0 {}
 
 		virtual graphics_resource_impl* impl() const noexcept = 0;

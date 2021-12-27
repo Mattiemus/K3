@@ -62,6 +62,13 @@ namespace openworld
 			return m_resource_usage;
 		}
 
+		virtual void get_interleaved_data(
+			const std::span<const std::span<std::byte>>& data) override;
+
+		virtual void set_interleaved_data(
+			render_context& render_ctx,
+			const std::span<const std::span<const std::byte>>& data) override;
+
 		virtual void get_data(
 			const std::span<std::byte>& data,
 			size_t element_count,

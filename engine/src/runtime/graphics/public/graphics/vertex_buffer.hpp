@@ -64,6 +64,19 @@ namespace openworld
             return m_impl->usage();
         }
 
+        void get_interleaved_data(
+            const std::span<const std::span<std::byte>>& data)
+        {
+            m_impl->get_interleaved_data(data);
+        }
+
+        void set_interleaved_data(
+            render_context& render_ctx,
+            const std::span<const std::span<const std::byte>>& data)
+        {
+            m_impl->set_interleaved_data(render_ctx, data);
+        }
+
         void get_data(
             const std::span<std::byte>& data,
             size_t element_count,

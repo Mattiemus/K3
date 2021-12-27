@@ -17,6 +17,13 @@ bool gl_render_context::is_immediate_context()
     return true;
 }
 
+void gl_render_context::set_index_buffer(const index_buffer& index_buff)
+{
+    auto gl_index_buff = to_gl_index_buffer_id(index_buff);
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, gl_index_buff);
+}
+
 void gl_render_context::set_vertex_buffer(const vertex_buffer_binding& vertex_buffer)
 {
     if (m_vao == 0)

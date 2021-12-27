@@ -36,9 +36,11 @@
 
 #include "graphics/impl/graphics_resource_impl.hpp"
 #include "graphics/impl/vertex_buffer_impl.hpp"
+#include "graphics/impl/index_buffer_impl.hpp"
 
 #include "graphics/vertex_buffer.hpp"
 #include "graphics/vertex_buffer_binding.hpp"
+#include "graphics/index_buffer.hpp"
 #include "graphics/shader.hpp"
 #include "graphics/shader_group.hpp"
 #include "graphics/render_context.hpp"

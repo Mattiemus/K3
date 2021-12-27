@@ -2,9 +2,16 @@
 
 namespace openworld
 {
+    enum class index_format
+    {
+        bits16,
+        bits32
+    };
+
     enum class graphics_resource_type
     {
-        vertex_buffer
+        vertex_buffer,
+        index_buffer
     };
 
     enum class resource_usage

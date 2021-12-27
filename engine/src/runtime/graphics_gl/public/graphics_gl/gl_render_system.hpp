@@ -41,5 +41,6 @@ namespace openworld
     private:
         gl_render_context m_immediate_ctx;
         gl_vertex_buffer_impl_factory m_vertex_buffer_impl_factory;
+        gl_index_buffer_impl_factory m_index_buffer_impl_factory;
 	};
 }

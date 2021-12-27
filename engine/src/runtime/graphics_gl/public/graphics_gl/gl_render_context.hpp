@@ -30,7 +30,7 @@ namespace openworld
         //IEnumerable<IRenderContextExtension> GetExtensions();
         //bool IsExtensionSupported<T>() where T : IRenderContextExtension;
         //void ExecuteCommandList(ICommandList commandList, bool restoreImmediateContextState);
-        //void SetIndexBuffer(IndexBuffer indexBuffer);
+        virtual void set_index_buffer(const index_buffer& index_buff) override;
         virtual void set_vertex_buffer(const vertex_buffer_binding& vertex_buffer) override;
         //void SetVertexBuffers(params VertexBufferBinding[] vertexBuffers);
         //void SetStreamOutputTarget(StreamOutputBufferBinding streamOutputBuffer);

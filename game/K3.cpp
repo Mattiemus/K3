@@ -55,13 +55,25 @@ int main()
 
 
     std::vector<vertex_position_color> vertices{
-        { { 0.0f,  0.5f,  0.0f }, { 255, 0,  0, 255 } },
+        { { -0.5f,  0.5f,  0.0f }, { 255, 0,  0, 255 } },
         { { 0.5f, -0.5f,  0.0f }, { 0, 255,  0, 255 } },
         { { -0.5f, -0.5f,  0.0f }, { 0, 0,  255, 255 } },
+        { { 0.5f,  0.5f,  0.0f }, { 255, 0,  0, 255 } },
     };
     const auto& vertices_layout = vertex_position_color::vertex_layout;
 
     vertex_buffer vertex_buff(*render_sys, vertices_layout, std::as_bytes(std::span(vertices)));
+
+
+
+
+    std::vector<unsigned short> indices{
+        0, 1, 2,
+        0, 3, 1
+    };
+
+    index_buffer index_buff(*render_sys, indices);
+
 
     return host->run(
         [&]()
@@ -69,9 +81,10 @@ int main()
             ctx.clear(color::green());
 
             ctx.set_vertex_buffer(vertex_buffer_binding(vertex_buff));
+            ctx.set_index_buffer(index_buff);
 
             shader_group.apply(ctx);
-            ctx.draw(primitive_type::triangle_list, 3, 0);
+            ctx.draw_indexed(primitive_type::triangle_list, 6, 0, 0);
 
             swap_chain.present();
         });

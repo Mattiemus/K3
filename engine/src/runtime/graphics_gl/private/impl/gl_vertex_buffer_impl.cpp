@@ -55,6 +55,19 @@ openworld::render_system& gl_vertex_buffer_impl::render_system() const
 	return m_render_sys;
 }
 
+void gl_vertex_buffer_impl::get_interleaved_data(
+	const std::span<const std::span<std::byte>>& data)
+{
+	throw std::exception("not implemented");
+}
+
+void gl_vertex_buffer_impl::set_interleaved_data(
+	render_context& render_ctx,
+	const std::span<const std::span<const std::byte>>& data)
+{
+	throw std::exception("not implemented");
+}
+
 void gl_vertex_buffer_impl::get_data(
 	const std::span<std::byte>& data,
 	size_t element_count,
@@ -62,7 +75,7 @@ void gl_vertex_buffer_impl::get_data(
 	size_t read_start_offset,
 	size_t vertex_stride)
 {
-	throw std::exception();
+	throw std::exception("not implemented");
 }
 
 void gl_vertex_buffer_impl::set_data(
