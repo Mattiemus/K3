@@ -7,7 +7,7 @@ namespace openworld
     class float4x4 final
     {
     public:
-        static float4x4 identity;
+        static const float4x4 identity;
 
         float m11 = 0;
         float m12 = 0;
@@ -26,10 +26,10 @@ namespace openworld
         float m43 = 0;
         float m44 = 0;
 
-        constexpr float4x4()
+        constexpr float4x4() noexcept
         {}
 
-        constexpr float4x4(float value) :
+        constexpr float4x4(float value) noexcept :
             m11(value),
             m12(value),
             m13(value),
@@ -52,7 +52,7 @@ namespace openworld
             float m11, float m12, float m13, float m14,
             float m21, float m22, float m23, float m24,
             float m31, float m32, float m33, float m34,
-            float m41, float m42, float m43, float m44) :
+            float m41, float m42, float m43, float m44) noexcept :
             m11(m11),
             m12(m12),
             m13(m13),
@@ -90,11 +90,32 @@ namespace openworld
 
         static float4x4 from_quaternion(const quaternion& rot);
         static void from_quaternion(const quaternion& rot, float4x4& result);
+
+        float3 translation() const;
+        void translation(const float3& new_translation);
+
+        float3 up() const;
+        void up(const float3& new_up);
+
+        float3 down() const;
+        void down(const float3& new_down);
+
+        float3 backward() const;
+        void backward(const float3& new_backward);
+
+        float3 forward() const;
+        void forward(const float3& new_forward);
+
+        float3 right() const;
+        void right(const float3& new_right);
+
+        float3 left() const;
+        void left(const float3& new_left);
     };
 
     static_assert(sizeof(float4x4) == (16 * sizeof(float)));
 
-    inline bool operator ==(const float4x4& lhs, const float4x4& rhs)
+    inline bool operator ==(const float4x4& lhs, const float4x4& rhs) noexcept
     {
         return is_equal(lhs.m11, rhs.m11) && is_equal(lhs.m12, rhs.m12) && is_equal(lhs.m13, rhs.m13) && is_equal(lhs.m14, rhs.m14) &&
             is_equal(lhs.m21, rhs.m21) && is_equal(lhs.m22, rhs.m22) && is_equal(lhs.m23, rhs.m23) && is_equal(lhs.m24, rhs.m24) &&
@@ -102,7 +123,7 @@ namespace openworld
             is_equal(lhs.m41, rhs.m41) && is_equal(lhs.m42, rhs.m42) && is_equal(lhs.m43, rhs.m43) && is_equal(lhs.m44, rhs.m44);
     }
 
-    inline bool operator !=(const float4x4& lhs, const float4x4& rhs)
+    inline bool operator !=(const float4x4& lhs, const float4x4& rhs) noexcept
     {
         return !is_equal(lhs.m11, rhs.m11) || !is_equal(lhs.m12, rhs.m12) || !is_equal(lhs.m13, rhs.m13) || !is_equal(lhs.m14, rhs.m14) ||
             !is_equal(lhs.m21, rhs.m21) || !is_equal(lhs.m22, rhs.m22) || !is_equal(lhs.m23, rhs.m23) || !is_equal(lhs.m24, rhs.m24) ||

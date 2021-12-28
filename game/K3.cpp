@@ -62,18 +62,13 @@ int main()
     };
     const auto& vertices_layout = vertex_position_color::vertex_layout;
 
-    vertex_buffer vertex_buff(*render_sys, vertices_layout, std::as_bytes(std::span(vertices)));
-
-
-
-
     std::vector<unsigned short> indices{
         0, 1, 2,
         0, 3, 1
     };
 
+    vertex_buffer vertex_buff(*render_sys, vertices_layout, std::as_bytes(std::span(vertices)));
     index_buffer index_buff(*render_sys, indices);
-
 
     return host->run(
         [&]()

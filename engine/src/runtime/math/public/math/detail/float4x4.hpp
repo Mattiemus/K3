@@ -286,4 +286,123 @@ namespace openworld
         result.m43 = 0.0f;
         result.m44 = 1.0f;
     }
+
+    inline float3 float4x4::translation() const
+    {
+        float3 v{};
+        v.x = m41;
+        v.y = m42;
+        v.z = m43;
+
+        return v;
+    }
+
+    inline void float4x4::translation(const float3& new_translation)
+    {
+        m41 = new_translation.x;
+        m42 = new_translation.y;
+        m43 = new_translation.z;
+    }
+
+    inline float3 float4x4::up() const
+    {
+        float3 v{};
+        v.x = m21;
+        v.y = m22;
+        v.z = m23;
+
+        return v;
+    }
+
+    inline void float4x4::up(const float3& new_up)
+    {
+        m21 = new_up.x;
+        m22 = new_up.y;
+        m23 = new_up.z;
+    }
+
+    inline float3 float4x4::down() const
+    {
+        float3 v{};
+        v.x = -m21;
+        v.y = -m22;
+        v.z = -m23;
+
+        return v;
+    }
+
+    inline void float4x4::down(const float3& new_down)
+    {
+        m21 = -new_down.x;
+        m22 = -new_down.y;
+        m23 = -new_down.z;
+    }
+
+    inline float3 float4x4::backward() const
+    {
+        float3 v{};
+        v.x = m31;
+        v.y = m32;
+        v.z = m33;
+
+        return v;
+    }
+
+    inline void float4x4::backward(const float3& new_backward)
+    {
+        m31 = new_backward.x;
+        m32 = new_backward.y;
+        m33 = new_backward.z;
+    }
+
+    inline float3 float4x4::forward() const
+    {
+        float3 v{};
+        v.x = -m31;
+        v.y = -m32;
+        v.z = -m33;
+
+        return v;
+    }
+
+    inline void float4x4::forward(const float3& new_forward)
+    {
+        m31 = -new_forward.x;
+        m32 = -new_forward.y;
+        m33 = -new_forward.z;
+    }
+
+    inline float3 float4x4::right() const
+    {
+        float3 v{};
+        v.x = m11;
+        v.y = m12;
+        v.z = m13;
+
+        return v;
+    }
+
+    inline void float4x4::right(const float3& new_right)
+    {
+        m11 = new_right.x;
+        m12 = new_right.y;
+        m13 = new_right.z;
+    }
+
+    inline float3 float4x4::left() const
+    {
+        float3 v{};
+        v.x = -m11;
+        v.y = -m12;
+        v.z = -m13;
+
+        return v;
+    }
+
+    inline void float4x4::left(const float3& new_left)
+    {
+        m11 = -new_left.x;
+        m12 = -new_left.y;
+        m13 = -new_left.z;
+    }
 }

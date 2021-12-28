@@ -1,6 +1,6 @@
 ﻿cmake_minimum_required(VERSION 3.8)
 
-add_executable(K3 "../third_party/K3.cpp")
+add_executable(K3 "K3.cpp")
 
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 
