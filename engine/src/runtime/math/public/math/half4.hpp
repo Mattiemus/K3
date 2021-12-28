@@ -1,7 +1,5 @@
 #pragma once
 
-#include "core/math/half.hpp"
-
 namespace openworld
 {
     class half4 final

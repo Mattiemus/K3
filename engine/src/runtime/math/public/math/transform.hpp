@@ -1,15 +1,16 @@
 #pragma once
 
-#include "core/math/float3.hpp"
-#include "core/math/quaternion.hpp"
-#include "core/math/float4x4.hpp"
-
 namespace openworld
 {
     class transform final
     {
     public:
-        constexpr transform()
+        constexpr transform() :
+            m_scale(1.0f, 1.0f, 1.0f),
+            m_rotation(0.0f, 0.0f, 0.0f, 1.0f),
+            m_translation(0.0f, 0.0f, 0.0f),
+            m_cached_matrix(float4x4::identity),
+            m_cache_refresh(false)
         {}
 
         const float3& get_scale() const
@@ -69,7 +70,7 @@ namespace openworld
             m_cache_refresh = true;
         }
 
-        const float4x4& matrix() const
+        const float4x4& matrix()
         {
             if (m_cache_refresh)
             {
@@ -84,17 +85,18 @@ namespace openworld
         quaternion m_rotation;
         float3 m_translation;
         float4x4 m_cached_matrix;
-        mutable bool m_cache_refresh = false;
+        bool m_cache_refresh;
 
-        void compute_matrix() const
+        void compute_matrix()
         {
-            //Matrix.FromScale(m_scale, out Matrix scaleM);
-            //Matrix.FromQuaternion(m_rotation, out Matrix rotationM);
-            //Matrix.FromTranslation(m_translation, out Matrix translationM);
+            auto scale_matrix = float4x4::from_scale(m_scale);
+            auto rotation_matrix = float4x4::from_quaternion(m_rotation);
+            auto translation_matrix = float4x4::from_translation(m_translation);
 
-            ////((Scale * Rotation) * Translation)
-            //Matrix.Multiply(scaleM, rotationM, out m_cachedMatrix);
-            //Matrix.Multiply(m_cachedMatrix, translationM, out m_cachedMatrix);
+            // ((Scale * Rotation) * Translation)
+            float4x4::multiply(scale_matrix, rotation_matrix, m_cached_matrix);
+            float4x4::multiply(m_cached_matrix, translation_matrix, m_cached_matrix);
+
             m_cache_refresh = false;
         }
     };

@@ -15,7 +15,8 @@ target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC
     openworld_engine_runtime_core
-    openworld_engine_runtime_graphics)
+    openworld_engine_runtime_graphics
+    openworld_engine_runtime_math)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
     libglew_static)

@@ -1,9 +1,5 @@
 #pragma once
 
-#include <cstdint>
-
-#include "core/math/float4.hpp"
-
 namespace openworld
 {
     class color final
@@ -65,10 +61,5 @@ namespace openworld
     constexpr bool operator !=(const color& lhs, const color& rhs) noexcept
     {
         return lhs.packed_value != rhs.packed_value;
-    }
-
-    constexpr float4 to_vector4(const color& c) noexcept
-    {
-        return float4(c.r / 255.0f, c.g / 255.0f, c.b / 255.0f, c.a / 255.0f);
     }
 }

@@ -21,13 +21,13 @@ namespace openworld
 
     static_assert(sizeof(float3) == (3 * sizeof(float)));
 
-    constexpr bool operator ==(const float3& lhs, const float3& rhs)
+    inline bool operator ==(const float3& lhs, const float3& rhs)
     {
-        return (lhs.x == rhs.x) && (lhs.y == rhs.y) && (lhs.z == rhs.z);
+        return is_equal(lhs.x, rhs.x) && is_equal(lhs.y, rhs.y) && is_equal(lhs.z, rhs.z);
     }
 
-    constexpr bool operator !=(const float3& lhs, const float3& rhs)
+    inline bool operator !=(const float3& lhs, const float3& rhs)
     {
-        return (lhs.x != rhs.x) || (lhs.y != rhs.y) || (lhs.z != rhs.z);
+        return !is_equal(lhs.x, rhs.x) || !is_equal(lhs.y, rhs.y) || !is_equal(lhs.z, rhs.z);
     }
 }

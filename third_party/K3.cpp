@@ -1,5 +1,5 @@
 ﻿#include "core/engine/engine.hpp"
-#include "core/math/float3.hpp"
+#include "math.hpp"
 #include "core/platform/platform_service.hpp"
 #include "core/platform/application_host.hpp"
 #include "core/platform/window.hpp"

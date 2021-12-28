@@ -23,13 +23,13 @@ namespace openworld
 
     static_assert(sizeof(quaternion) == (4 * sizeof(float)));
 
-    constexpr bool operator ==(const quaternion& lhs, const quaternion& rhs)
+    inline bool operator ==(const quaternion& lhs, const quaternion& rhs)
     {
-        return (lhs.x == rhs.x) && (lhs.y == rhs.y) && (lhs.z == rhs.z) && (lhs.w == rhs.w);
+        return is_equal(lhs.x, rhs.x) && is_equal(lhs.y, rhs.y) && is_equal(lhs.z, rhs.z) && is_equal(lhs.w, rhs.w);
     }
 
-    constexpr bool operator !=(const quaternion& lhs, const quaternion& rhs)
+    inline bool operator !=(const quaternion& lhs, const quaternion& rhs)
     {
-        return (lhs.x != rhs.x) || (lhs.y != rhs.y) || (lhs.z != rhs.z) || (lhs.w != rhs.w);
+        return !is_equal(lhs.x, rhs.x) || !is_equal(lhs.y, rhs.y) || !is_equal(lhs.z, rhs.z) || !is_equal(lhs.w, rhs.w);
     }
 }

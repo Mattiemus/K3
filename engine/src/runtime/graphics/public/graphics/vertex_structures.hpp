@@ -19,14 +19,14 @@ namespace openworld
         {}
     };
 
-    constexpr bool operator ==(
+    inline bool operator ==(
         const vertex_position_color& lhs,
         const vertex_position_color& rhs) noexcept
     {
         return (lhs.position == rhs.position) && (lhs.color == rhs.color);
     }
 
-    constexpr bool operator !=(
+    inline bool operator !=(
         const vertex_position_color& lhs,
         const vertex_position_color& rhs) noexcept
     {
