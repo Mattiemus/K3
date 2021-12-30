@@ -1,7 +1,5 @@
 #pragma once
 
-#include <stdexcept>
-
 namespace openworld
 {
     class service_not_found final :

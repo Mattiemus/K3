@@ -1,11 +1,5 @@
 #pragma once
 
-#include <stdexcept>
-#include <string>
-#include <vector>
-#include <memory>
-#include <span>
-
 #include "graphics.hpp"
 
 #include "graphics_gl/gl_headers.hpp"

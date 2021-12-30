@@ -1,6 +1,4 @@
-#include <stdexcept>
-
-#include "core/platform/win32/win32_window.hpp"
+#include "core.hpp"
 
 using namespace openworld;
 
@@ -55,12 +53,31 @@ win32_window::~win32_window()
     }
 }
 
+bool win32_window::is_minimized()
+{
+    throw_if_window_destroyed();
+    return IsIconic(m_hwnd) != FALSE;
+}
+
+bool win32_window::is_maximized()
+{
+    throw_if_window_destroyed();
+    return IsZoomed(m_hwnd) != FALSE;
+}
+
+bool win32_window::is_focused()
+{
+    throw_if_window_destroyed();
+    return m_is_focused;
+}
+
 void* win32_window::handle()
 {
+    throw_if_window_destroyed();
     return static_cast<void*>(m_hwnd);
 }
 
-std::string win32_window::get_title()
+std::string win32_window::title()
 {
     throw_if_window_destroyed();
 
@@ -72,7 +89,7 @@ std::string win32_window::get_title()
     }
 
     std::string s{};
-    s.reserve(len);
+    s.reserve(static_cast<size_t>(len));
 
     if (GetWindowText(m_hwnd, s.data(), static_cast<int>(s.capacity())) == 0)
     {
@@ -82,7 +99,7 @@ std::string win32_window::get_title()
     return s;
 }
 
-void win32_window::set_title(const std::string& new_title)
+void win32_window::title(const std::string& new_title)
 {
     throw_if_window_destroyed();
 
@@ -90,6 +107,12 @@ void win32_window::set_title(const std::string& new_title)
     {
         throw std::runtime_error("Failed to set window title");
     }
+}
+
+void win32_window::focus()
+{
+    throw_if_window_destroyed();
+    SetFocus(m_hwnd);
 }
 
 LRESULT CALLBACK win32_window::window_proc_static(HWND hwnd, UINT msg, WPARAM w_param, LPARAM l_param)
@@ -138,6 +161,14 @@ LRESULT win32_window::window_proc(UINT msg, WPARAM w_param, LPARAM l_param)
         }
 
         return FALSE;
+
+    case WM_SETFOCUS:
+        m_is_focused = true;
+        break;
+
+    case WM_KILLFOCUS:
+        m_is_focused = false;
+        break;
     }
 
     return DefWindowProc(m_hwnd, msg, w_param, l_param);

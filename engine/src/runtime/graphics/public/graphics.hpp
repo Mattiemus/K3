@@ -1,17 +1,14 @@
 #pragma once
 
-#include <vector>
-#include <span>
-#include <initializer_list>
-#include <string>
-#include <stdexcept>
-#include <memory>
-
+#include "core.hpp"
 #include "math.hpp"
 
-#include "core/utilities/enums.hpp"
-
 #include "graphics/enums.hpp"
+#include "graphics/resource_region_1d.hpp"
+#include "graphics/resource_region_2d.hpp"
+#include "graphics/resource_region_3d.hpp"
+#include "graphics/display_mode.hpp"
+#include "graphics/presentation_parameters.hpp"
 #include "graphics/exceptions.hpp"
 #include "graphics/graphics_resource.hpp"
 #include "graphics/vertex_element.hpp"
@@ -21,7 +18,9 @@
 #include "graphics/impl/graphics_resource_impl.hpp"
 #include "graphics/impl/vertex_buffer_impl.hpp"
 #include "graphics/impl/index_buffer_impl.hpp"
+#include "graphics/impl/swap_chain_impl.hpp"
 
+#include "graphics/swap_chain.hpp"
 #include "graphics/vertex_buffer.hpp"
 #include "graphics/vertex_buffer_binding.hpp"
 #include "graphics/index_buffer.hpp"

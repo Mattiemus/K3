@@ -1,7 +1,5 @@
 #pragma once
 
-#include "core/engine/service_locator.hpp"
-
 namespace openworld
 {
     class engine final

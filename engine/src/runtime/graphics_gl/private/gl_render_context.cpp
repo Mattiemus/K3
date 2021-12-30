@@ -143,6 +143,8 @@ void gl_render_context::draw_indexed_instanced(
     size_t start_instance_offset)
 {
     auto draw_mode = to_gl_enum(prim_type);
+
+    // TODO: Get index type from index buffer
     GLenum index_type = GL_UNSIGNED_SHORT;
 
     glDrawElementsInstancedBaseVertex(

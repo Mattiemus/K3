@@ -28,13 +28,13 @@ namespace openworld
         vertex_buffer(
             openworld::render_system& render_sys,
             const vertex_layout& layout,
-            const std::span<const std::byte>& data,
+            const memory_region& data,
             resource_usage usage = resource_usage::static_usage);
 
         vertex_buffer(
             openworld::render_system& render_sys,
             const vertex_layout& layout,
-            const std::span<const std::span<const std::byte>>& data,
+            const std::vector<memory_region>& data,
             resource_usage usage = resource_usage::static_usage);
         
         virtual ~vertex_buffer() {}
@@ -65,78 +65,48 @@ namespace openworld
         }
 
         void get_interleaved_data(
-            const std::span<const std::span<std::byte>>& data)
+            const std::vector<memory_region>& data)
         {
             m_impl->get_interleaved_data(data);
         }
 
         void set_interleaved_data(
             render_context& render_ctx,
-            const std::span<const std::span<const std::byte>>& data)
+            const std::vector<memory_region>& data)
         {
             m_impl->set_interleaved_data(render_ctx, data);
         }
 
         void get_data(
-            const std::span<std::byte>& data,
+            const memory_region& data,
+            size_t start_index,
             size_t element_count,
-            size_t element_size,
-            size_t read_start_offset,
+            size_t buffer_read_start_offset,
             size_t vertex_stride)
         {
             m_impl->get_data(
                 data,
+                start_index,
                 element_count,
-                element_size,
-                read_start_offset,
-                vertex_stride);
-        }
-
-        template <typename Element>
-        void get_data(
-            const std::span<Element>& data,
-            size_t vertex_stride)
-        {
-            m_impl->get_data(
-                std::as_bytes(data),
-                data.size(),
-                sizeof(Element),
-                0,
+                buffer_read_start_offset,
                 vertex_stride);
         }
 
         void set_data(
             render_context& render_ctx,
-            const std::span<const std::byte>& data,
+            const memory_region& data,
+            size_t start_index,
             size_t element_count,
-            size_t element_size,
-            size_t write_start_offset,
+            size_t buffer_write_start_offset,
             size_t vertex_stride,
             data_write_options write_opts)
         {
             m_impl->set_data(
                 render_ctx,
                 data,
+                start_index,
                 element_count,
-                element_size,
-                write_start_offset,
-                vertex_stride,
-                write_opts);
-        }
-
-        template <typename Element>
-        void set_data(
-            render_context& render_ctx,
-            const std::span<const Element>& data,
-            size_t vertex_stride,
-            data_write_options write_opts)
-        {
-            m_impl->set_data(
-                render_ctx,
-                std::as_bytes(data),
-                data.size(),
-                sizeof(Element),
-                0,
+                buffer_write_start_offset,
                 vertex_stride,
                 write_opts);
         }

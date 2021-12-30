@@ -1,9 +1,5 @@
-﻿#include "core/engine/engine.hpp"
+﻿#include "core.hpp"
 #include "math.hpp"
-#include "core/platform/platform_service.hpp"
-#include "core/platform/application_host.hpp"
-#include "core/platform/window.hpp"
-#include "core/platform/win32/win32_platform_service.hpp"
 #include "graphics_gl.hpp"
 
 using namespace openworld;
@@ -11,20 +7,17 @@ using namespace openworld;
 int main()
 {
     engine::initialize();
-    engine::services().make_service<platform_service, win32_platform_service>();
+    engine::services().make_service<platform_system, win32_platform_system>();
     engine::services().make_service<render_system, gl_render_system>();
 
-    auto host = std::make_shared<application_host>();
-    auto win = host->create_window(true);
+    application_host app_host{};
+    auto win = app_host.create_window(true);
 
     auto render_sys = engine::services().get_service<render_system>();
     auto& ctx = render_sys->immediate_context();
 
 
-
     gl_swap_chain swap_chain{ win };
-
-
 
 
     shader vertex_shader(
@@ -67,10 +60,10 @@ int main()
         0, 3, 1
     };
 
-    vertex_buffer vertex_buff(*render_sys, vertices_layout, std::as_bytes(std::span(vertices)));
-    index_buffer index_buff(*render_sys, indices);
+    vertex_buffer vertex_buff(*render_sys, vertices_layout, memory_region(vertices));
+    index_buffer index_buff(*render_sys, index_format::ushort, memory_region(indices));
 
-    return host->run(
+    return app_host.run(
         [&]()
         {
             ctx.clear(color::green());

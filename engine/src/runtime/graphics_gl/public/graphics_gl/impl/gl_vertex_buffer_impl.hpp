@@ -19,13 +19,13 @@ namespace openworld
 		gl_vertex_buffer_impl(
 			openworld::gl_render_system& render_sys,
 			const vertex_layout& layout,
-			const std::span<const std::byte>& data,
+			const memory_region& data,
 			resource_usage usage);
 
 		gl_vertex_buffer_impl(
 			openworld::gl_render_system& render_sys,
 			const vertex_layout& layout,
-			const std::span<const std::span<const std::byte>>& data,
+			const std::vector<memory_region>& data,
 			resource_usage usage);
 
 		virtual ~gl_vertex_buffer_impl();
@@ -63,25 +63,25 @@ namespace openworld
 		}
 
 		virtual void get_interleaved_data(
-			const std::span<const std::span<std::byte>>& data) override;
+			const std::vector<memory_region>& data) override;
 
 		virtual void set_interleaved_data(
 			render_context& render_ctx,
-			const std::span<const std::span<const std::byte>>& data) override;
+			const std::vector<memory_region>& data) override;
 
 		virtual void get_data(
-			const std::span<std::byte>& data,
+			const memory_region& data,
+			size_t start_index,
 			size_t element_count,
-			size_t element_size,
-			size_t read_start_offset,
+			size_t buffer_read_start_offset,
 			size_t vertex_stride) override;
 
 		virtual void set_data(
 			render_context& render_ctx,
-			const std::span<const std::byte>& data,
+			const memory_region& data,
+			size_t start_index,
 			size_t element_count,
-			size_t element_size,
-			size_t write_start_offset,
+			size_t buffer_write_start_offset,
 			size_t vertex_stride,
 			data_write_options write_opts) override;
 
@@ -124,7 +124,7 @@ namespace openworld
 
 		virtual std::unique_ptr<vertex_buffer_impl> create_impl(
 			const vertex_layout& layout,
-			const std::span<const std::byte>& data,
+			const memory_region& data,
 			resource_usage usage) override
 		{
 			return std::make_unique<gl_vertex_buffer_impl>(
@@ -136,7 +136,7 @@ namespace openworld
 
 		virtual std::unique_ptr<vertex_buffer_impl> create_impl(
 			const vertex_layout& layout,
-			const std::span<const std::span<const std::byte>>& data,
+			const std::vector<memory_region>& data,
 			resource_usage usage) override
 		{
 			return std::make_unique<gl_vertex_buffer_impl>(

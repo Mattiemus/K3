@@ -15,25 +15,25 @@ namespace openworld
 		virtual resource_usage usage() const = 0;
 
 		virtual void get_interleaved_data(
-			const std::span<const std::span<std::byte>>& data) = 0;
+			const std::vector<memory_region>& data) = 0;
 
 		virtual void set_interleaved_data(
 			render_context& render_ctx,
-			const std::span<const std::span<const std::byte>>& data) = 0;
+			const std::vector<memory_region>& data) = 0;
 
 		virtual void get_data(
-			const std::span<std::byte>& data,
+			const memory_region& data,
+			size_t start_index,
 			size_t element_count,
-			size_t element_size,
-			size_t read_start_offset,
+			size_t buffer_read_start_offset,
 			size_t vertex_stride) = 0;
 
 		virtual void set_data(
 			render_context& render_ctx,
-			const std::span<const std::byte>& data,
+			const memory_region& data,
+			size_t start_index,
 			size_t element_count,
-			size_t element_size,
-			size_t write_start_offset,
+			size_t buffer_write_start_offset,
 			size_t vertex_stride,
 			data_write_options write_opts) = 0;
 	};
@@ -51,12 +51,12 @@ namespace openworld
 
 		virtual std::unique_ptr<vertex_buffer_impl> create_impl(
 			const vertex_layout& layout,
-			const std::span<const std::byte>& data,
+			const memory_region& data,
 			resource_usage usage) = 0;
 
 		virtual std::unique_ptr<vertex_buffer_impl> create_impl(
 			const vertex_layout& layout,
-			const std::span<const std::span<const std::byte>>& data,
+			const std::vector<memory_region>& data,
 			resource_usage usage) = 0;
 	};
 }

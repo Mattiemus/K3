@@ -1,7 +1,6 @@
 #pragma once
 
-#include <cstdint>
-#include <cmath>
+#include "core.hpp"
 
 #include "math/math_utils.hpp"
 #include "math/color.hpp"
@@ -24,6 +23,7 @@
 #include "math/uint4.hpp"
 #include "math/ushort2.hpp"
 #include "math/ushort4.hpp"
+#include "math/int_rectangle.hpp"
 
 #include "math/detail/color.hpp"
 #include "math/detail/float4x4.hpp"

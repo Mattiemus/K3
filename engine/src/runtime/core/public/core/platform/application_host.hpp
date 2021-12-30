@@ -1,9 +1,5 @@
 #pragma once
 
-#include "core/engine/engine.hpp"
-#include "core/platform/impl/application_host_impl.hpp"
-#include "core/platform/platform_service.hpp"
-
 namespace openworld
 {
     class application_host final
@@ -11,13 +7,13 @@ namespace openworld
     public:
         application_host()
         {
-            auto svc = engine::services().get_service<platform_service>();
-            m_impl = svc->create_application_host_impl();
+            auto playform_sys = engine::services().get_service<platform_system>();
+            m_impl = playform_sys->create_application_host_impl();
         }
 
-        application_host(platform_service& svc)
+        application_host(platform_system& playform_sys)
         {
-            m_impl = svc.create_application_host_impl();
+            m_impl = playform_sys.create_application_host_impl();
         }
 
         bool is_running()
@@ -46,6 +42,6 @@ namespace openworld
         }
 
     private:
-        std::shared_ptr<application_host_impl> m_impl;
+        std::unique_ptr<application_host_impl> m_impl;
     };
 }

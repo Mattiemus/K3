@@ -19,7 +19,7 @@ namespace openworld
 		gl_index_buffer_impl(
 			openworld::gl_render_system& render_sys,
 			index_format format,
-			const std::span<const std::byte>& data,
+			const memory_region& data,
 			resource_usage usage);
 
 		virtual ~gl_index_buffer_impl();
@@ -57,17 +57,17 @@ namespace openworld
 		}
 
 		virtual void get_data(
-			const std::span<std::byte>& data,
+			const memory_region& data,
+			size_t start_index,
 			size_t element_count,
-			size_t element_size,
-			size_t read_start_offset) override;
+			size_t buffer_read_start_offset) override;
 
 		virtual void set_data(
 			render_context& render_ctx,
-			const std::span<const std::byte>& data,
+			const memory_region& data,
+			size_t start_index,
 			size_t element_count,
-			size_t element_size,
-			size_t write_start_offset,
+			size_t buffer_write_start_offset,
 			data_write_options write_opts) override;
 
 	private:
@@ -109,7 +109,7 @@ namespace openworld
 
 		virtual std::unique_ptr<index_buffer_impl> create_impl(
 			index_format format,
-			const std::span<const std::byte>& data,
+			const memory_region& data,
 			resource_usage usage) override
 		{
 			return std::make_unique<gl_index_buffer_impl>(

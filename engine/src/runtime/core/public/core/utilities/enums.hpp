@@ -1,7 +1,5 @@
 #pragma once
 
-#include <type_traits>
-
 #define OPENWORLD_DEFINE_ENUM_FLAG_OPERATORS(ENUM) \
     constexpr ENUM operator|(ENUM lhs, ENUM rhs) noexcept \
     { \

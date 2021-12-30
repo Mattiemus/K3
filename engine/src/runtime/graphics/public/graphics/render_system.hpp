@@ -15,10 +15,12 @@ namespace openworld
 
         //IGraphicsAdapter Adapter{ get; }
         //bool AreCommandListsSupported{ get; }
+        // 
         //IPredefinedBlendStateProvider PredefinedBlendStates{ get; }
         //IPredefinedDepthStencilStateProvider PredefinedDepthStencilStates{ get; }
         //IPredefinedRasterizerStateProvider PredefinedRasterizerStates{ get; }
         //IPredefinedSamplerStateProvider PredefinedSamplerStates{ get; }
+        // 
         //StandardEffectLibrary StandardEffects{ get; }
         //IDeferredRenderContext CreateDeferredRenderContext();
 

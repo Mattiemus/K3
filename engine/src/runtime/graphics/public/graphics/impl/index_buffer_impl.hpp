@@ -15,17 +15,17 @@ namespace openworld
 		virtual resource_usage usage() const = 0;
 
 		virtual void get_data(
-			const std::span<std::byte>& data,
+			const memory_region& data,
+			size_t start_index,
 			size_t element_count,
-			size_t element_size,
-			size_t read_start_offset) = 0;
+			size_t buffer_read_start_offset) = 0;
 
 		virtual void set_data(
 			render_context& render_ctx,
-			const std::span<const std::byte>& data,
+			const memory_region& data,
+			size_t start_index,
 			size_t element_count,
-			size_t element_size,
-			size_t write_start_offset,
+			size_t buffer_write_start_offset,
 			data_write_options write_opts) = 0;
 	};
 
@@ -42,7 +42,7 @@ namespace openworld
 
 		virtual std::unique_ptr<index_buffer_impl> create_impl(
 			index_format format,
-			const std::span<const std::byte>& data,
+			const memory_region& data,
 			resource_usage usage) = 0;
 	};
 }

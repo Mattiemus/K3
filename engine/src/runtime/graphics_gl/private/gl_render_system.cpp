@@ -22,7 +22,7 @@ graphics_resource_impl_factory& gl_render_system::get_impl_factory(graphics_reso
 		return m_index_buffer_impl_factory;
 	}
 
-	throw std::exception("Unknown resource type");
+	throw graphics_exception("Unsupported graphics resource type");
 }
 
 bool gl_render_system::is_supported(graphics_resource_type resource_type)

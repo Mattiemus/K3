@@ -1,8 +1,4 @@
-#include <cassert>
-#include <stdexcept>
-
-#include "core/platform/win32/win32_application_host_impl.hpp"
-#include "core/platform/win32/win32_window.hpp"
+#include "core.hpp"
 
 using namespace openworld;
 

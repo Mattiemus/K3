@@ -1,12 +1,5 @@
 #pragma once
 
-#include <typeinfo>
-#include <typeindex>
-#include <unordered_map>
-#include <memory>
-
-#include "core/engine/exceptions.hpp"
-
 namespace openworld
 {
     class service_locator final

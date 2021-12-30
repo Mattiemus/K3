@@ -4,14 +4,47 @@ namespace openworld
 {
     enum class index_format
     {
-        bits16,
-        bits32
+        ushort,
+        uint
+    };
+
+    constexpr size_t format_size(index_format format) noexcept
+    {
+        switch (format)
+        {
+        case index_format::ushort:
+            return sizeof(unsigned short);
+        case index_format::uint:
+            return sizeof(unsigned int);
+        default:
+            return 0;
+        }
+    }
+
+    enum class surface_format
+    {
+        color = 0,
+        bgr_color = 1,
+        bgr565 = 2,
+        bgra5551 = 3,
+        dxt1 = 4,
+        dxt3 = 5,
+        dxt5 = 6,
+        rgba1010102 = 7,
+        rg32 = 8,
+        rgba64 = 9,
+        alpha8 = 10,
+        _float = 11,
+        float2 = 12,
+        float3 = 13,
+        float4 = 14
     };
 
     enum class graphics_resource_type
     {
         vertex_buffer,
-        index_buffer
+        index_buffer,
+        swap_chain
     };
 
     enum class resource_usage
@@ -172,4 +205,36 @@ namespace openworld
         discard,
         no_overwrite
     };
+
+    enum class depth_format
+    {
+        none = 0,
+        depth16 = 1,
+        depth24_stencil8 = 2,
+        depth32 = 3,
+        depth32_stencil8 = 4
+    };
+
+    enum class present_interval
+    {
+        immediate = 0,
+        one = 1,
+        two = 2
+    };
+
+    enum class render_target_usage
+    {
+        discard_contents = 0,
+        preserve_contents = 1,
+        platform_default = 2
+    };
+
+    enum class display_orientation
+    {
+        _default = 0,
+        landscape_left = 1,
+        landscape_right = 2,
+        Portrait = 4
+    };
+    OPENWORLD_DEFINE_ENUM_FLAG_OPERATORS(display_orientation);
 }

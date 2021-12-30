@@ -9,5 +9,5 @@ namespace openworld
         warn = 2,
         info = 3,
         debug = 4
-    }
+    };
 }

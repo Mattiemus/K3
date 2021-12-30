@@ -1,6 +1,4 @@
-#include <stdexcept>
-
-#include "core/engine/engine.hpp"
+#include "core.hpp"
 
 using namespace openworld;
 

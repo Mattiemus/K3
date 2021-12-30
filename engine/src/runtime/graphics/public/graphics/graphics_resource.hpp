@@ -5,6 +5,9 @@ namespace openworld
 	class render_system;
 	class graphics_resource_impl;
 
+	template <typename Resource>
+	class graphics_resource_traits;
+
 	class graphics_resource
 	{
 	public:
@@ -41,7 +44,4 @@ namespace openworld
 		std::string m_name;
 		void* m_tag;
 	};
-
-	template <typename Resource>
-	class graphics_resource_traits;
 }

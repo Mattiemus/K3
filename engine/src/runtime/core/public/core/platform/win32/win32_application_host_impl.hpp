@@ -1,10 +1,5 @@
 #pragma once
 
-#include <atomic>
-
-#include "core/platform/impl/application_host_impl.hpp"
-#include "core/platform/win32/win32_api.hpp"
-
 namespace openworld
 {
     class win32_application_host_impl final :

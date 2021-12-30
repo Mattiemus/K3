@@ -28,17 +28,7 @@ namespace openworld
         index_buffer(
             openworld::render_system& render_sys,
             index_format format,
-            const std::span<const std::byte>& data,
-            resource_usage usage = resource_usage::static_usage);
-
-        index_buffer(
-            openworld::render_system& render_sys,
-            const std::span<const unsigned int>& data,
-            resource_usage usage = resource_usage::static_usage);
-
-        index_buffer(
-            openworld::render_system& render_sys,
-            const std::span<const unsigned short>& data,
+            const memory_region& data,
             resource_usage usage = resource_usage::static_usage);
 
         virtual ~index_buffer() {}
@@ -69,32 +59,32 @@ namespace openworld
         }
 
         void get_data(
-            const std::span<std::byte>& data,
+            const memory_region& data,
+            size_t start_index,
             size_t element_count,
-            size_t element_size,
-            size_t read_start_offset)
+            size_t buffer_read_start_offset)
         {
             m_impl->get_data(
                 data, 
+                start_index,
                 element_count,
-                element_size,
-                read_start_offset);
+                buffer_read_start_offset);
         }
 
         void set_data(
             render_context& render_ctx,
-            const std::span<const std::byte>& data,
+            const memory_region& data,
+            size_t start_index,
             size_t element_count,
-            size_t element_size,
-            size_t write_start_offset,
+            size_t buffer_write_start_offset,
             data_write_options write_opts)
         {
             m_impl->set_data(
                 render_ctx,
                 data,
+                start_index,
                 element_count,
-                element_size,
-                write_start_offset,
+                buffer_write_start_offset,
                 write_opts);
         }
 
