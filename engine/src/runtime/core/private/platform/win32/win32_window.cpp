@@ -53,6 +53,18 @@ win32_window::~win32_window()
     }
 }
 
+bool win32_window::enable_input_events()
+{
+    throw_if_window_destroyed();
+    return m_is_input_events_enabled;
+}
+
+void win32_window::enable_input_events(bool enable)
+{
+    throw_if_window_destroyed();
+    m_is_input_events_enabled = enable;
+}
+
 bool win32_window::is_minimized()
 {
     throw_if_window_destroyed();
@@ -63,6 +75,12 @@ bool win32_window::is_maximized()
 {
     throw_if_window_destroyed();
     return IsZoomed(m_hwnd) != FALSE;
+}
+
+bool win32_window::is_mouse_inside_window()
+{
+    throw_if_window_destroyed();
+    return m_is_mouse_over;
 }
 
 bool win32_window::is_focused()
@@ -162,13 +180,37 @@ LRESULT win32_window::window_proc(UINT msg, WPARAM w_param, LPARAM l_param)
 
         return FALSE;
 
+    case WM_SIZE:
+        client_size_changed(*this);
+        break;
+
     case WM_SETFOCUS:
         m_is_focused = true;
+        got_focus(*this);
         break;
 
     case WM_KILLFOCUS:
         m_is_focused = false;
+        lost_focus(*this);
         break;
+    }
+
+    if (m_is_input_events_enabled)
+    {
+        switch (msg)
+        {
+        case WM_MOUSEMOVE:
+            if (!m_is_mouse_over)
+            {
+                m_is_mouse_over = true;
+                mouse_enter(*this);
+            }
+            break;
+
+        case WM_MOUSELEAVE:
+            mouse_leave(*this);
+            break;
+        }
     }
 
     return DefWindowProc(m_hwnd, msg, w_param, l_param);

@@ -53,14 +53,12 @@ int main()
         { { -0.5f, -0.5f,  0.0f }, { 0, 0,  255, 255 } },
         { { 0.5f,  0.5f,  0.0f }, { 255, 0,  0, 255 } },
     };
-    const auto& vertices_layout = vertex_position_color::vertex_layout;
+    vertex_buffer vertex_buff(*render_sys, vertex_position_color::vertex_layout, memory_region(vertices));
 
     std::vector<unsigned short> indices{
         0, 1, 2,
         0, 3, 1
     };
-
-    vertex_buffer vertex_buff(*render_sys, vertices_layout, memory_region(vertices));
     index_buffer index_buff(*render_sys, index_format::ushort, memory_region(indices));
 
     return app_host.run(

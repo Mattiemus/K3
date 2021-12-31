@@ -20,6 +20,7 @@ namespace openworld
     {
     public:
         swap_chain(
+            openworld::render_system& render_sys,
             void* window_handle,
             const presentation_parameters& presentation_params);
 

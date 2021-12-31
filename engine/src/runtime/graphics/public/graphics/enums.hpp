@@ -44,7 +44,8 @@ namespace openworld
     {
         vertex_buffer,
         index_buffer,
-        swap_chain
+        swap_chain,
+        occlusion_query
     };
 
     enum class resource_usage
@@ -237,4 +238,12 @@ namespace openworld
         Portrait = 4
     };
     OPENWORLD_DEFINE_ENUM_FLAG_OPERATORS(display_orientation);
+
+    enum class texture_dimension
+    {
+        one = 0,
+        two = 1,
+        three = 2,
+        cube = 3
+    };
 }

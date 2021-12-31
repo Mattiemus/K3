@@ -81,4 +81,13 @@ namespace openworld
 
         virtual void flush() = 0;
     };
+
+    class deferred_render_context :
+        public render_context
+    {
+    public:
+        virtual ~deferred_render_context() = 0 {};
+
+        //ICommandList FinishCommandList(bool restoreDeferredContextState);
+    };
 }

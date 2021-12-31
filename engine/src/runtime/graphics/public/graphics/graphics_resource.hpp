@@ -11,7 +11,10 @@ namespace openworld
 	class graphics_resource
 	{
 	public:
-		graphics_resource();
+		constexpr graphics_resource() :
+			m_name("<no name>"), m_tag(nullptr)
+		{}
+
 		virtual ~graphics_resource() = 0 {}
 
 		virtual graphics_resource_impl* impl() const noexcept = 0;
@@ -36,9 +39,15 @@ namespace openworld
 			m_tag = new_tag;
 		}
 
-		size_t resource_id() const;
+		size_t resource_id() const
+		{
+			return impl()->resource_id();
+		}
 
-		openworld::render_system& render_system() const;
+		openworld::render_system& render_system() const
+		{
+			return impl()->render_system();
+		}
 
 	private:
 		std::string m_name;

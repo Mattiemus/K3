@@ -15,6 +15,11 @@
 #include <span>
 #include <optional>
 #include <atomic>
+#include <mutex>
+#include <thread>
+#include <utility>
+
+#include "core/signals/signal.hpp"
 
 #include "core/engine/exceptions.hpp"
 #include "core/engine/service_locator.hpp"
