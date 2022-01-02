@@ -45,7 +45,26 @@ namespace openworld
         vertex_buffer,
         index_buffer,
         swap_chain,
-        occlusion_query
+        occlusion_query,
+        blend_state
+    };
+
+    enum class shader_resource_type
+    {
+        unknown = 0,
+        buffer = 1,
+        texture_1d = 2,
+        texture_1d_array = 3,
+        texture_2d = 4,
+        texture_2d_array = 5,
+        texture_2d_ms = 6,
+        texture_2d_ms_array = 7,
+        texture_3d = 8,
+        texture_cube = 9,
+        texture_cube_array = 10,
+        texture_cube_ms = 11,
+        texture_cube_ms_array = 12,
+        sampler_state = 13
     };
 
     enum class resource_usage
@@ -246,4 +265,49 @@ namespace openworld
         three = 2,
         cube = 3
     };
+
+    enum class render_state_type
+    {
+        blend_state = 0,
+        depth_stencil_state = 1,
+        rasterizer_state = 2,
+        sampler_state = 3
+    };
+
+    enum class blend_function
+    {
+        add = 0,
+        subtract = 1,
+        reverse_subtract = 2,
+        minimum = 3,
+        maximum = 4
+    };
+
+    enum class blend
+    {
+        zero = 0,
+        one = 1,
+        source_color = 2,
+        inverse_source_color = 3,
+        source_alpha = 4,
+        inverse_source_alpha = 5,
+        destination_color = 6,
+        inverse_destination_color = 7,
+        destination_alpha = 8,
+        inverse_destination_alpha = 9,
+        blend_factor = 10,
+        inverse_blend_factor = 11,
+        source_alpha_saturation = 12
+    };
+
+    enum class color_write_channels
+    {
+        none = 0,
+        red = 1,
+        green = 2,
+        blue = 4,
+        alpha = 8,
+        all = red | green | blue | alpha
+    };
+    OPENWORLD_DEFINE_ENUM_FLAG_OPERATORS(color_write_channels);
 }

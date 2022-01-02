@@ -8,6 +8,10 @@ namespace openworld
 		public graphics_resource_impl
 	{
 	public:
+		swap_chain_impl(size_t resource_id, openworld::render_system& render_system) :
+			graphics_resource_impl(resource_id, render_system)
+		{}
+
 		virtual ~swap_chain_impl() = 0 {}
 
         virtual const openworld::presentation_parameters& presentation_parameters() const = 0;
@@ -44,6 +48,10 @@ namespace openworld
 		public graphics_resource_impl_factory
 	{
 	public:
+		swap_chain_impl_factory(openworld::render_system& render_system) :
+			graphics_resource_impl_factory(render_system)
+		{}
+
 		virtual ~swap_chain_impl_factory() = 0 {}
 
 		virtual std::unique_ptr<swap_chain_impl> create_impl(

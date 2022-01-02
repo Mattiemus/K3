@@ -7,7 +7,9 @@ add_library(${PROJECT_NAME} STATIC
     "private/vertex_structures.cpp"
     "private/vertex_buffer.cpp"    
     "private/index_buffer.cpp"
-    "private/occlusion_query.cpp")
+    "private/occlusion_query.cpp"
+    "private/blend_state.cpp"
+    "private/msaa_description.cpp")
 
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 

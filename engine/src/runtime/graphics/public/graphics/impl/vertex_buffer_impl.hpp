@@ -8,6 +8,10 @@ namespace openworld
 		public graphics_resource_impl
 	{
 	public:
+		vertex_buffer_impl(size_t resource_id, openworld::render_system& render_system) :
+			graphics_resource_impl(resource_id, render_system)
+		{}
+
 		virtual ~vertex_buffer_impl() = 0 {}
 
 		virtual const vertex_layout& layout() const = 0;
@@ -42,6 +46,10 @@ namespace openworld
 		public graphics_resource_impl_factory
 	{
 	public:
+		vertex_buffer_impl_factory(openworld::render_system& render_system) :
+			graphics_resource_impl_factory(render_system)
+		{}
+
 		virtual ~vertex_buffer_impl_factory() = 0 {}
 
 		virtual std::unique_ptr<vertex_buffer_impl> create_impl(

@@ -30,7 +30,7 @@ int main()
         "void main() {\n"
         "    colour = vertex_colour;\n"
         "    gl_Position = vec4(vertex_position, 1.0);\n"
-        "}\n");
+        "}");
 
     shader frag_shader(
         shader_language::glsl_source,
@@ -40,7 +40,7 @@ int main()
         "out vec4 frag_colour;\n"
         "void main() {\n"
         "  frag_colour = colour;\n"
-        "}\n");
+        "}");
 
     gl_shader_group shader_group({ vertex_shader, frag_shader });
 

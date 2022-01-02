@@ -23,14 +23,7 @@ vertex_buffer::vertex_buffer(
         throw graphics_exception("Render system does not supported vertex buffers");
     }
 
-    try
-    {
-        m_impl = render_sys.make_impl<vertex_buffer>(layout, vertex_count, usage);
-    }
-    catch (...)
-    {
-        throw graphics_exception("Failed to create graphics resource");
-    }
+    m_impl = render_sys.make_impl<vertex_buffer>(layout, vertex_count, usage);
 }
 
 vertex_buffer::vertex_buffer(
@@ -57,14 +50,7 @@ vertex_buffer::vertex_buffer(
         throw graphics_exception("Render system does not supported vertex buffers");
     }
 
-    try
-    {
-        m_impl = render_sys.make_impl<vertex_buffer>(layout, data, usage);
-    }
-    catch (...)
-    {
-        throw graphics_exception("Failed to create graphics resource");
-    }
+    m_impl = render_sys.make_impl<vertex_buffer>(layout, data, usage);
 }
 
 vertex_buffer::vertex_buffer(
@@ -125,12 +111,5 @@ vertex_buffer::vertex_buffer(
         throw graphics_exception("Render system does not supported vertex buffers");
     }
 
-    try
-    {
-        m_impl = render_sys.make_impl<vertex_buffer>(layout, data, usage);
-    }
-    catch (...)
-    {
-        throw graphics_exception("Failed to create graphics resource");
-    }
+    m_impl = render_sys.make_impl<vertex_buffer>(layout, data, usage);
 }

@@ -9,12 +9,5 @@ occlusion_query::occlusion_query(openworld::render_system& render_sys)
         throw graphics_exception("Render system does not supported occlusion queries");
     }
 
-    try
-    {
-        m_impl = render_sys.make_impl<occlusion_query>();
-    }
-    catch (...)
-    {
-        throw graphics_exception("Failed to create graphics resource");
-    }
+    m_impl = render_sys.make_impl<occlusion_query>();
 }

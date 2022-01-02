@@ -13,14 +13,7 @@ vertex_layout::vertex_layout(std::initializer_list<const vertex_element> element
     m_elements.insert(m_elements.end(), elements.begin(), elements.end());
     m_vertex_stride = calculate_offsets_and_get_vertex_stride(m_elements);
 
-    try
-    {
-        validate_vertex_elements(m_vertex_stride, m_elements);
-    }
-    catch (...)
-    {
-        throw graphics_exception("Failed to validate vertex declaration");
-    }
+    validate_vertex_elements(m_vertex_stride, m_elements);
 }
 
 vertex_layout::vertex_layout(std::span<const vertex_element> elements) :
@@ -34,14 +27,7 @@ vertex_layout::vertex_layout(std::span<const vertex_element> elements) :
     m_elements.insert(m_elements.end(), elements.begin(), elements.end());
     m_vertex_stride = calculate_offsets_and_get_vertex_stride(m_elements);
 
-    try
-    {
-        validate_vertex_elements(m_vertex_stride, m_elements);
-    }
-    catch (...)
-    {
-        throw graphics_exception("Failed to validate vertex declaration");
-    }
+    validate_vertex_elements(m_vertex_stride, m_elements);
 }
 
 vertex_layout::vertex_layout(size_t vertex_stride, const std::span<const vertex_element>& elements) :
@@ -54,14 +40,7 @@ vertex_layout::vertex_layout(size_t vertex_stride, const std::span<const vertex_
 
     m_elements.insert(m_elements.end(), elements.begin(), elements.end());
 
-    try
-    {
-        validate_vertex_elements(m_vertex_stride, m_elements);
-    }
-    catch (...)
-    {
-        throw graphics_exception("Failed to validate vertex declaration");
-    }
+    validate_vertex_elements(m_vertex_stride, m_elements);
 }
 
 size_t vertex_layout::calculate_offsets_and_get_vertex_stride(const std::span<vertex_element>& elements)

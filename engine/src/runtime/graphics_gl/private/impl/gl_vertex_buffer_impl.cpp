@@ -3,11 +3,13 @@
 using namespace openworld;
 
 gl_vertex_buffer_impl::gl_vertex_buffer_impl(
+	size_t resource_id,
 	openworld::gl_render_system& render_sys,
 	const vertex_layout& layout,
 	size_t vertex_count,
 	resource_usage usage) :
-	m_render_sys(render_sys),
+	vertex_buffer_impl(resource_id, render_sys),
+	m_gl_render_sys(render_sys),
 	m_buffer_id(0),
 	m_vertex_layout(layout),
 	m_vertex_count(0),
@@ -17,11 +19,13 @@ gl_vertex_buffer_impl::gl_vertex_buffer_impl(
 }
 
 gl_vertex_buffer_impl::gl_vertex_buffer_impl(
+	size_t resource_id,
 	openworld::gl_render_system& render_sys,
 	const vertex_layout& layout,
 	const memory_region& data,
 	resource_usage usage) :
-	m_render_sys(render_sys),
+	vertex_buffer_impl(resource_id, render_sys),
+	m_gl_render_sys(render_sys),
 	m_buffer_id(0),
 	m_vertex_layout(layout),
 	m_vertex_count(0),
@@ -32,11 +36,13 @@ gl_vertex_buffer_impl::gl_vertex_buffer_impl(
 }
 
 gl_vertex_buffer_impl::gl_vertex_buffer_impl(
+	size_t resource_id,
 	openworld::gl_render_system& render_sys,
 	const vertex_layout& layout,
 	const std::vector<memory_region>& data,
 	resource_usage usage) :
-	m_render_sys(render_sys),
+	vertex_buffer_impl(resource_id, render_sys),
+	m_gl_render_sys(render_sys),
 	m_buffer_id(0),
 	m_vertex_layout(layout),
 	m_vertex_count(0),
@@ -48,11 +54,6 @@ gl_vertex_buffer_impl::gl_vertex_buffer_impl(
 gl_vertex_buffer_impl::~gl_vertex_buffer_impl()
 {
 	glDeleteBuffers(1, &m_buffer_id);
-}
-
-openworld::render_system& gl_vertex_buffer_impl::render_system() const
-{
-	return m_render_sys;
 }
 
 void gl_vertex_buffer_impl::get_interleaved_data(

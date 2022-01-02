@@ -33,12 +33,12 @@ namespace openworld
             return m_impl.get();
         }
 
-        bool is_complete()
+        bool is_complete() const
         {
             return m_impl->is_complete();
         }
 
-        size_t pixel_count()
+        size_t pixel_count() const
         {
             return m_impl->pixel_count();
         }

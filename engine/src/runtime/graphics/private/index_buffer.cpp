@@ -23,14 +23,7 @@ index_buffer::index_buffer(
         throw graphics_exception("Render system does not supported index buffers");
     }
 
-    try
-    {
-        m_impl = render_sys.make_impl<index_buffer>(format, index_count, usage);
-    }
-    catch (...)
-    {
-        throw graphics_exception("Failed to create graphics resource");
-    }
+    m_impl = render_sys.make_impl<index_buffer>(format, index_count, usage);
 }
 
 index_buffer::index_buffer(
@@ -57,12 +50,5 @@ index_buffer::index_buffer(
         throw graphics_exception("Render system does not supported index buffers");
     }
 
-    try
-    {
-        m_impl = render_sys.make_impl<index_buffer>(format, data, usage);
-    }
-    catch (...)
-    {
-        throw graphics_exception("Failed to create graphics resource");
-    }
+    m_impl = render_sys.make_impl<index_buffer>(format, data, usage);
 }

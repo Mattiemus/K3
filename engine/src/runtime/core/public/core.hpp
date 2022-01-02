@@ -18,16 +18,18 @@
 #include <mutex>
 #include <thread>
 #include <utility>
+#include <algorithm>
 
 #include "core/signals/signal.hpp"
+
+#include "core/utilities/enums.hpp"
+#include "core/utilities/hash.hpp"
 
 #include "core/engine/exceptions.hpp"
 #include "core/engine/service_locator.hpp"
 #include "core/engine/engine.hpp"
 
 #include "core/containers/memory_region.hpp"
-
-#include "core/utilities/enums.hpp"
 
 #include "core/logging/enums.hpp"
 

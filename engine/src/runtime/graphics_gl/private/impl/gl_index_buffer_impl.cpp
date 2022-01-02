@@ -3,11 +3,13 @@
 using namespace openworld;
 
 gl_index_buffer_impl::gl_index_buffer_impl(
+	size_t resource_id,
 	openworld::gl_render_system& render_sys,
 	index_format format,
 	size_t index_count,
 	resource_usage usage) :
-	m_render_sys(render_sys),
+	index_buffer_impl(resource_id, render_sys),
+	m_gl_render_sys(render_sys),
 	m_buffer_id(0),
 	m_index_count(index_count),
 	m_index_format(format),
@@ -17,11 +19,13 @@ gl_index_buffer_impl::gl_index_buffer_impl(
 }
 
 gl_index_buffer_impl::gl_index_buffer_impl(
+	size_t resource_id,
 	openworld::gl_render_system& render_sys,
 	index_format format,
 	const memory_region& data,
 	resource_usage usage) :
-	m_render_sys(render_sys),
+	index_buffer_impl(resource_id, render_sys),
+	m_gl_render_sys(render_sys),
 	m_buffer_id(0),
 	m_index_count(0),
 	m_index_format(format),
@@ -34,11 +38,6 @@ gl_index_buffer_impl::gl_index_buffer_impl(
 gl_index_buffer_impl::~gl_index_buffer_impl()
 {
 	glDeleteBuffers(1, &m_buffer_id);
-}
-
-openworld::render_system& gl_index_buffer_impl::render_system() const
-{
-	return m_render_sys;
 }
 
 void gl_index_buffer_impl::get_data(

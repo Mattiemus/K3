@@ -25,6 +25,11 @@ namespace openworld
             a(a)
         {}
 
+        static constexpr color transparent_black() noexcept
+        {
+            return color(static_cast<uint8_t>(0), static_cast<uint8_t>(0), static_cast<uint8_t>(0), static_cast<uint8_t>(0));
+        }
+
         static constexpr color black() noexcept
         {
             return color(static_cast<uint8_t>(0), static_cast<uint8_t>(0), static_cast<uint8_t>(0), static_cast<uint8_t>(255));
@@ -63,3 +68,5 @@ namespace openworld
         return lhs.packed_value != rhs.packed_value;
     }
 }
+
+OPENWORLD_DEFINE_STD_HASH(::openworld::color, x.packed_value)
