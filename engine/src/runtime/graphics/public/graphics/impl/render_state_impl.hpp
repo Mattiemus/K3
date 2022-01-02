@@ -19,7 +19,7 @@ namespace openworld
 			return m_is_bound;
 		}
 
-		void bind_state()
+		void bind_render_state()
 		{
 			if (!m_is_bound)
 			{

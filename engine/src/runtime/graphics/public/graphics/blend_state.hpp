@@ -27,30 +27,20 @@ namespace openworld
 			return m_impl.get();
 		}
 
+		virtual openworld::render_state_impl* render_state_impl() const noexcept override
+		{
+			return m_impl.get();
+		}
+
 		openworld::blend_state_impl* blend_state_impl() const noexcept
 		{
 			return m_impl.get();
 		}
 
-        virtual bool is_bound() const override
-        {
-            return m_impl->is_bound();
-        }
-
         virtual render_state_type state_type() const override
         {
             return render_state_type::blend_state;
         }
-
-		virtual render_state_key state_key() const override
-		{
-			if (!m_impl->is_bound())
-			{
-				return compute_render_state_key();
-			}
-
-			return m_key;
-		}
 
 		size_t render_target_blend_count() const
 		{
@@ -122,21 +112,11 @@ namespace openworld
 				desc);
 		}
 
-		virtual void bind_render_state() override
-		{
-			if (!m_impl->is_bound())
-			{
-				m_impl->bind_blend_state();
-				m_key = compute_render_state_key();
-			}
-		}
-
     private:
         std::unique_ptr<openworld::blend_state_impl> m_impl;
-		render_state_key m_key;
 
-		void set_defaults();
-		render_state_key compute_render_state_key() const;
+		virtual void set_defaults() override;
+		virtual render_state_key compute_render_state_key() const override;
 	};
 }
 

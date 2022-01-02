@@ -18,11 +18,6 @@ vertex_buffer::vertex_buffer(
         throw graphics_exception("Vertex count must be greater than zero");
     }
 
-    if (!render_sys.is_supported<vertex_buffer>())
-    {
-        throw graphics_exception("Render system does not supported vertex buffers");
-    }
-
     m_impl = render_sys.make_impl<vertex_buffer>(layout, vertex_count, usage);
 }
 
@@ -43,11 +38,6 @@ vertex_buffer::vertex_buffer(
     if (total_size_bytes % vertex_stride != 0)
     {
         throw graphics_exception("Vertex layout stride mismatch");
-    }
-
-    if (!render_sys.is_supported<vertex_buffer>())
-    {
-        throw graphics_exception("Render system does not supported vertex buffers");
     }
 
     m_impl = render_sys.make_impl<vertex_buffer>(layout, data, usage);
@@ -104,11 +94,6 @@ vertex_buffer::vertex_buffer(
     if (total_size_bytes > layout.vertex_stride() * vertex_count)
     {
         throw graphics_exception("Vertex buffer size mismatch");
-    }
-
-    if (!render_sys.is_supported<vertex_buffer>())
-    {
-        throw graphics_exception("Render system does not supported vertex buffers");
     }
 
     m_impl = render_sys.make_impl<vertex_buffer>(layout, data, usage);

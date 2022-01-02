@@ -18,11 +18,6 @@ index_buffer::index_buffer(
         throw graphics_exception("Index count must be greater than zero");
     }
 
-    if (!render_sys.is_supported<index_buffer>())
-    {
-        throw graphics_exception("Render system does not supported index buffers");
-    }
-
     m_impl = render_sys.make_impl<index_buffer>(format, index_count, usage);
 }
 
@@ -43,11 +38,6 @@ index_buffer::index_buffer(
     if (data.size_element() != index_size || total_size_bytes % index_size != 0)
     {
         throw graphics_exception("Index format size mismatch");
-    }
-
-    if (!render_sys.is_supported<index_buffer>())
-    {
-        throw graphics_exception("Render system does not supported index buffers");
     }
 
     m_impl = render_sys.make_impl<index_buffer>(format, data, usage);

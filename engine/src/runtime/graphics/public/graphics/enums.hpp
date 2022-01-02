@@ -46,7 +46,8 @@ namespace openworld
         index_buffer,
         swap_chain,
         occlusion_query,
-        blend_state
+        blend_state,
+        depth_stencil_state
     };
 
     enum class shader_resource_type
@@ -310,4 +311,28 @@ namespace openworld
         all = red | green | blue | alpha
     };
     OPENWORLD_DEFINE_ENUM_FLAG_OPERATORS(color_write_channels);
+
+    enum class stencil_operation
+    {
+        keep = 0,
+        zero = 1,
+        replace = 2,
+        increment = 3,
+        decrement = 4,
+        increment_and_clamp = 5,
+        decrement_and_clamp = 6,
+        invert = 7
+    };
+
+    enum class comparison_function
+    {
+        always = 0,
+        never = 1,
+        less = 2,
+        less_equal = 3,
+        equal = 4,
+        greater_equal = 5,
+        greater = 6,
+        not_equal = 7
+    };
 }

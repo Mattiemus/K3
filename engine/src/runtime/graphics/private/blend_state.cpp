@@ -4,13 +4,7 @@ using namespace openworld;
 
 blend_state::blend_state(openworld::render_system& render_sys)
 {
-    if (!render_sys.is_supported<blend_state>())
-    {
-        throw graphics_exception("Render system does not supported blend state");
-    }
-
-    m_impl = render_sys.make_impl<blend_state>();
-    
+    m_impl = render_sys.make_impl<blend_state>();    
     set_defaults();
 }
 

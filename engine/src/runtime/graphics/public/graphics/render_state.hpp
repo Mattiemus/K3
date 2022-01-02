@@ -9,6 +9,8 @@ namespace openworld
 	public:
 		virtual ~render_state() = 0 {}
 
+		virtual openworld::render_state_impl* render_state_impl() const noexcept = 0;
+
 		virtual std::string standard_content_name() override
 		{
 			return m_predefined_state_name;
@@ -19,14 +21,38 @@ namespace openworld
 			return m_predefined_state_name.empty();
 		}
 
-		virtual bool is_bound() const = 0;
-		virtual render_state_type state_type() const = 0;
-		virtual render_state_key state_key() const = 0;
+		bool is_bound() const
+		{
+			return render_state_impl()->is_bound();
+		}
 
-		virtual void bind_render_state() = 0;
+		virtual render_state_type state_type() const = 0;
+
+		render_state_key state_key() const
+		{
+			if (!is_bound())
+			{
+				return compute_render_state_key();
+			}
+
+			return m_key;
+		}
+
+		void bind_render_state()
+		{
+			if (!is_bound())
+			{
+				render_state_impl()->bind_render_state();
+				m_key = compute_render_state_key();
+			}
+		}
 
 	protected:
 		std::string m_predefined_state_name;
+		render_state_key m_key;
+
+		virtual void set_defaults() = 0;
+		virtual render_state_key compute_render_state_key() const = 0;
 	};
 }
 
