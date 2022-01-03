@@ -38,6 +38,8 @@ namespace openworld
 			return m_key;
 		}
 
+		virtual void set_defaults() = 0;
+
 		void bind_render_state()
 		{
 			if (!is_bound())
@@ -51,7 +53,6 @@ namespace openworld
 		std::string m_predefined_state_name;
 		render_state_key m_key;
 
-		virtual void set_defaults() = 0;
 		virtual render_state_key compute_render_state_key() const = 0;
 	};
 }

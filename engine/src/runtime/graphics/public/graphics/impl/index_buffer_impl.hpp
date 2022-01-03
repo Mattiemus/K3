@@ -8,15 +8,36 @@ namespace openworld
 		public graphics_resource_impl
 	{
 	public:
-		index_buffer_impl(size_t resource_id, openworld::render_system& render_system) :
-			graphics_resource_impl(resource_id, render_system)
-		{}
+		index_buffer_impl(
+			size_t resource_id,
+			openworld::render_system& render_system,
+			index_format format,
+			size_t index_count,
+			resource_usage usage);
+
+		index_buffer_impl(
+			size_t resource_id,
+			openworld::render_system& render_system,
+			index_format format,
+			const memory_region& data,
+			resource_usage usage);
 
 		virtual ~index_buffer_impl() = 0 {}
 
-		virtual size_t index_count() const = 0;
-		virtual index_format format() const = 0;
-		virtual resource_usage usage() const = 0;
+		constexpr size_t index_count() const
+		{
+			return m_index_count;
+		}
+
+		constexpr index_format format() const
+		{
+			return m_index_format;
+		}
+
+		constexpr resource_usage usage() const
+		{
+			return m_usage;
+		}
 
 		virtual void get_data(
 			const memory_region& data,
@@ -31,6 +52,11 @@ namespace openworld
 			size_t element_count,
 			size_t buffer_write_start_offset,
 			data_write_options write_opts) = 0;
+
+	private:
+		size_t m_index_count;
+		index_format m_index_format;
+		resource_usage m_usage;
 	};
 
 	class index_buffer_impl_factory :

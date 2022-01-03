@@ -3,7 +3,8 @@
 project(openworld_engine_runtime_math VERSION 0.1.0)
 
 add_library(${PROJECT_NAME} STATIC
-    "private/float4x4.cpp")
+    "private/float4x4.cpp"
+    "private/color.cpp")
 
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 

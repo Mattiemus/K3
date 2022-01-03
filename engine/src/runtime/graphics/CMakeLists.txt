@@ -10,7 +10,11 @@ add_library(${PROJECT_NAME} STATIC
     "private/occlusion_query.cpp"
     "private/blend_state.cpp"
     "private/msaa_description.cpp"
-    "private/depth_stencil_state.cpp")
+    "private/depth_stencil_state.cpp"
+    "private/sampler_state.cpp"
+    "private/rasterizer_state.cpp"
+    "private/impl/index_buffer_impl.cpp"
+    "private/impl/vertex_buffer_impl.cpp")
 
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 

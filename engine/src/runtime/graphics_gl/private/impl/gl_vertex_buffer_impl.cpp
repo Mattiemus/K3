@@ -8,12 +8,9 @@ gl_vertex_buffer_impl::gl_vertex_buffer_impl(
 	const vertex_layout& layout,
 	size_t vertex_count,
 	resource_usage usage) :
-	vertex_buffer_impl(resource_id, render_sys),
+	vertex_buffer_impl(resource_id, render_sys, layout, vertex_count, usage),
 	m_gl_render_sys(render_sys),
-	m_buffer_id(0),
-	m_vertex_layout(layout),
-	m_vertex_count(0),
-	m_resource_usage(usage)
+	m_buffer_id(0)
 {
 	throw std::exception("not implemented");
 }
@@ -24,12 +21,9 @@ gl_vertex_buffer_impl::gl_vertex_buffer_impl(
 	const vertex_layout& layout,
 	const memory_region& data,
 	resource_usage usage) :
-	vertex_buffer_impl(resource_id, render_sys),
+	vertex_buffer_impl(resource_id, render_sys, layout, data, usage),
 	m_gl_render_sys(render_sys),
-	m_buffer_id(0),
-	m_vertex_layout(layout),
-	m_vertex_count(0),
-	m_resource_usage(usage)
+	m_buffer_id(0)
 {
 	glCreateBuffers(1, &m_buffer_id);
 	glNamedBufferStorage(m_buffer_id, data.size_bytes(), data.data(), GL_MAP_WRITE_BIT | GL_DYNAMIC_STORAGE_BIT);
@@ -41,12 +35,9 @@ gl_vertex_buffer_impl::gl_vertex_buffer_impl(
 	const vertex_layout& layout,
 	const std::vector<memory_region>& data,
 	resource_usage usage) :
-	vertex_buffer_impl(resource_id, render_sys),
+	vertex_buffer_impl(resource_id, render_sys, layout, data, usage),
 	m_gl_render_sys(render_sys),
-	m_buffer_id(0),
-	m_vertex_layout(layout),
-	m_vertex_count(0),
-	m_resource_usage(usage)
+	m_buffer_id(0)
 {
 	throw std::exception();
 }

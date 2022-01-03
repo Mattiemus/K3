@@ -47,7 +47,9 @@ namespace openworld
         swap_chain,
         occlusion_query,
         blend_state,
-        depth_stencil_state
+        depth_stencil_state,
+        sampler_state,
+        rasterizer_state
     };
 
     enum class shader_resource_type
@@ -334,5 +336,55 @@ namespace openworld
         greater_equal = 5,
         greater = 6,
         not_equal = 7
+    };
+
+    enum class texture_address_mode
+    {
+        wrap = 0,
+        clamp = 1,
+        border = 2,
+        mirror = 3,
+        mirror_once = 4
+    };
+
+    enum class texture_filter
+    {
+        point = 0,
+        point_mip_linear = 1,
+        linear = 2,
+        linear_mip_point = 3,
+        min_linear_mag_point_mip_linear = 4,
+        min_linear_mag_point_mip_point = 5,
+        min_point_mag_linear_mip_linear = 6,
+        min_point_mag_linear_mip_point = 7,
+        anisotropic = 8,
+        comparison_point = 9,
+        comparison_point_mip_linear = 10,
+        comparison_linear = 11,
+        comparison_linear_mip_point = 12,
+        comparison_min_linear_mag_point_mip_linear = 13,
+        comparison_min_linear_mag_point_mip_point = 14,
+        comparison_min_point_mag_linear_mip_linear = 15,
+        comparison_min_point_mag_linear_mip_point = 16,
+        comparison_anisotropic = 17
+    };
+
+    enum class fill_mode
+    {
+        solid = 0,
+        wire_frame = 1
+    };
+
+    enum class vertex_winding
+    {
+        clockwise = 0,
+        counter_clockwise = 1
+    };
+
+    enum class cull_mode
+    {
+        none = 0,
+        front = 1,
+        back = 2
     };
 }

@@ -8,12 +8,9 @@ gl_index_buffer_impl::gl_index_buffer_impl(
 	index_format format,
 	size_t index_count,
 	resource_usage usage) :
-	index_buffer_impl(resource_id, render_sys),
+	index_buffer_impl(resource_id, render_sys, format, index_count, usage),
 	m_gl_render_sys(render_sys),
-	m_buffer_id(0),
-	m_index_count(index_count),
-	m_index_format(format),
-	m_resource_usage(usage)
+	m_buffer_id(0)
 {
 	throw std::exception("not implemented");
 }
@@ -24,12 +21,9 @@ gl_index_buffer_impl::gl_index_buffer_impl(
 	index_format format,
 	const memory_region& data,
 	resource_usage usage) :
-	index_buffer_impl(resource_id, render_sys),
+	index_buffer_impl(resource_id, render_sys, format, data, usage),
 	m_gl_render_sys(render_sys),
-	m_buffer_id(0),
-	m_index_count(0),
-	m_index_format(format),
-	m_resource_usage(usage)
+	m_buffer_id(0)
 {
 	glCreateBuffers(1, &m_buffer_id);
 	glNamedBufferStorage(m_buffer_id, data.size_bytes(), data.data(), GL_MAP_WRITE_BIT | GL_DYNAMIC_STORAGE_BIT);

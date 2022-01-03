@@ -72,7 +72,7 @@ namespace openworld
 	private:
 		bool m_alpha_to_coverage_enable = false;
 		bool m_independent_blend_enable = false;
-		color m_blend_factor = color::transparent_black();
+		color m_blend_factor = color::transparent_black;
 		size_t m_multi_sample_mask = 0;
 	};
 

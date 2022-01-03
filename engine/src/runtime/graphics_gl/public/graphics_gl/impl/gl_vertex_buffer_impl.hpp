@@ -43,21 +43,6 @@ namespace openworld
 			return m_gl_render_sys;
 		}
 
-		virtual const vertex_layout& layout() const override
-		{
-			return m_vertex_layout;
-		}
-
-		virtual size_t vertex_count() const override
-		{
-			return m_vertex_count;
-		}
-
-		virtual resource_usage usage() const override
-		{
-			return m_resource_usage;
-		}
-
 		virtual void get_interleaved_data(
 			const std::vector<memory_region>& data) override;
 
@@ -84,9 +69,6 @@ namespace openworld
 	private:
 		openworld::gl_render_system& m_gl_render_sys;
 		GLuint m_buffer_id;
-		vertex_layout m_vertex_layout;
-		size_t m_vertex_count;
-		resource_usage m_resource_usage;
 	};
 
 	class gl_vertex_buffer_impl_factory final :

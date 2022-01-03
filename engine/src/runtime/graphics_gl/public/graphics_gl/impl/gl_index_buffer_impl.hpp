@@ -36,21 +36,6 @@ namespace openworld
 			return m_gl_render_sys;
 		}
 
-		virtual size_t index_count() const override
-		{
-			return m_index_count;
-		}
-
-		virtual index_format format() const override
-		{
-			return m_index_format;
-		}
-
-		virtual resource_usage usage() const override
-		{
-			return m_resource_usage;
-		}
-
 		virtual void get_data(
 			const memory_region& data,
 			size_t start_index,
@@ -68,9 +53,6 @@ namespace openworld
 	private:
 		openworld::gl_render_system& m_gl_render_sys;
 		GLuint m_buffer_id;
-		size_t m_index_count;
-		index_format m_index_format;
-		resource_usage m_resource_usage;
 	};
 
 	class gl_index_buffer_impl_factory final :

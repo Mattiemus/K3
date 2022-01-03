@@ -64,7 +64,7 @@ int main()
     return app_host.run(
         [&]()
         {
-            ctx.clear(color::green());
+            ctx.clear(color::green);
 
             ctx.set_vertex_buffer(vertex_buffer_binding(vertex_buff));
             ctx.set_index_buffer(index_buff);

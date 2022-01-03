@@ -5,6 +5,13 @@ namespace openworld
     class color final
     {
     public:
+        static const color transparent_black;
+        static const color black;
+        static const color white;
+        static const color red;
+        static const color green;
+        static const color blue;
+
         union {
             struct {
                 uint8_t r;
@@ -24,36 +31,6 @@ namespace openworld
             b(b),
             a(a)
         {}
-
-        static constexpr color transparent_black() noexcept
-        {
-            return color(static_cast<uint8_t>(0), static_cast<uint8_t>(0), static_cast<uint8_t>(0), static_cast<uint8_t>(0));
-        }
-
-        static constexpr color black() noexcept
-        {
-            return color(static_cast<uint8_t>(0), static_cast<uint8_t>(0), static_cast<uint8_t>(0), static_cast<uint8_t>(255));
-        }
-
-        static constexpr color white() noexcept
-        {
-            return color(static_cast<uint8_t>(255), static_cast<uint8_t>(255), static_cast<uint8_t>(255), static_cast<uint8_t>(255));
-        }
-
-        static constexpr color red() noexcept
-        {
-            return color(static_cast<uint8_t>(255), static_cast<uint8_t>(0), static_cast<uint8_t>(0), static_cast<uint8_t>(255));
-        }
-
-        static constexpr color green() noexcept
-        {
-            return color(static_cast<uint8_t>(0), static_cast<uint8_t>(255), static_cast<uint8_t>(0), static_cast<uint8_t>(255));
-        }
-
-        static constexpr color blue() noexcept
-        {
-            return color(static_cast<uint8_t>(0), static_cast<uint8_t>(0), static_cast<uint8_t>(255), static_cast<uint8_t>(255));
-        }
     };
 
     static_assert(sizeof(color) == sizeof(uint32_t));

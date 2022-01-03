@@ -12,7 +12,7 @@ void blend_state::set_defaults()
 {
     m_impl->alpha_to_coverage_enable(false);
     m_impl->independent_blend_enable(false);
-    m_impl->blend_factor(color::white());
+    m_impl->blend_factor(color::white);
     m_impl->multi_sample_mask(std::numeric_limits<size_t>::max());
 
     for (size_t i = 0; i < m_impl->render_target_blend_count(); i++)
