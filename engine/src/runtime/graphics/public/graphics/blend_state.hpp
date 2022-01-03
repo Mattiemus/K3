@@ -22,17 +22,17 @@ namespace openworld
 		blend_state(openworld::render_system& render_sys);
 		virtual ~blend_state() {}
 
-		virtual graphics_resource_impl* impl() const noexcept override
+		virtual graphics_resource_impl* impl() const override
 		{
 			return m_impl.get();
 		}
 
-		virtual openworld::render_state_impl* render_state_impl() const noexcept override
+		virtual openworld::render_state_impl* render_state_impl() const override
 		{
 			return m_impl.get();
 		}
 
-		openworld::blend_state_impl* blend_state_impl() const noexcept
+		openworld::blend_state_impl* blend_state_impl() const
 		{
 			return m_impl.get();
 		}
@@ -123,7 +123,7 @@ namespace openworld
 template<>
 struct std::hash<openworld::blend_state>
 {
-	size_t operator()(const openworld::blend_state& s) const noexcept
+	size_t operator()(const openworld::blend_state& s) const
 	{
 		size_t hash = 0;
 		openworld::hash_combine(hash, openworld::render_state_type::blend_state);

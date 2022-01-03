@@ -12,7 +12,7 @@ namespace openworld
 		size_t front = 0;
 		size_t back = 0;
 
-		constexpr resource_region_3d() noexcept
+		constexpr resource_region_3d()
 		{}
 
 		constexpr resource_region_3d(
@@ -21,7 +21,7 @@ namespace openworld
 			size_t top,
 			size_t bottom,
 			size_t front,
-			size_t back) noexcept :
+			size_t back) :
 			left(left),
 			right(right),
 			top(top),
@@ -30,22 +30,22 @@ namespace openworld
 			back(back)
 		{}
 
-		constexpr size_t width() const noexcept
+		constexpr size_t width() const
 		{
 			return right - left;
 		}
 
-		constexpr size_t height() const noexcept
+		constexpr size_t height() const
 		{
 			return bottom - top;
 		}
 
-		constexpr size_t depth() const noexcept
+		constexpr size_t depth() const
 		{
 			return back - front;
 		}
 
-		constexpr size_t element_count() const noexcept
+		constexpr size_t element_count() const
 		{
 			return width() * height() * depth();
 		}

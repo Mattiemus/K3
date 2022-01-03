@@ -14,7 +14,7 @@ namespace openworld
 
 		virtual ~render_state_impl() = 0 {}
 
-		constexpr bool is_bound() const noexcept
+		constexpr bool is_bound() const
 		{
 			return m_is_bound;
 		}

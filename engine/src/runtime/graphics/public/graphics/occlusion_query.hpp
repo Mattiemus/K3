@@ -23,12 +23,12 @@ namespace openworld
 
         virtual ~occlusion_query() {}
 
-        virtual graphics_resource_impl* impl() const noexcept override
+        virtual graphics_resource_impl* impl() const override
         {
             return m_impl.get();
         }
 
-        openworld::occlusion_query_impl* occlusion_query_impl() const noexcept
+        openworld::occlusion_query_impl* occlusion_query_impl() const
         {
             return m_impl.get();
         }

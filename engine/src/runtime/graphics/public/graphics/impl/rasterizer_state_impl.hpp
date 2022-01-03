@@ -17,7 +17,7 @@ namespace openworld
 		virtual bool is_antialiased_line_option_supported() const = 0;
 		virtual bool is_depth_clip_option_supported() const = 0;
 
-		constexpr cull_mode cull() const noexcept
+		constexpr cull_mode cull() const
 		{
 			return m_cull;
 		}
@@ -28,7 +28,7 @@ namespace openworld
 			m_cull = mode;
 		}
 
-		constexpr openworld::vertex_winding vertex_winding() const noexcept
+		constexpr openworld::vertex_winding vertex_winding() const
 		{
 			return m_vertex_winding;
 		}
@@ -39,7 +39,7 @@ namespace openworld
 			m_vertex_winding = winding;
 		}
 
-		constexpr fill_mode fill() const noexcept
+		constexpr fill_mode fill() const
 		{
 			return m_fill;
 		}
@@ -50,7 +50,7 @@ namespace openworld
 			m_fill = fill;
 		}
 
-		constexpr size_t depth_bias() const noexcept
+		constexpr size_t depth_bias() const
 		{
 			return m_depth_bias;
 		}
@@ -61,7 +61,7 @@ namespace openworld
 			m_depth_bias = bias;
 		}
 
-		constexpr float depth_bias_clamp() const noexcept
+		constexpr float depth_bias_clamp() const
 		{
 			return m_depth_bias_clamp;
 		}
@@ -72,7 +72,7 @@ namespace openworld
 			m_depth_bias_clamp = bias;
 		}
 
-		constexpr float slope_scaled_depth_bias() const noexcept
+		constexpr float slope_scaled_depth_bias() const
 		{
 			return m_slope_scaled_depth_bias;
 		}
@@ -83,7 +83,7 @@ namespace openworld
 			m_slope_scaled_depth_bias = bias;
 		}
 
-		constexpr bool depth_clip_enable() const noexcept
+		constexpr bool depth_clip_enable() const
 		{
 			return m_depth_clip_enable;
 		}
@@ -94,7 +94,7 @@ namespace openworld
 			m_depth_clip_enable = enable;
 		}
 
-		constexpr bool multi_sample_enable() const noexcept
+		constexpr bool multi_sample_enable() const
 		{
 			return m_multi_sample_enable;
 		}
@@ -105,7 +105,7 @@ namespace openworld
 			m_multi_sample_enable = enable;
 		}
 
-		constexpr bool antialiased_line_enable() const noexcept
+		constexpr bool antialiased_line_enable() const
 		{
 			return m_antialiased_line_enable;
 		}
@@ -116,7 +116,7 @@ namespace openworld
 			m_antialiased_line_enable = enable;
 		}
 
-		constexpr bool scissor_test_enable() const noexcept
+		constexpr bool scissor_test_enable() const
 		{
 			return m_scissor_test_enable;
 		}

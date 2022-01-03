@@ -14,7 +14,7 @@ namespace openworld
 
 		virtual ~depth_stencil_state_impl() = 0 {}
 
-		constexpr bool depth_enable() const noexcept
+		constexpr bool depth_enable() const
 		{
 			return m_depth_enable;
 		}
@@ -25,7 +25,7 @@ namespace openworld
 			m_depth_enable = enable;
 		}
 
-		constexpr bool depth_write_enable() const noexcept
+		constexpr bool depth_write_enable() const
 		{
 			return m_depth_write_enable;
 		}
@@ -36,7 +36,7 @@ namespace openworld
 			m_depth_write_enable = enable;
 		}
 
-		constexpr comparison_function depth_function() const noexcept
+		constexpr comparison_function depth_function() const
 		{
 			return m_depth_function;
 		}
@@ -47,7 +47,7 @@ namespace openworld
 			m_depth_function = fn;
 		}
 
-		constexpr bool stencil_enable() const noexcept
+		constexpr bool stencil_enable() const
 		{
 			return m_stencil_enable;
 		}
@@ -58,7 +58,7 @@ namespace openworld
 			m_stencil_enable = enable;
 		}
 
-		constexpr int reference_stencil() const noexcept
+		constexpr int reference_stencil() const
 		{
 			return m_reference_stencil;
 		}
@@ -69,7 +69,7 @@ namespace openworld
 			m_reference_stencil = value;
 		}
 
-		constexpr size_t stencil_read_mask() const noexcept
+		constexpr size_t stencil_read_mask() const
 		{
 			return m_stencil_read_mask;
 		}
@@ -80,7 +80,7 @@ namespace openworld
 			m_stencil_read_mask = mask;
 		}
 
-		constexpr size_t stencil_write_mask() const noexcept
+		constexpr size_t stencil_write_mask() const
 		{
 			return m_stencil_write_mask;
 		}
@@ -91,7 +91,7 @@ namespace openworld
 			m_stencil_write_mask = mask;
 		}
 
-		constexpr bool two_sided_stencil_enable() const noexcept
+		constexpr bool two_sided_stencil_enable() const
 		{
 			return m_two_sided_stencil_enable;
 		}
@@ -102,7 +102,7 @@ namespace openworld
 			m_two_sided_stencil_enable = enable;
 		}
 
-		constexpr comparison_function stencil_function() const noexcept
+		constexpr comparison_function stencil_function() const
 		{
 			return m_stencil_function;
 		}
@@ -113,7 +113,7 @@ namespace openworld
 			m_stencil_function = fn;
 		}
 
-		constexpr stencil_operation stencil_depth_fail() const noexcept
+		constexpr stencil_operation stencil_depth_fail() const
 		{
 			return m_stencil_depth_fail;
 		}
@@ -124,7 +124,7 @@ namespace openworld
 			m_stencil_depth_fail = op;
 		}
 
-		constexpr stencil_operation stencil_fail() const noexcept
+		constexpr stencil_operation stencil_fail() const
 		{
 			return m_stencil_fail;
 		}
@@ -135,7 +135,7 @@ namespace openworld
 			m_stencil_fail = op;
 		}
 
-		constexpr stencil_operation stencil_pass() const noexcept
+		constexpr stencil_operation stencil_pass() const
 		{
 			return m_stencil_pass;
 		}
@@ -146,7 +146,7 @@ namespace openworld
 			m_stencil_pass = op;
 		}
 
-		constexpr comparison_function back_face_stencil_function() const noexcept
+		constexpr comparison_function back_face_stencil_function() const
 		{
 			return m_back_face_stencil_function;
 		}
@@ -157,7 +157,7 @@ namespace openworld
 			m_back_face_stencil_function = fn;
 		}
 
-		constexpr stencil_operation back_face_stencil_depth_fail() const noexcept
+		constexpr stencil_operation back_face_stencil_depth_fail() const
 		{
 			return m_back_face_stencil_depth_fail;
 		}
@@ -168,7 +168,7 @@ namespace openworld
 			m_back_face_stencil_depth_fail = op;
 		}
 
-		constexpr stencil_operation back_face_stencil_fail() const noexcept
+		constexpr stencil_operation back_face_stencil_fail() const
 		{
 			return m_back_face_stencil_fail;
 		}
@@ -179,7 +179,7 @@ namespace openworld
 			m_back_face_stencil_fail = op;
 		}
 
-		constexpr stencil_operation back_face_stencil_pass() const noexcept
+		constexpr stencil_operation back_face_stencil_pass() const
 		{
 			return m_back_face_stencil_pass;
 		}

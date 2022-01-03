@@ -17,9 +17,9 @@ namespace openworld
 
 		virtual ~graphics_resource() = 0 {}
 
-		virtual graphics_resource_impl* impl() const noexcept = 0;
+		virtual graphics_resource_impl* impl() const = 0;
 
-		const std::string& name() const noexcept
+		const std::string& name() const
 		{
 			return m_name;
 		}
@@ -29,12 +29,12 @@ namespace openworld
 			m_name = new_name;
 		}
 
-		void* tag() const noexcept
+		void* tag() const
 		{
 			return m_tag;
 		}
 
-		void tag(void* new_tag) noexcept
+		void tag(void* new_tag)
 		{
 			m_tag = new_tag;
 		}

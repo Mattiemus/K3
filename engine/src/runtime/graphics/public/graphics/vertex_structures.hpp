@@ -10,10 +10,10 @@ namespace openworld
         float3 position;
         openworld::color color;
 
-        constexpr vertex_position_color() noexcept
+        constexpr vertex_position_color()
         {}
 
-        constexpr vertex_position_color(const float3& position, const openworld::color& color) noexcept :
+        constexpr vertex_position_color(const float3& position, const openworld::color& color) :
             position(position),
             color(color)
         {}
@@ -21,14 +21,14 @@ namespace openworld
 
     inline bool operator ==(
         const vertex_position_color& lhs,
-        const vertex_position_color& rhs) noexcept
+        const vertex_position_color& rhs)
     {
         return (lhs.position == rhs.position) && (lhs.color == rhs.color);
     }
 
     inline bool operator !=(
         const vertex_position_color& lhs,
-        const vertex_position_color& rhs) noexcept
+        const vertex_position_color& rhs)
     {
         return (lhs.position != rhs.position) || (lhs.color != rhs.color);
     }

@@ -34,7 +34,7 @@ namespace openworld
             surface_format format,
             msaa_description & preferred_msaa);
 
-        constexpr bool is_multisampled() const noexcept
+        constexpr bool is_multisampled() const
         {
             return count > 1;
         }

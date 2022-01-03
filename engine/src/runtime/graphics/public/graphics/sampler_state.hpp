@@ -22,17 +22,17 @@ namespace openworld
 		sampler_state(openworld::render_system& render_sys);
 		virtual ~sampler_state() {}
 
-		virtual graphics_resource_impl* impl() const noexcept override
+		virtual graphics_resource_impl* impl() const override
 		{
 			return m_impl.get();
 		}
 
-		virtual openworld::render_state_impl* render_state_impl() const noexcept override
+		virtual openworld::render_state_impl* render_state_impl() const override
 		{
 			return m_impl.get();
 		}
 
-		openworld::sampler_state_impl* sampler_state_impl() const noexcept
+		openworld::sampler_state_impl* sampler_state_impl() const
 		{
 			return m_impl.get();
 		}
@@ -47,7 +47,7 @@ namespace openworld
 			return m_impl->supported_anisotropy_levels();
 		}
 
-		constexpr texture_address_mode address_u() const noexcept
+		constexpr texture_address_mode address_u() const
 		{
 			return m_impl->address_u();
 		}
@@ -57,7 +57,7 @@ namespace openworld
 			m_impl->address_u(mode);
 		}
 
-		constexpr texture_address_mode address_v() const noexcept
+		constexpr texture_address_mode address_v() const
 		{
 			return m_impl->address_v();
 		}
@@ -67,7 +67,7 @@ namespace openworld
 			m_impl->address_v(mode);
 		}
 
-		constexpr texture_address_mode address_w() const noexcept
+		constexpr texture_address_mode address_w() const
 		{
 			return m_impl->address_w();
 		}
@@ -77,7 +77,7 @@ namespace openworld
 			m_impl->address_w(mode);
 		}
 
-		constexpr texture_filter filter() const noexcept
+		constexpr texture_filter filter() const
 		{
 			return m_impl->filter();
 		}
@@ -87,7 +87,7 @@ namespace openworld
 			m_impl->filter(f);
 		}
 
-		constexpr size_t max_anisotropy() const noexcept
+		constexpr size_t max_anisotropy() const
 		{
 			return m_impl->max_anisotropy();
 		}
@@ -97,7 +97,7 @@ namespace openworld
 			m_impl->max_anisotropy(x);
 		}
 
-		constexpr float mip_map_level_of_detail_bias() const noexcept
+		constexpr float mip_map_level_of_detail_bias() const
 		{
 			return m_impl->mip_map_level_of_detail_bias();
 		}
@@ -107,7 +107,7 @@ namespace openworld
 			m_impl->mip_map_level_of_detail_bias(bias);
 		}
 
-		constexpr size_t min_mip_map_level() const noexcept
+		constexpr size_t min_mip_map_level() const
 		{
 			return m_impl->min_mip_map_level();
 		}
@@ -117,7 +117,7 @@ namespace openworld
 			m_impl->min_mip_map_level(level);
 		}
 
-		constexpr size_t max_mip_map_level() const noexcept
+		constexpr size_t max_mip_map_level() const
 		{
 			return m_impl->max_mip_map_level();
 		}
@@ -127,7 +127,7 @@ namespace openworld
 			m_impl->max_mip_map_level(level);
 		}
 
-		constexpr color border_color() const noexcept
+		constexpr color border_color() const
 		{
 			return m_impl->border_color();
 		}
@@ -137,7 +137,7 @@ namespace openworld
 			m_impl->border_color(c);
 		}
 
-		constexpr comparison_function compare_function() const noexcept
+		constexpr comparison_function compare_function() const
 		{
 			return m_impl->compare_function();
 		}
@@ -163,7 +163,7 @@ namespace openworld
 template<>
 struct std::hash<openworld::sampler_state>
 {
-	size_t operator()(const openworld::sampler_state& s) const noexcept
+	size_t operator()(const openworld::sampler_state& s) const
 	{
 		size_t hash = 0;
 		openworld::hash_combine(hash, openworld::render_state_type::sampler_state);

@@ -8,7 +8,7 @@ namespace openworld
         uint
     };
 
-    constexpr size_t format_size(index_format format) noexcept
+    constexpr size_t format_size(index_format format)
     {
         switch (format)
         {
@@ -163,7 +163,7 @@ namespace openworld
         float4 = 27
     };
 
-    constexpr size_t format_size(vertex_format format) noexcept
+    constexpr size_t format_size(vertex_format format)
     {
         switch (format)
         {

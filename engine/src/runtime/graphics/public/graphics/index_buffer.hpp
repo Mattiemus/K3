@@ -33,12 +33,12 @@ namespace openworld
 
         virtual ~index_buffer() {}
 
-        virtual graphics_resource_impl* impl() const noexcept override
+        virtual graphics_resource_impl* impl() const override
         {
             return m_impl.get();
         }
 
-        openworld::index_buffer_impl* index_buffer_impl() const noexcept
+        openworld::index_buffer_impl* index_buffer_impl() const
         {
             return m_impl.get();
         }

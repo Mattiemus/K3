@@ -9,7 +9,7 @@ namespace openworld
 	public:
 		virtual ~render_state() = 0 {}
 
-		virtual openworld::render_state_impl* render_state_impl() const noexcept = 0;
+		virtual openworld::render_state_impl* render_state_impl() const = 0;
 
 		virtual std::string standard_content_name() override
 		{
@@ -60,7 +60,7 @@ namespace openworld
 template<>
 struct std::hash<openworld::render_state>
 {
-	size_t operator()(const openworld::render_state& s) const noexcept
+	size_t operator()(const openworld::render_state& s) const
 	{
 		return s.state_key().hash();
 	}

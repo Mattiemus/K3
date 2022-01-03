@@ -22,17 +22,17 @@ namespace openworld
 		depth_stencil_state(openworld::render_system& render_sys);
 		virtual ~depth_stencil_state() {}
 
-		virtual graphics_resource_impl* impl() const noexcept override
+		virtual graphics_resource_impl* impl() const override
 		{
 			return m_impl.get();
 		}
 
-		virtual openworld::render_state_impl* render_state_impl() const noexcept override
+		virtual openworld::render_state_impl* render_state_impl() const override
 		{
 			return m_impl.get();
 		}
 
-		openworld::depth_stencil_state_impl* blend_state_impl() const noexcept
+		openworld::depth_stencil_state_impl* blend_state_impl() const
 		{
 			return m_impl.get();
 		}
@@ -213,7 +213,7 @@ namespace openworld
 template<>
 struct std::hash<openworld::depth_stencil_state>
 {
-	size_t operator()(const openworld::depth_stencil_state& s) const noexcept
+	size_t operator()(const openworld::depth_stencil_state& s) const
 	{
 		size_t hash = 0;
 		openworld::hash_combine(hash, openworld::render_state_type::depth_stencil_state);

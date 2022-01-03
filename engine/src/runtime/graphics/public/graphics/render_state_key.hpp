@@ -5,18 +5,18 @@ namespace openworld
 	class render_state_key final
 	{
 	public:
-		constexpr render_state_key() noexcept = default;
-		constexpr render_state_key(render_state_type state_type, size_t hash) noexcept :
+		constexpr render_state_key() = default;
+		constexpr render_state_key(render_state_type state_type, size_t hash) :
 			m_state_type(state_type),
 			m_hash(hash)
 		{}
 
-		constexpr render_state_type state_type() const noexcept
+		constexpr render_state_type state_type() const
 		{
 			return m_state_type;
 		}
 
-		constexpr size_t hash() const noexcept
+		constexpr size_t hash() const
 		{
 			return m_hash;
 		}
@@ -26,12 +26,12 @@ namespace openworld
 		size_t m_hash = 0;
 	};
 
-	constexpr bool operator ==(const render_state_key& lhs, const render_state_key& rhs) noexcept
+	constexpr bool operator ==(const render_state_key& lhs, const render_state_key& rhs)
 	{
 		return (lhs.state_type() == rhs.state_type()) && (lhs.hash() == rhs.hash());
 	}
 
-	constexpr bool operator !=(const render_state_key& lhs, const render_state_key& rhs) noexcept
+	constexpr bool operator !=(const render_state_key& lhs, const render_state_key& rhs)
 	{
 		return (lhs.state_type() != rhs.state_type()) || (lhs.hash() != rhs.hash());
 	}

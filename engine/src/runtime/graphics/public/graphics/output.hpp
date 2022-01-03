@@ -11,17 +11,17 @@ namespace openworld
             m_bounds(bounds)
         {}
 
-        constexpr void* monitor_handle() const noexcept
+        constexpr void* monitor_handle() const
         {
             return m_monitor_handle;
         }
 
-        constexpr const std::string& name() const noexcept
+        constexpr const std::string& name() const
         {
             return m_name;
         }
 
-        constexpr const int_rectangle& desktop_bounds() const noexcept
+        constexpr const int_rectangle& desktop_bounds() const
         {
             return m_bounds;
         }

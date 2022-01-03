@@ -21,7 +21,7 @@ namespace openworld
             depth_format depth_fmt,
             size_t width,
             size_t height,
-            bool is_full_screen = false) noexcept :
+            bool is_full_screen = false) :
             back_buffer_format(surface_fmt),
             depth_stencil_format(depth_fmt),
             back_buffer_width(width),
@@ -29,7 +29,7 @@ namespace openworld
             is_full_screen(is_full_screen)
         {}
 
-        constexpr int_rectangle bounds() const noexcept
+        constexpr int_rectangle bounds() const
         {
             return int_rectangle(0, 0, back_buffer_width, back_buffer_height);
         }

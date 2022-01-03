@@ -8,22 +8,22 @@ namespace openworld
 		size_t left = 0;
 		size_t right = 0;
 
-		constexpr resource_region_1d() noexcept
+		constexpr resource_region_1d()
 		{}
 
 		constexpr resource_region_1d(
 			size_t left,
-			size_t right) noexcept :
+			size_t right) :
 			left(left),
 			right(right)
 		{}
 
-		constexpr size_t width() const noexcept
+		constexpr size_t width() const
 		{
 			return right - left;
 		}
 
-		constexpr size_t element_count() const noexcept
+		constexpr size_t element_count() const
 		{
 			return width();
 		}

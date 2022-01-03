@@ -16,7 +16,7 @@ namespace openworld
         blend color_destination_blend = blend::zero;
         color_write_channels write_channels = color_write_channels::all;
 
-        constexpr render_target_blend_description() noexcept
+        constexpr render_target_blend_description()
         {}
 
         constexpr render_target_blend_description(
@@ -27,7 +27,7 @@ namespace openworld
             blend_function color_blend_function,
             blend color_source_blend,
             blend color_destination_blend,
-            color_write_channels write_channels) noexcept :
+            color_write_channels write_channels) :
             blend_enable(blend_enable),
             alpha_blend_function(alpha_blend_function),
             alpha_source_blend(alpha_source_blend),
@@ -38,7 +38,7 @@ namespace openworld
             write_channels(write_channels)
         {}
 
-        constexpr bool is_default() const noexcept
+        constexpr bool is_default() const
         {
             return (blend_enable == false) &&
                 (alpha_blend_function == blend_function::add) &&
@@ -53,7 +53,7 @@ namespace openworld
 
     constexpr bool operator ==(
         const render_target_blend_description& lhs,
-        const render_target_blend_description& rhs) noexcept
+        const render_target_blend_description& rhs)
     {
         return (lhs.blend_enable == rhs.blend_enable) &&
             (lhs.alpha_blend_function == rhs.alpha_blend_function) &&
@@ -67,7 +67,7 @@ namespace openworld
 
     constexpr bool operator !=(
         const render_target_blend_description& lhs,
-        const render_target_blend_description& rhs) noexcept
+        const render_target_blend_description& rhs)
     {
         return (lhs.blend_enable != rhs.blend_enable) ||
             (lhs.alpha_blend_function != rhs.alpha_blend_function) ||

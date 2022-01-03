@@ -16,7 +16,7 @@ namespace openworld
 
 		virtual size_t supported_anisotropy_levels() const = 0;
 
-		constexpr texture_address_mode address_u() const noexcept
+		constexpr texture_address_mode address_u() const
 		{
 			return m_address_u;
 		}
@@ -27,7 +27,7 @@ namespace openworld
 			m_address_u = mode;
 		}
 
-		constexpr texture_address_mode address_v() const noexcept
+		constexpr texture_address_mode address_v() const
 		{
 			return m_address_v;
 		}
@@ -38,7 +38,7 @@ namespace openworld
 			m_address_v = mode;
 		}
 
-		constexpr texture_address_mode address_w() const noexcept
+		constexpr texture_address_mode address_w() const
 		{
 			return m_address_w;
 		}
@@ -49,7 +49,7 @@ namespace openworld
 			m_address_w = mode;
 		}
 
-		constexpr texture_filter filter() const noexcept
+		constexpr texture_filter filter() const
 		{
 			return m_filter;
 		}
@@ -60,7 +60,7 @@ namespace openworld
 			m_filter = f;
 		}
 
-		constexpr size_t max_anisotropy() const noexcept
+		constexpr size_t max_anisotropy() const
 		{
 			return m_max_anisotropy;
 		}
@@ -71,7 +71,7 @@ namespace openworld
 			m_max_anisotropy = std::clamp(x, 1ULL, supported_anisotropy_levels());
 		}
 
-		constexpr float mip_map_level_of_detail_bias() const noexcept
+		constexpr float mip_map_level_of_detail_bias() const
 		{
 			return m_mip_map_level_of_detail_bias;
 		}
@@ -82,7 +82,7 @@ namespace openworld
 			m_mip_map_level_of_detail_bias = bias;
 		}
 
-		constexpr size_t min_mip_map_level() const noexcept
+		constexpr size_t min_mip_map_level() const
 		{
 			return m_min_mip_map_level;
 		}
@@ -93,7 +93,7 @@ namespace openworld
 			m_min_mip_map_level = level;
 		}
 
-		constexpr size_t max_mip_map_level() const noexcept
+		constexpr size_t max_mip_map_level() const
 		{
 			return m_max_mip_map_level;
 		}
@@ -104,7 +104,7 @@ namespace openworld
 			m_max_mip_map_level = level;
 		}
 
-		constexpr color border_color() const noexcept
+		constexpr color border_color() const
 		{
 			return m_border_color;
 		}
@@ -115,7 +115,7 @@ namespace openworld
 			m_border_color = c;
 		}
 
-		constexpr comparison_function compare_function() const noexcept
+		constexpr comparison_function compare_function() const
 		{
 			return m_compare_function;
 		}

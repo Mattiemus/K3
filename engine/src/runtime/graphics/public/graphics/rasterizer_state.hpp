@@ -22,17 +22,17 @@ namespace openworld
 		rasterizer_state(openworld::render_system& render_sys);
 		virtual ~rasterizer_state() {}
 
-		virtual graphics_resource_impl* impl() const noexcept override
+		virtual graphics_resource_impl* impl() const override
 		{
 			return m_impl.get();
 		}
 
-		virtual openworld::render_state_impl* render_state_impl() const noexcept override
+		virtual openworld::render_state_impl* render_state_impl() const override
 		{
 			return m_impl.get();
 		}
 
-		openworld::rasterizer_state_impl* rasterizer_state_impl() const noexcept
+		openworld::rasterizer_state_impl* rasterizer_state_impl() const
 		{
 			return m_impl.get();
 		}
@@ -163,7 +163,7 @@ namespace openworld
 template<>
 struct std::hash<openworld::rasterizer_state>
 {
-	size_t operator()(const openworld::rasterizer_state& s) const noexcept
+	size_t operator()(const openworld::rasterizer_state& s) const
 	{
 		size_t hash = 0;
 		openworld::hash_combine(hash, openworld::render_state_type::rasterizer_state);

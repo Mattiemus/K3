@@ -39,12 +39,12 @@ namespace openworld
         
         virtual ~vertex_buffer() {}
 
-        virtual graphics_resource_impl* impl() const noexcept override
+        virtual graphics_resource_impl* impl() const override
         {
             return m_impl.get();
         }
 
-        openworld::vertex_buffer_impl* vertex_buffer_impl() const noexcept
+        openworld::vertex_buffer_impl* vertex_buffer_impl() const
         {
             return m_impl.get();
         }

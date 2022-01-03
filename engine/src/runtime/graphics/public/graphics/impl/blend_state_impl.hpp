@@ -18,7 +18,7 @@ namespace openworld
 		virtual bool is_alpha_to_coverage_supported() const = 0;
 		virtual bool is_independent_blend_supported() const = 0;
 
-		constexpr bool alpha_to_coverage_enable() const noexcept
+		constexpr bool alpha_to_coverage_enable() const
 		{
 			return m_alpha_to_coverage_enable;
 		}
@@ -29,7 +29,7 @@ namespace openworld
 			m_alpha_to_coverage_enable = enable;
 		}
 
-		constexpr bool independent_blend_enable() const noexcept
+		constexpr bool independent_blend_enable() const
 		{
 			return m_independent_blend_enable;
 		}
@@ -40,7 +40,7 @@ namespace openworld
 			m_independent_blend_enable = enable;
 		}
 
-		constexpr color blend_factor() const noexcept
+		constexpr color blend_factor() const
 		{
 			return m_blend_factor;
 		}
@@ -51,7 +51,7 @@ namespace openworld
 			m_blend_factor = factor;
 		}
 
-		constexpr size_t multi_sample_mask() const noexcept
+		constexpr size_t multi_sample_mask() const
 		{
 			return m_multi_sample_mask;
 		}

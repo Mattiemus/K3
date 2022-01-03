@@ -10,31 +10,31 @@ namespace openworld
 		size_t top = 0;
 		size_t bottom = 0;
 
-		constexpr resource_region_2d() noexcept
+		constexpr resource_region_2d()
 		{}
 
 		constexpr resource_region_2d(
 			size_t left,
 			size_t right,
 			size_t top,
-			size_t bottom) noexcept :
+			size_t bottom) :
 			left(left),
 			right(right),
 			top(top),
 			bottom(bottom)
 		{}
 
-		constexpr size_t width() const noexcept
+		constexpr size_t width() const
 		{
 			return right - left;
 		}
 
-		constexpr size_t height() const noexcept
+		constexpr size_t height() const
 		{
 			return bottom - top;
 		}
 
-		constexpr size_t element_count() const noexcept
+		constexpr size_t element_count() const
 		{
 			return width() * height();
 		}

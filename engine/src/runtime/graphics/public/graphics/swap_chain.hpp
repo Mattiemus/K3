@@ -26,12 +26,12 @@ namespace openworld
 
         virtual ~swap_chain() {}
 
-        virtual graphics_resource_impl* impl() const noexcept override
+        virtual graphics_resource_impl* impl() const override
         {
             return m_impl.get();
         }
 
-        openworld::swap_chain_impl* swap_chain_impl() const noexcept
+        openworld::swap_chain_impl* swap_chain_impl() const
         {
             return m_impl.get();
         }
