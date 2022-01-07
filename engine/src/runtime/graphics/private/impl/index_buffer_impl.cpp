@@ -13,6 +13,11 @@ index_buffer_impl::index_buffer_impl(
 	m_index_format(format),
 	m_usage(usage)
 {
+	if (usage == resource_usage::immutable)
+	{
+		throw graphics_exception("Must supply data for immutable resource");
+	}
+
 	if (index_count <= 0)
 	{
 		throw graphics_exception("Resource size must be greater than zero");

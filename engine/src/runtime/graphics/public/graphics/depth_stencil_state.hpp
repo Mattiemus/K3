@@ -18,23 +18,15 @@ namespace openworld
 	class depth_stencil_state final :
 		public render_state
 	{
+		OPENWORLD_DELETE_COPY_OPERATORS(depth_stencil_state);
+
 	public:
 		depth_stencil_state(openworld::render_system& render_sys);
 		virtual ~depth_stencil_state() {}
 
-		virtual graphics_resource_impl* impl() const override
+		openworld::depth_stencil_state_impl& depth_stencil_state_impl() const
 		{
-			return m_impl.get();
-		}
-
-		virtual openworld::render_state_impl* render_state_impl() const override
-		{
-			return m_impl.get();
-		}
-
-		openworld::depth_stencil_state_impl* blend_state_impl() const
-		{
-			return m_impl.get();
+			return static_cast<openworld::depth_stencil_state_impl&>(impl());
 		}
 
 		virtual render_state_type state_type() const override
@@ -44,167 +36,165 @@ namespace openworld
 
 		bool depth_enable() const
 		{
-			return m_impl->depth_enable();
+			return depth_stencil_state_impl().depth_enable();
 		}
 
 		void depth_enable(bool enable)
 		{
-			m_impl->depth_enable(enable);
+			depth_stencil_state_impl().depth_enable(enable);
 		}
 
 		bool depth_write_enable() const
 		{
-			return m_impl->depth_write_enable();
+			return depth_stencil_state_impl().depth_write_enable();
 		}
 
 		void depth_write_enable(bool enable)
 		{
-			m_impl->depth_write_enable(enable);
+			depth_stencil_state_impl().depth_write_enable(enable);
 		}
 
 		comparison_function depth_function() const
 		{
-			return m_impl->depth_function();
+			return depth_stencil_state_impl().depth_function();
 		}
 
 		void depth_function(comparison_function fn)
 		{
-			m_impl->depth_function(fn);
+			depth_stencil_state_impl().depth_function(fn);
 		}
 
 		bool stencil_enable() const
 		{
-			return m_impl->stencil_enable();
+			return depth_stencil_state_impl().stencil_enable();
 		}
 
 		void stencil_enable(bool enable)
 		{
-			m_impl->stencil_enable(enable);
+			depth_stencil_state_impl().stencil_enable(enable);
 		}
 
 		int reference_stencil() const
 		{
-			return m_impl->reference_stencil();
+			return depth_stencil_state_impl().reference_stencil();
 		}
 
 		void reference_stencil(int value)
 		{
-			m_impl->reference_stencil(value);
+			depth_stencil_state_impl().reference_stencil(value);
 		}
 
 		size_t stencil_read_mask() const
 		{
-			return m_impl->stencil_read_mask();
+			return depth_stencil_state_impl().stencil_read_mask();
 		}
 
 		void stencil_read_mask(size_t mask)
 		{
-			m_impl->stencil_read_mask(mask);
+			depth_stencil_state_impl().stencil_read_mask(mask);
 		}
 
 		size_t stencil_write_mask() const
 		{
-			return m_impl->stencil_write_mask();
+			return depth_stencil_state_impl().stencil_write_mask();
 		}
 
 		void stencil_write_mask(size_t mask)
 		{
-			m_impl->stencil_write_mask(mask);
+			depth_stencil_state_impl().stencil_write_mask(mask);
 		}
 
 		bool two_sided_stencil_enable() const
 		{
-			return m_impl->two_sided_stencil_enable();
+			return depth_stencil_state_impl().two_sided_stencil_enable();
 		}
 
 		void two_sided_stencil_enable(bool enable)
 		{
-			m_impl->two_sided_stencil_enable(enable);
+			depth_stencil_state_impl().two_sided_stencil_enable(enable);
 		}
 
 		comparison_function stencil_function() const
 		{
-			return m_impl->stencil_function();
+			return depth_stencil_state_impl().stencil_function();
 		}
 
 		void stencil_function(comparison_function fn)
 		{
-			m_impl->stencil_function(fn);
+			depth_stencil_state_impl().stencil_function(fn);
 		}
 
 		stencil_operation stencil_depth_fail() const
 		{
-			return m_impl->stencil_depth_fail();
+			return depth_stencil_state_impl().stencil_depth_fail();
 		}
 
 		void stencil_depth_fail(stencil_operation op)
 		{
-			m_impl->stencil_depth_fail(op);
+			depth_stencil_state_impl().stencil_depth_fail(op);
 		}
 
 		stencil_operation stencil_fail() const
 		{
-			return m_impl->stencil_fail();
+			return depth_stencil_state_impl().stencil_fail();
 		}
 
 		void stencil_fail(stencil_operation op)
 		{
-			m_impl->stencil_fail(op);
+			depth_stencil_state_impl().stencil_fail(op);
 		}
 
 		stencil_operation stencil_pass() const
 		{
-			return m_impl->stencil_pass();
+			return depth_stencil_state_impl().stencil_pass();
 		}
 
 		void stencil_pass(stencil_operation op)
 		{
-			m_impl->stencil_pass(op);
+			depth_stencil_state_impl().stencil_pass(op);
 		}
 
 		comparison_function back_face_stencil_function() const
 		{
-			return m_impl->back_face_stencil_function();
+			return depth_stencil_state_impl().back_face_stencil_function();
 		}
 
 		void back_face_stencil_function(comparison_function fn)
 		{
-			m_impl->back_face_stencil_function(fn);
+			depth_stencil_state_impl().back_face_stencil_function(fn);
 		}
 
 		stencil_operation back_face_stencil_depth_fail() const
 		{
-			return m_impl->back_face_stencil_depth_fail();
+			return depth_stencil_state_impl().back_face_stencil_depth_fail();
 		}
 
 		void back_face_stencil_depth_fail(stencil_operation op)
 		{
-			m_impl->back_face_stencil_depth_fail(op);
+			depth_stencil_state_impl().back_face_stencil_depth_fail(op);
 		}
 
 		stencil_operation back_face_stencil_fail() const
 		{
-			return m_impl->back_face_stencil_fail();
+			return depth_stencil_state_impl().back_face_stencil_fail();
 		}
 
 		void back_face_stencil_fail(stencil_operation op)
 		{
-			m_impl->back_face_stencil_fail(op);
+			depth_stencil_state_impl().back_face_stencil_fail(op);
 		}
 
 		stencil_operation back_face_stencil_pass() const
 		{
-			return m_impl->back_face_stencil_pass();
+			return depth_stencil_state_impl().back_face_stencil_pass();
 		}
 
 		void back_face_stencil_pass(stencil_operation op)
 		{
-			m_impl->back_face_stencil_pass(op);
+			depth_stencil_state_impl().back_face_stencil_pass(op);
 		}
 
 	private:
-		std::unique_ptr<openworld::depth_stencil_state_impl> m_impl;
-
 		virtual void set_defaults() override;
 		virtual render_state_key compute_render_state_key() const override;
 	};

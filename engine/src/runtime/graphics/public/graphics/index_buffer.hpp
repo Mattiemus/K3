@@ -18,6 +18,8 @@ namespace openworld
     class index_buffer final :
         public graphics_resource
     {
+        OPENWORLD_DELETE_COPY_OPERATORS(index_buffer);
+
     public:
         index_buffer(
             openworld::render_system& render_sys,
@@ -33,29 +35,24 @@ namespace openworld
 
         virtual ~index_buffer() {}
 
-        virtual graphics_resource_impl* impl() const override
+        openworld::index_buffer_impl& index_buffer_impl() const
         {
-            return m_impl.get();
-        }
-
-        openworld::index_buffer_impl* index_buffer_impl() const
-        {
-            return m_impl.get();
+            return static_cast<openworld::index_buffer_impl&>(impl());
         }
 
         size_t index_count() const
         {
-            return m_impl->index_count();
+            return index_buffer_impl().index_count();
         }
 
         index_format format() const
         {
-            return m_impl->format();
+            return index_buffer_impl().format();
         }
 
         resource_usage usage() const
         {
-            return m_impl->usage();
+            return index_buffer_impl().usage();
         }
 
         void get_data(
@@ -64,7 +61,7 @@ namespace openworld
             size_t element_count,
             size_t buffer_read_start_offset)
         {
-            m_impl->get_data(
+            index_buffer_impl().get_data(
                 data, 
                 start_index,
                 element_count,
@@ -79,7 +76,7 @@ namespace openworld
             size_t buffer_write_start_offset,
             data_write_options write_opts)
         {
-            m_impl->set_data(
+            index_buffer_impl().set_data(
                 render_ctx,
                 data,
                 start_index,
@@ -87,8 +84,5 @@ namespace openworld
                 buffer_write_start_offset,
                 write_opts);
         }
-
-    private:
-        std::unique_ptr<openworld::index_buffer_impl> m_impl;
     };
 }

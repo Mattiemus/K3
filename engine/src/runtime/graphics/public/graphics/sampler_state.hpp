@@ -16,25 +16,23 @@ namespace openworld
 	};
 
 	class sampler_state final :
-		public render_state
+		public render_state,
+		public shader_resource
 	{
+		OPENWORLD_DELETE_COPY_OPERATORS(sampler_state);
+
 	public:
 		sampler_state(openworld::render_system& render_sys);
 		virtual ~sampler_state() {}
 
-		virtual graphics_resource_impl* impl() const override
+		openworld::sampler_state_impl& sampler_state_impl() const
 		{
-			return m_impl.get();
+			return static_cast<openworld::sampler_state_impl&>(impl());
 		}
 
-		virtual openworld::render_state_impl* render_state_impl() const override
+		virtual shader_resource_type resource_type()
 		{
-			return m_impl.get();
-		}
-
-		openworld::sampler_state_impl* sampler_state_impl() const
-		{
-			return m_impl.get();
+			return shader_resource_type::sampler_state;
 		}
 
 		virtual render_state_type state_type() const override
@@ -44,117 +42,115 @@ namespace openworld
 
 		size_t supported_anisotropy_levels() const
 		{
-			return m_impl->supported_anisotropy_levels();
+			return sampler_state_impl().supported_anisotropy_levels();
 		}
 
 		constexpr texture_address_mode address_u() const
 		{
-			return m_impl->address_u();
+			return sampler_state_impl().address_u();
 		}
 
 		void address_u(texture_address_mode mode)
 		{
-			m_impl->address_u(mode);
+			sampler_state_impl().address_u(mode);
 		}
 
 		constexpr texture_address_mode address_v() const
 		{
-			return m_impl->address_v();
+			return sampler_state_impl().address_v();
 		}
 
 		void address_v(texture_address_mode mode)
 		{
-			m_impl->address_v(mode);
+			sampler_state_impl().address_v(mode);
 		}
 
 		constexpr texture_address_mode address_w() const
 		{
-			return m_impl->address_w();
+			return sampler_state_impl().address_w();
 		}
 
 		void address_w(texture_address_mode mode)
 		{
-			m_impl->address_w(mode);
+			sampler_state_impl().address_w(mode);
 		}
 
 		constexpr texture_filter filter() const
 		{
-			return m_impl->filter();
+			return sampler_state_impl().filter();
 		}
 
 		void filter(texture_filter f)
 		{
-			m_impl->filter(f);
+			sampler_state_impl().filter(f);
 		}
 
 		constexpr size_t max_anisotropy() const
 		{
-			return m_impl->max_anisotropy();
+			return sampler_state_impl().max_anisotropy();
 		}
 
 		void max_anisotropy(size_t x)
 		{
-			m_impl->max_anisotropy(x);
+			sampler_state_impl().max_anisotropy(x);
 		}
 
 		constexpr float mip_map_level_of_detail_bias() const
 		{
-			return m_impl->mip_map_level_of_detail_bias();
+			return sampler_state_impl().mip_map_level_of_detail_bias();
 		}
 
 		void mip_map_level_of_detail_bias(float bias)
 		{
-			m_impl->mip_map_level_of_detail_bias(bias);
+			sampler_state_impl().mip_map_level_of_detail_bias(bias);
 		}
 
 		constexpr size_t min_mip_map_level() const
 		{
-			return m_impl->min_mip_map_level();
+			return sampler_state_impl().min_mip_map_level();
 		}
 
 		void min_mip_map_level(size_t level)
 		{
-			m_impl->min_mip_map_level(level);
+			sampler_state_impl().min_mip_map_level(level);
 		}
 
 		constexpr size_t max_mip_map_level() const
 		{
-			return m_impl->max_mip_map_level();
+			return sampler_state_impl().max_mip_map_level();
 		}
 
 		void max_mip_map_level(size_t level)
 		{
-			m_impl->max_mip_map_level(level);
+			sampler_state_impl().max_mip_map_level(level);
 		}
 
 		constexpr color border_color() const
 		{
-			return m_impl->border_color();
+			return sampler_state_impl().border_color();
 		}
 
 		void border_color(const color& c)
 		{
-			m_impl->border_color(c);
+			sampler_state_impl().border_color(c);
 		}
 
 		constexpr comparison_function compare_function() const
 		{
-			return m_impl->compare_function();
+			return sampler_state_impl().compare_function();
 		}
 
 		void compare_function(comparison_function fn)
 		{
-			m_impl->compare_function(fn);
+			sampler_state_impl().compare_function(fn);
 		}
 
 		bool is_addressing_mode_supported(texture_address_mode mode)
 		{
-			return m_impl->is_addressing_mode_supported(mode);
+			return sampler_state_impl().is_addressing_mode_supported(mode);
 		}
 
 	private:
-		std::unique_ptr<openworld::sampler_state_impl> m_impl;
-
 		virtual void set_defaults() override;
 		virtual render_state_key compute_render_state_key() const override;
 	};

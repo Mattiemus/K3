@@ -5,6 +5,8 @@ namespace openworld
 	class gl_render_context final :
 		public render_context
 	{
+        OPENWORLD_DELETE_COPY_OPERATORS(gl_render_context);
+
     public:
         gl_render_context();
         virtual ~gl_render_context();

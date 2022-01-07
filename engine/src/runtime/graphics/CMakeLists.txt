@@ -14,7 +14,9 @@ add_library(${PROJECT_NAME} STATIC
     "private/sampler_state.cpp"
     "private/rasterizer_state.cpp"
     "private/impl/index_buffer_impl.cpp"
-    "private/impl/vertex_buffer_impl.cpp")
+    "private/impl/vertex_buffer_impl.cpp"
+    "private/impl/texture_1d_impl.cpp"
+    "private/texture_1d.cpp" "private/texture_1d_array.cpp")
 
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 

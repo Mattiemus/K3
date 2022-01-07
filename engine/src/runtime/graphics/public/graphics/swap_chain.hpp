@@ -18,6 +18,8 @@ namespace openworld
     class swap_chain final :
         public graphics_resource
     {
+        OPENWORLD_DELETE_COPY_OPERATORS(swap_chain);
+
     public:
         swap_chain(
             openworld::render_system& render_sys,
@@ -26,44 +28,39 @@ namespace openworld
 
         virtual ~swap_chain() {}
 
-        virtual graphics_resource_impl* impl() const override
+        openworld::swap_chain_impl& swap_chain_impl() const
         {
-            return m_impl.get();
-        }
-
-        openworld::swap_chain_impl* swap_chain_impl() const
-        {
-            return m_impl.get();
+            return static_cast<openworld::swap_chain_impl&>(impl());
         }
 
         const openworld::presentation_parameters& presentation_parameters() const
         {
-            return m_impl->presentation_parameters();
+            return swap_chain_impl().presentation_parameters();
         }
 
         const display_mode& current_display_mode() const
         {
-            return m_impl->current_display_mode();
+            return swap_chain_impl().current_display_mode();
         }
 
         void* window_handle() const
         {
-            return m_impl->window_handle();
+            return swap_chain_impl().window_handle();
         }
 
         void* monitor_handle() const
         {
-            return m_impl->monitor_handle();
+            return swap_chain_impl().monitor_handle();
         }
 
         bool is_full_screen() const
         {
-            return m_impl->is_full_screen();
+            return swap_chain_impl().is_full_screen();
         }
 
         bool is_wide_screen() const
         {
-            return m_impl->is_wide_screen();
+            return swap_chain_impl().is_wide_screen();
         }
 
         void clear(
@@ -86,7 +83,7 @@ namespace openworld
             const std::optional<resource_region_2d>& subimage,
             size_t start_index)
         {
-            m_impl->get_back_buffer_data(
+            swap_chain_impl().get_back_buffer_data(
                 data,
                 subimage,
                 start_index);
@@ -94,27 +91,24 @@ namespace openworld
 
         void present()
         {
-            m_impl->present();
+            swap_chain_impl().present();
         }
 
         void reset(
             void* window_handle,
             const openworld::presentation_parameters& presentation_params)
         {
-            m_impl->reset(window_handle, presentation_params);
+            swap_chain_impl().reset(window_handle, presentation_params);
         }
 
         void resize(size_t width, size_t height)
         {
-            m_impl->resize(width, height);
+            swap_chain_impl().resize(width, height);
         }
 
         bool toggle_full_screen()
         {
-            return m_impl->toggle_full_screen();
+            return swap_chain_impl().toggle_full_screen();
         }
-
-    private:
-        std::unique_ptr<openworld::swap_chain_impl> m_impl;
     };
 }

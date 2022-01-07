@@ -6,7 +6,10 @@ namespace openworld
 
     class shader_group
     {
+        OPENWORLD_DELETE_COPY_OPERATORS(shader_group);
+
     public:
+        shader_group() {}
         virtual ~shader_group() = 0 {};
 
         virtual bool contains_shader(shader_stage stage) = 0;

@@ -7,9 +7,10 @@ namespace openworld
 {
     class gl_swap_chain final
     {
+        OPENWORLD_DELETE_COPY_OPERATORS(gl_swap_chain);
+
     public:
         gl_swap_chain(const std::shared_ptr<window>& window);
-        gl_swap_chain(const gl_swap_chain&) = delete;
 
         virtual ~gl_swap_chain();
 

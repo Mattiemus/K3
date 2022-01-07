@@ -18,42 +18,36 @@ namespace openworld
     class occlusion_query final :
         public graphics_resource
     {
+        OPENWORLD_DELETE_COPY_OPERATORS(occlusion_query);
+
     public:
         occlusion_query(openworld::render_system& render_sys);
 
         virtual ~occlusion_query() {}
 
-        virtual graphics_resource_impl* impl() const override
+        openworld::occlusion_query_impl& occlusion_query_impl() const
         {
-            return m_impl.get();
-        }
-
-        openworld::occlusion_query_impl* occlusion_query_impl() const
-        {
-            return m_impl.get();
+            return static_cast<openworld::occlusion_query_impl&>(impl());
         }
 
         bool is_complete() const
         {
-            return m_impl->is_complete();
+            return occlusion_query_impl().is_complete();
         }
 
         size_t pixel_count() const
         {
-            return m_impl->pixel_count();
+            return occlusion_query_impl().pixel_count();
         }
 
         void begin()
         {
-            m_impl->begin();
+            occlusion_query_impl().begin();
         }
 
         void end()
         {
-            m_impl->end();
+            occlusion_query_impl().end();
         }
-
-    private:
-        std::unique_ptr<openworld::occlusion_query_impl> m_impl;
     };
 }

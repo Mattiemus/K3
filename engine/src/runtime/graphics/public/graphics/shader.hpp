@@ -4,18 +4,18 @@ namespace openworld
 {
     class shader final
     {
+        OPENWORLD_DELETE_COPY_OPERATORS(shader);
+
     public:
         shader(shader_language language, shader_stage stage, const std::string& source);
-        shader(const shader&) = delete;
-        shader(shader&& other) :
+        shader(shader&& other) noexcept :
             m_pimpl(other.m_pimpl), m_shader_lang(other.m_shader_lang), m_shader_stage(other.m_shader_stage)
         {
             other.m_pimpl = nullptr;
         }
         ~shader();
 
-        shader& operator =(const shader&) = delete;
-        shader& operator =(shader&& other)
+        shader& operator =(shader&& other) noexcept
         {
             m_pimpl = other.m_pimpl;
             m_shader_lang = other.m_shader_lang;

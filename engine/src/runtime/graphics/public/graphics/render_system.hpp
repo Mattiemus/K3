@@ -6,14 +6,17 @@ namespace openworld
 
     class render_system
     {
+        OPENWORLD_DELETE_COPY_OPERATORS(render_system);
+
     public:
+        render_system() {}
         virtual ~render_system() = 0 {}
 
         virtual std::string platform() = 0;
 
         virtual render_context& immediate_context() = 0;
 
-        //IGraphicsAdapter Adapter{ get; }
+        virtual const graphics_adapter& adapter() const = 0;
         //bool AreCommandListsSupported{ get; }
         // 
         //IPredefinedBlendStateProvider PredefinedBlendStates{ get; }

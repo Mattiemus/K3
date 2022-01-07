@@ -7,6 +7,8 @@ namespace openworld
 	class depth_stencil_state_impl :
 		public render_state_impl
 	{
+		OPENWORLD_DELETE_COPY_OPERATORS(depth_stencil_state_impl);
+
 	public:
 		depth_stencil_state_impl(size_t resource_id, openworld::render_system& render_system) :
 			render_state_impl(resource_id, render_system)

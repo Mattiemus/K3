@@ -7,6 +7,8 @@ namespace openworld
 	class gl_render_system final :
 		public render_system
 	{
+        OPENWORLD_DELETE_COPY_OPERATORS(gl_render_system);
+
     public:
         gl_render_system();
         virtual ~gl_render_system() {}
@@ -26,7 +28,11 @@ namespace openworld
             return m_immediate_ctx;
         }
 
-        //IGraphicsAdapter Adapter{ get; }
+        virtual const graphics_adapter& adapter() const override
+        {
+            throw std::runtime_error("not implemented");
+        }
+
         //bool AreCommandListsSupported{ get; }
         //IPredefinedBlendStateProvider PredefinedBlendStates{ get; }
         //IPredefinedDepthStencilStateProvider PredefinedDepthStencilStates{ get; }

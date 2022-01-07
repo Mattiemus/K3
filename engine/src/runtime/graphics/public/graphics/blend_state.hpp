@@ -18,23 +18,15 @@ namespace openworld
 	class blend_state final :
         public render_state
 	{
+		OPENWORLD_DELETE_COPY_OPERATORS(blend_state);
+
     public:
 		blend_state(openworld::render_system& render_sys);
 		virtual ~blend_state() {}
 
-		virtual graphics_resource_impl* impl() const override
+		openworld::blend_state_impl& blend_state_impl() const
 		{
-			return m_impl.get();
-		}
-
-		virtual openworld::render_state_impl* render_state_impl() const override
-		{
-			return m_impl.get();
-		}
-
-		openworld::blend_state_impl* blend_state_impl() const
-		{
-			return m_impl.get();
+			return static_cast<openworld::blend_state_impl&>(impl());
 		}
 
         virtual render_state_type state_type() const override
@@ -44,77 +36,75 @@ namespace openworld
 
 		size_t render_target_blend_count() const
 		{
-			return m_impl->render_target_blend_count();
+			return blend_state_impl().render_target_blend_count();
 		}
 
 		bool is_alpha_to_coverage_supported() const
 		{
-			return m_impl->is_alpha_to_coverage_supported();
+			return blend_state_impl().is_alpha_to_coverage_supported();
 		}
 
 		bool is_independent_blend_supported() const
 		{
-			return m_impl->is_independent_blend_supported();
+			return blend_state_impl().is_independent_blend_supported();
 		}
 
 		bool alpha_to_coverage_enable() const
 		{
-			return m_impl->alpha_to_coverage_enable();
+			return blend_state_impl().alpha_to_coverage_enable();
 		}
 
 		void alpha_to_coverage_enable(bool enable)
 		{
-			m_impl->alpha_to_coverage_enable(enable);
+			blend_state_impl().alpha_to_coverage_enable(enable);
 		}
 
 		bool independent_blend_enable() const
 		{
-			return m_impl->independent_blend_enable();
+			return blend_state_impl().independent_blend_enable();
 		}
 
 		void independent_blend_enable(bool enable)
 		{
-			m_impl->independent_blend_enable(enable);
+			blend_state_impl().independent_blend_enable(enable);
 		}
 
 		color blend_factor() const
 		{
-			return m_impl->blend_factor();
+			return blend_state_impl().blend_factor();
 		}
 
 		void blend_factor(const color& factor)
 		{
-			m_impl->blend_factor(factor);
+			blend_state_impl().blend_factor(factor);
 		}
 
 		size_t multi_sample_mask() const
 		{
-			return m_impl->multi_sample_mask();
+			return blend_state_impl().multi_sample_mask();
 		}
 
 		void multi_sample_mask(size_t mask)
 		{
-			m_impl->multi_sample_mask(mask);
+			blend_state_impl().multi_sample_mask(mask);
 		}
 
 		render_target_blend_description get_render_target_blend_description(
 			size_t render_target_index) const
 		{
-			return m_impl->get_render_target_blend_description(render_target_index);
+			return blend_state_impl().get_render_target_blend_description(render_target_index);
 		}
 
 		void set_render_target_blend_description(
 			size_t render_target_index,
 			const render_target_blend_description& desc)
 		{
-			m_impl->set_render_target_blend_description(
+			blend_state_impl().set_render_target_blend_description(
 				render_target_index,
 				desc);
 		}
 
     private:
-        std::unique_ptr<openworld::blend_state_impl> m_impl;
-
 		virtual void set_defaults() override;
 		virtual render_state_key compute_render_state_key() const override;
 	};

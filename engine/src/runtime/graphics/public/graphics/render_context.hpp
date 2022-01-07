@@ -6,7 +6,10 @@ namespace openworld
 
     class render_context
     {
+        OPENWORLD_DELETE_COPY_OPERATORS(render_context);
+
     public:
+        render_context() {}
         virtual ~render_context() = 0 {}
 
         virtual bool is_immediate_context() = 0;

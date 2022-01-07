@@ -7,6 +7,8 @@ namespace openworld
 	class blend_state_impl :
 		public render_state_impl
 	{
+		OPENWORLD_DELETE_COPY_OPERATORS(blend_state_impl);
+
 	public:
 		blend_state_impl(size_t resource_id, openworld::render_system& render_system) :
 			render_state_impl(resource_id, render_system)

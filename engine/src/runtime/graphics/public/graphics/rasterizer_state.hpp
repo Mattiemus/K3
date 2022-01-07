@@ -18,23 +18,15 @@ namespace openworld
 	class rasterizer_state final :
 		public render_state
 	{
+		OPENWORLD_DELETE_COPY_OPERATORS(rasterizer_state);
+
 	public:
 		rasterizer_state(openworld::render_system& render_sys);
 		virtual ~rasterizer_state() {}
 
-		virtual graphics_resource_impl* impl() const override
+		openworld::rasterizer_state_impl& rasterizer_state_impl() const
 		{
-			return m_impl.get();
-		}
-
-		virtual openworld::render_state_impl* render_state_impl() const override
-		{
-			return m_impl.get();
-		}
-
-		openworld::rasterizer_state_impl* rasterizer_state_impl() const
-		{
-			return m_impl.get();
+			return static_cast<openworld::rasterizer_state_impl&>(impl());
 		}
 
 		virtual render_state_type state_type() const override
@@ -44,117 +36,115 @@ namespace openworld
 
 		bool is_antialiased_line_option_supported() const
 		{
-			return m_impl->is_antialiased_line_option_supported();
+			return rasterizer_state_impl().is_antialiased_line_option_supported();
 		}
 
 		bool is_depth_clip_option_supported() const
 		{
-			return m_impl->is_depth_clip_option_supported();
+			return rasterizer_state_impl().is_depth_clip_option_supported();
 		}
 
 		cull_mode cull() const
 		{
-			return m_impl->cull();
+			return rasterizer_state_impl().cull();
 		}
 
 		void cull(cull_mode mode)
 		{
-			m_impl->cull(mode);
+			rasterizer_state_impl().cull(mode);
 		}
 
 		openworld::vertex_winding vertex_winding() const
 		{
-			return m_impl->vertex_winding();
+			return rasterizer_state_impl().vertex_winding();
 		}
 
 		void vertex_winding(openworld::vertex_winding winding)
 		{
-			m_impl->vertex_winding(winding);
+			rasterizer_state_impl().vertex_winding(winding);
 		}
 
 		fill_mode fill() const
 		{
-			return m_impl->fill();
+			return rasterizer_state_impl().fill();
 		}
 
 		void fill(fill_mode fill)
 		{
-			m_impl->fill(fill);
+			rasterizer_state_impl().fill(fill);
 		}
 
 		size_t depth_bias() const
 		{
-			return m_impl->depth_bias();
+			return rasterizer_state_impl().depth_bias();
 		}
 
 		void depth_bias(size_t bias)
 		{
-			m_impl->depth_bias(bias);
+			rasterizer_state_impl().depth_bias(bias);
 		}
 
 		float depth_bias_clamp() const
 		{
-			return m_impl->depth_bias_clamp();
+			return rasterizer_state_impl().depth_bias_clamp();
 		}
 
 		void depth_bias_clamp(float bias)
 		{
-			m_impl->depth_bias_clamp(bias);
+			rasterizer_state_impl().depth_bias_clamp(bias);
 		}
 
 		float slope_scaled_depth_bias() const
 		{
-			return m_impl->slope_scaled_depth_bias();
+			return rasterizer_state_impl().slope_scaled_depth_bias();
 		}
 
 		void slope_scaled_depth_bias(float bias)
 		{
-			m_impl->slope_scaled_depth_bias(bias);
+			rasterizer_state_impl().slope_scaled_depth_bias(bias);
 		}
 
 		bool depth_clip_enable() const
 		{
-			return m_impl->depth_clip_enable();
+			return rasterizer_state_impl().depth_clip_enable();
 		}
 
 		void depth_clip_enable(bool enable)
 		{
-			m_impl->depth_clip_enable(enable);
+			rasterizer_state_impl().depth_clip_enable(enable);
 		}
 
 		bool multi_sample_enable() const
 		{
-			return m_impl->multi_sample_enable();
+			return rasterizer_state_impl().multi_sample_enable();
 		}
 
 		void multi_sample_enable(bool enable)
 		{
-			m_impl->multi_sample_enable(enable);
+			rasterizer_state_impl().multi_sample_enable(enable);
 		}
 
 		bool antialiased_line_enable() const
 		{
-			return m_impl->antialiased_line_enable();
+			return rasterizer_state_impl().antialiased_line_enable();
 		}
 
 		void antialiased_line_enable(bool enable)
 		{
-			m_impl->antialiased_line_enable(enable);
+			rasterizer_state_impl().antialiased_line_enable(enable);
 		}
 
 		bool scissor_test_enable() const
 		{
-			return m_impl->scissor_test_enable();
+			return rasterizer_state_impl().scissor_test_enable();
 		}
 
 		void scissor_test_enable(bool enable)
 		{
-			m_impl->scissor_test_enable(enable);
+			rasterizer_state_impl().scissor_test_enable(enable);
 		}
 
 	private:
-		std::unique_ptr<openworld::rasterizer_state_impl> m_impl;
-
 		virtual void set_defaults() override;
 		virtual render_state_key compute_render_state_key() const override;
 	};

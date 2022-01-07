@@ -8,7 +8,8 @@ vertex_buffer::vertex_buffer(
     size_t vertex_count,
     resource_usage usage)
 {
-    m_impl = render_sys.make_impl<vertex_buffer>(layout, vertex_count, usage);
+    auto impl = render_sys.make_impl<vertex_buffer>(layout, vertex_count, usage);
+    bind_impl(std::move(impl));
 }
 
 vertex_buffer::vertex_buffer(
@@ -17,7 +18,8 @@ vertex_buffer::vertex_buffer(
     const memory_region& data,
     resource_usage usage)
 {
-    m_impl = render_sys.make_impl<vertex_buffer>(layout, data, usage);
+    auto impl = render_sys.make_impl<vertex_buffer>(layout, data, usage);
+    bind_impl(std::move(impl));
 }
 
 vertex_buffer::vertex_buffer(
@@ -26,5 +28,6 @@ vertex_buffer::vertex_buffer(
     const std::vector<memory_region>& data,
     resource_usage usage)
 {
-    m_impl = render_sys.make_impl<vertex_buffer>(layout, data, usage);
+    auto impl = render_sys.make_impl<vertex_buffer>(layout, data, usage);
+    bind_impl(std::move(impl));
 }

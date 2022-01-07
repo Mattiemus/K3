@@ -6,10 +6,16 @@ namespace openworld
 		public graphics_resource,
 		public standard_library_content
 	{
+		OPENWORLD_DELETE_COPY_OPERATORS(render_state);
+
 	public:
+		render_state() {}
 		virtual ~render_state() = 0 {}
 
-		virtual openworld::render_state_impl* render_state_impl() const = 0;
+		openworld::render_state_impl& render_state_impl() const
+		{
+			return static_cast<openworld::render_state_impl&>(impl());
+		}
 
 		virtual std::string standard_content_name() override
 		{
@@ -23,7 +29,7 @@ namespace openworld
 
 		bool is_bound() const
 		{
-			return render_state_impl()->is_bound();
+			return render_state_impl().is_bound();
 		}
 
 		virtual render_state_type state_type() const = 0;
@@ -44,7 +50,7 @@ namespace openworld
 		{
 			if (!is_bound())
 			{
-				render_state_impl()->bind_render_state();
+				render_state_impl().bind_render_state();
 				m_key = compute_render_state_key();
 			}
 		}

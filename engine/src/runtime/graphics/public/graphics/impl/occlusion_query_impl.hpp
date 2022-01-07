@@ -7,6 +7,8 @@ namespace openworld
 	class occlusion_query_impl :
 		public graphics_resource_impl
 	{
+		OPENWORLD_DELETE_COPY_OPERATORS(occlusion_query_impl);
+
 	public:
 		occlusion_query_impl(size_t resource_id, openworld::render_system& render_system) :
 			graphics_resource_impl(resource_id, render_system)

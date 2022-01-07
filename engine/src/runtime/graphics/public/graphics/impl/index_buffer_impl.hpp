@@ -7,6 +7,8 @@ namespace openworld
 	class index_buffer_impl :
 		public graphics_resource_impl
 	{
+		OPENWORLD_DELETE_COPY_OPERATORS(index_buffer_impl);
+
 	public:
 		index_buffer_impl(
 			size_t resource_id,

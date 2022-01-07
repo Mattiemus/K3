@@ -9,6 +9,8 @@ namespace openworld
 	class gl_vertex_buffer_impl final :
 		public vertex_buffer_impl
 	{
+		OPENWORLD_DELETE_COPY_OPERATORS(gl_vertex_buffer_impl);
+
 	public:
 		gl_vertex_buffer_impl(
 			size_t resource_id,

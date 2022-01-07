@@ -40,6 +40,46 @@ namespace openworld
         float4 = 14
     };
 
+    constexpr size_t format_size(surface_format format)
+    {
+        switch (format)
+        {
+        case surface_format::float4:
+            return sizeof(float4);
+        case surface_format::float3:
+            return sizeof(float3);
+        case surface_format::float2:
+            return sizeof(float2);
+        case surface_format::_float:
+            return sizeof(float);
+        case surface_format::color:
+            return sizeof(color);
+        case surface_format::rgba64:
+            return 8;
+        case surface_format::bgr_color:
+        case surface_format::rgba1010102:
+        case surface_format::rg32:
+            return 4;
+        case surface_format::bgr565:
+        case surface_format::bgra5551:
+        case surface_format::dxt3:
+        case surface_format::dxt5:
+            return 2;
+        case surface_format::dxt1:
+        case surface_format::alpha8:
+            return 1;
+        default:
+            return 0;
+        }
+    }
+
+    constexpr bool is_compressed_format(surface_format format)
+    {
+        return (format == surface_format::dxt1) || 
+            (format == surface_format::dxt3) || 
+            (format == surface_format::dxt5);
+    }
+
     enum class graphics_resource_type
     {
         vertex_buffer,
@@ -49,7 +89,9 @@ namespace openworld
         blend_state,
         depth_stencil_state,
         sampler_state,
-        rasterizer_state
+        rasterizer_state,
+        texture_1d,
+        texture_1d_array
     };
 
     enum class shader_resource_type

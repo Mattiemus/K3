@@ -7,6 +7,8 @@ namespace openworld
 	class vertex_buffer_impl : 
 		public graphics_resource_impl
 	{
+		OPENWORLD_DELETE_COPY_OPERATORS(vertex_buffer_impl);
+
 	public:
 		vertex_buffer_impl(
 			size_t resource_id,

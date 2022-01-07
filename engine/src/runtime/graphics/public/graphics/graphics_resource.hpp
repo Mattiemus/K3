@@ -10,6 +10,8 @@ namespace openworld
 
 	class graphics_resource
 	{
+		OPENWORLD_DELETE_COPY_OPERATORS(graphics_resource);
+
 	public:
 		constexpr graphics_resource() :
 			m_name("<no name>"), m_tag(nullptr)
@@ -17,7 +19,10 @@ namespace openworld
 
 		virtual ~graphics_resource() = 0 {}
 
-		virtual graphics_resource_impl* impl() const = 0;
+		graphics_resource_impl& impl() const
+		{
+			return *m_impl;
+		}
 
 		const std::string& name() const
 		{
@@ -41,15 +46,22 @@ namespace openworld
 
 		size_t resource_id() const
 		{
-			return impl()->resource_id();
+			return impl().resource_id();
 		}
 
 		openworld::render_system& render_system() const
 		{
-			return impl()->render_system();
+			return impl().render_system();
+		}
+
+	protected:
+		void bind_impl(std::unique_ptr<graphics_resource_impl>&& impl)
+		{
+			m_impl = std::move(impl);
 		}
 
 	private:
+		std::unique_ptr<graphics_resource_impl> m_impl;
 		std::string m_name;
 		void* m_tag;
 	};

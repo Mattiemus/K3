@@ -8,7 +8,8 @@ index_buffer::index_buffer(
     size_t index_count,
     resource_usage usage)
 {
-    m_impl = render_sys.make_impl<index_buffer>(format, index_count, usage);
+    auto impl = render_sys.make_impl<index_buffer>(format, index_count, usage);
+    bind_impl(std::move(impl));
 }
 
 index_buffer::index_buffer(
@@ -17,5 +18,6 @@ index_buffer::index_buffer(
     const memory_region& data,
     resource_usage usage)
 {
-    m_impl = render_sys.make_impl<index_buffer>(format, data, usage);
+    auto impl = render_sys.make_impl<index_buffer>(format, data, usage);
+    bind_impl(std::move(impl));
 }

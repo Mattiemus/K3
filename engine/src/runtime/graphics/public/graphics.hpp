@@ -48,6 +48,8 @@ public:
 #include "graphics/impl/depth_stencil_state_impl.hpp"
 #include "graphics/impl/sampler_state_impl.hpp"
 #include "graphics/impl/rasterizer_state_impl.hpp"
+#include "graphics/impl/texture_1d_impl.hpp"
+#include "graphics/impl/texture_1d_array_impl.hpp"
 
 #include "graphics/swap_chain.hpp"
 #include "graphics/occlusion_query.hpp"
@@ -58,6 +60,9 @@ public:
 #include "graphics/depth_stencil_state.hpp"
 #include "graphics/sampler_state.hpp"
 #include "graphics/rasterizer_state.hpp"
+#include "graphics/texture.hpp"
+#include "graphics/texture_1d.hpp"
+#include "graphics/texture_1d_array.hpp"
 #include "graphics/shader.hpp"
 #include "graphics/shader_group.hpp"
 #include "graphics/shader_pipeline_stage.hpp"

@@ -9,6 +9,8 @@ namespace openworld
 	class gl_index_buffer_impl final :
 		public index_buffer_impl
 	{
+		OPENWORLD_DELETE_COPY_OPERATORS(gl_index_buffer_impl);
+
 	public:
 		gl_index_buffer_impl(
 			size_t resource_id,

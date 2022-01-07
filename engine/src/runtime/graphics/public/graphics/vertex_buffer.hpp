@@ -18,6 +18,8 @@ namespace openworld
 	class vertex_buffer final :
         public graphics_resource
 	{
+        OPENWORLD_DELETE_COPY_OPERATORS(vertex_buffer);
+
 	public:
         vertex_buffer(
             openworld::render_system& render_sys,
@@ -39,42 +41,37 @@ namespace openworld
         
         virtual ~vertex_buffer() {}
 
-        virtual graphics_resource_impl* impl() const override
+        openworld::vertex_buffer_impl& vertex_buffer_impl() const
         {
-            return m_impl.get();
-        }
-
-        openworld::vertex_buffer_impl* vertex_buffer_impl() const
-        {
-            return m_impl.get();
+            return static_cast<openworld::vertex_buffer_impl&>(impl());
         }
 
         const vertex_layout& layout() const
         {
-            return m_impl->layout();
+            return vertex_buffer_impl().layout();
         }
 
         size_t vertex_count() const
         {
-            return m_impl->vertex_count();
+            return vertex_buffer_impl().vertex_count();
         }
 
         resource_usage usage() const
         {
-            return m_impl->usage();
+            return vertex_buffer_impl().usage();
         }
 
         void get_interleaved_data(
             const std::vector<memory_region>& data)
         {
-            m_impl->get_interleaved_data(data);
+            vertex_buffer_impl().get_interleaved_data(data);
         }
 
         void set_interleaved_data(
             render_context& render_ctx,
             const std::vector<memory_region>& data)
         {
-            m_impl->set_interleaved_data(render_ctx, data);
+            vertex_buffer_impl().set_interleaved_data(render_ctx, data);
         }
 
         void get_data(
@@ -84,7 +81,7 @@ namespace openworld
             size_t buffer_read_start_offset,
             size_t vertex_stride)
         {
-            m_impl->get_data(
+            vertex_buffer_impl().get_data(
                 data,
                 start_index,
                 element_count,
@@ -101,7 +98,7 @@ namespace openworld
             size_t vertex_stride,
             data_write_options write_opts)
         {
-            m_impl->set_data(
+            vertex_buffer_impl().set_data(
                 render_ctx,
                 data,
                 start_index,
@@ -110,8 +107,5 @@ namespace openworld
                 vertex_stride,
                 write_opts);
         }
-
-    private:
-        std::unique_ptr<openworld::vertex_buffer_impl> m_impl;
 	};
 }

@@ -24,6 +24,7 @@
 
 #include "core/utilities/enums.hpp"
 #include "core/utilities/hash.hpp"
+#include "core/utilities/macros.hpp"
 
 #include "core/engine/exceptions.hpp"
 #include "core/engine/service_locator.hpp"

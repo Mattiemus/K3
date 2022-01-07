@@ -6,6 +6,8 @@ namespace openworld
 
 	class graphics_resource_impl
 	{
+		OPENWORLD_DELETE_COPY_OPERATORS(graphics_resource_impl);
+
 	public:
 		graphics_resource_impl(size_t resource_id, openworld::render_system& render_system) :
 			m_resource_id(resource_id), m_render_system(render_system)

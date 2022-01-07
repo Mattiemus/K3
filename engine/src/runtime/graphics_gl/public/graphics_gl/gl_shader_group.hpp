@@ -7,9 +7,10 @@ namespace openworld
     class gl_shader_group final :
         public shader_group
     {
+        OPENWORLD_DELETE_COPY_OPERATORS(gl_shader_group);
+
     public:
         gl_shader_group(const std::vector<std::reference_wrapper<shader>>& stages);
-        gl_shader_group(const gl_shader_group&) = delete;
         gl_shader_group(gl_shader_group&& other) noexcept;
 
         virtual ~gl_shader_group();
