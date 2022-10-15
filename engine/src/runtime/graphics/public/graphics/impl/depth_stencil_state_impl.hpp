@@ -14,7 +14,7 @@ namespace openworld
 			render_state_impl(resource_id, render_system)
 		{}
 
-		virtual ~depth_stencil_state_impl() = 0 {}
+		virtual ~depth_stencil_state_impl() = 0;
 
 		constexpr bool depth_enable() const
 		{
@@ -219,7 +219,7 @@ namespace openworld
 			graphics_resource_impl_factory(render_system)
 		{}
 
-		virtual ~depth_stencil_state_impl_factory() = 0 {}
+		virtual ~depth_stencil_state_impl_factory() = 0;
 
 		virtual std::unique_ptr<depth_stencil_state_impl> create_impl() = 0;
 	};

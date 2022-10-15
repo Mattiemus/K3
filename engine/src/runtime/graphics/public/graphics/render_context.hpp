@@ -10,7 +10,7 @@ namespace openworld
 
     public:
         render_context() {}
-        virtual ~render_context() = 0 {}
+        virtual ~render_context() = 0;
 
         virtual bool is_immediate_context() = 0;
 
@@ -89,7 +89,7 @@ namespace openworld
         public render_context
     {
     public:
-        virtual ~deferred_render_context() = 0 {};
+        virtual ~deferred_render_context() = 0;
 
         //ICommandList FinishCommandList(bool restoreDeferredContextState);
     };

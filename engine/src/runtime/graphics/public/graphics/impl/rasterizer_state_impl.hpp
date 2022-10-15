@@ -14,7 +14,7 @@ namespace openworld
 			render_state_impl(resource_id, render_system)
 		{}
 
-		virtual ~rasterizer_state_impl() = 0 {}
+		virtual ~rasterizer_state_impl() = 0;
 
 		virtual bool is_antialiased_line_option_supported() const = 0;
 		virtual bool is_depth_clip_option_supported() const = 0;
@@ -150,7 +150,7 @@ namespace openworld
 			graphics_resource_impl_factory(render_system)
 		{}
 
-		virtual ~rasterizer_state_impl_factory() = 0 {}
+		virtual ~rasterizer_state_impl_factory() = 0;
 
 		virtual std::unique_ptr<rasterizer_state_impl> create_impl() = 0;
 	};

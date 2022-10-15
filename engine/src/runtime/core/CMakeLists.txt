@@ -4,8 +4,11 @@ project(openworld_engine_runtime_core VERSION 0.1.0)
 
 add_library(${PROJECT_NAME} STATIC
     "private/engine/engine.cpp"
+    "private/platform/impl/application_host_impl.cpp"
     "private/platform/win32/win32_window.cpp"
-    "private/platform/win32/win32_application_host_impl.cpp")
+    "private/platform/win32/win32_application_host_impl.cpp"
+    "private/platform/platform_system.cpp"
+    "private/platform/window.cpp")
 
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 

@@ -2,10 +2,21 @@
 #include "math.hpp"
 #include "graphics_gl.hpp"
 
+#include <set>
+#include <random>
+#include <cassert>
+#include <ranges>
+
 using namespace openworld;
+
+
 
 int main()
 {
+    
+
+
+
     engine::initialize();
     engine::services().make_service<platform_system, win32_platform_system>();
     engine::services().make_service<render_system, gl_render_system>();
@@ -64,7 +75,7 @@ int main()
     return app_host.run(
         [&]()
         {
-            ctx.clear(color::green);
+            ctx.clear(color(128, 128, 128, 255));
 
             ctx.set_vertex_buffer(vertex_buffer_binding(vertex_buff));
             ctx.set_index_buffer(index_buff);

@@ -1,0 +1,487 @@
+[
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\lapi.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\lapi.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/lapi.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\lcode.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\lcode.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/lcode.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\lctype.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\lctype.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/lctype.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\ldebug.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\ldebug.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/ldebug.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\ldo.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\ldo.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/ldo.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\ldump.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\ldump.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/ldump.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\lfunc.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\lfunc.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/lfunc.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\lgc.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\lgc.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/lgc.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\llex.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\llex.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/llex.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\lmem.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\lmem.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/lmem.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\lobject.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\lobject.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/lobject.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\lopcodes.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\lopcodes.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/lopcodes.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\lparser.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\lparser.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/lparser.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\lstate.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\lstate.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/lstate.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\lstring.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\lstring.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/lstring.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\ltable.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\ltable.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/ltable.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\ltm.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\ltm.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/ltm.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\lundump.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\lundump.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/lundump.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\lvm.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\lvm.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/lvm.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\lzio.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\lzio.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/lzio.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\lauxlib.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\lauxlib.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/lauxlib.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\lbaselib.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\lbaselib.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/lbaselib.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\lcorolib.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\lcorolib.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/lcorolib.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\ldblib.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\ldblib.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/ldblib.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\liolib.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\liolib.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/liolib.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\lmathlib.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\lmathlib.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/lmathlib.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\loadlib.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\loadlib.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/loadlib.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\loslib.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\loslib.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/loslib.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\lstrlib.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\lstrlib.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/lstrlib.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\ltablib.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\ltablib.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/ltablib.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\lutf8lib.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\lutf8lib.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/lutf8lib.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\lua_static.dir\\src\\linit.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\linit.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/linit.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo  -I..\\third_party\\lua\\lua-5.4.0\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\lua\\lua-5.4.0\\CMakeFiles\\luac.dir\\src\\luac.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\lua\\lua-5.4.0\\src\\luac.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/lua/lua-5.4.0/src/luac.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -DGLEW_NO_GLU -DGLEW_STATIC -DVC_EXTRALEAN -DWIN32_MEAN_AND_LEAN -D_CRT_SECURE_NO_WARNINGS -I..\\third_party\\glew\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\glew\\CMakeFiles\\libglew_static.dir\\src\\glew.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\glew\\src\\glew.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/glew/src/glew.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100190~1.0\\x64\\rc.exe -DGLEW_NO_GLU -DGLEW_STATIC -DVC_EXTRALEAN -DWIN32_MEAN_AND_LEAN -D_CRT_SECURE_NO_WARNINGS -IC:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\glew\\include  /DWIN32 /D_DEBUG   /fothird_party\\glew\\CMakeFiles\\libglew_static.dir\\build\\glew.rc.res C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\glew\\build\\glew.rc",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/glew/build/glew.rc"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -DGLEW_BUILD -DGLEW_NO_GLU -DVC_EXTRALEAN -DWIN32_MEAN_AND_LEAN -D_CRT_SECURE_NO_WARNINGS -Dlibglew_shared_EXPORTS -I..\\third_party\\glew\\include  /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1   /Fothird_party\\glew\\CMakeFiles\\libglew_shared.dir\\src\\glew.c.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\glew\\src\\glew.c",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/glew/src/glew.c"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100190~1.0\\x64\\rc.exe -DGLEW_BUILD -DGLEW_NO_GLU -DVC_EXTRALEAN -DWIN32_MEAN_AND_LEAN -D_CRT_SECURE_NO_WARNINGS -Dlibglew_shared_EXPORTS -IC:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\glew\\include  /DWIN32 /D_DEBUG   /fothird_party\\glew\\CMakeFiles\\libglew_shared.dir\\build\\glew.rc.res C:\\Users\\Matthew\\Desktop\\K3\\K3\\third_party\\glew\\build\\glew.rc",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/third_party/glew/build/glew.rc"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\core\\private  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\core\\CMakeFiles\\openworld_engine_runtime_core.dir\\private\\engine\\engine.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\core\\private\\engine\\engine.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/core/private/engine/engine.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\core\\private  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\core\\CMakeFiles\\openworld_engine_runtime_core.dir\\private\\platform\\impl\\application_host_impl.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\core\\private\\platform\\impl\\application_host_impl.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/core/private/platform/impl/application_host_impl.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\core\\private  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\core\\CMakeFiles\\openworld_engine_runtime_core.dir\\private\\platform\\win32\\win32_window.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\core\\private\\platform\\win32\\win32_window.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/core/private/platform/win32/win32_window.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\core\\private  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\core\\CMakeFiles\\openworld_engine_runtime_core.dir\\private\\platform\\win32\\win32_application_host_impl.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\core\\private\\platform\\win32\\win32_application_host_impl.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/core/private/platform/win32/win32_application_host_impl.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\core\\private  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\core\\CMakeFiles\\openworld_engine_runtime_core.dir\\private\\platform\\platform_system.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\core\\private\\platform\\platform_system.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/core/private/platform/platform_system.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\core\\private  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\core\\CMakeFiles\\openworld_engine_runtime_core.dir\\private\\platform\\window.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\core\\private\\platform\\window.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/core/private/platform/window.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\ecs\\public -I..\\engine\\src\\runtime\\ecs\\private -I..\\engine\\src\\runtime\\core\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\ecs\\CMakeFiles\\openworld_engine_runtime_ecs.dir\\private\\component_registry.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\ecs\\private\\component_registry.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/ecs/private/component_registry.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\impl\\graphics_resource_impl.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\impl\\graphics_resource_impl.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/impl/graphics_resource_impl.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\impl\\index_buffer_impl.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\impl\\index_buffer_impl.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/impl/index_buffer_impl.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\impl\\vertex_buffer_impl.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\impl\\vertex_buffer_impl.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/impl/vertex_buffer_impl.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\impl\\texture_1d_impl.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\impl\\texture_1d_impl.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/impl/texture_1d_impl.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\impl\\texture_1d_array_impl.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\impl\\texture_1d_array_impl.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/impl/texture_1d_array_impl.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\impl\\texture_2d_impl.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\impl\\texture_2d_impl.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/impl/texture_2d_impl.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\impl\\texture_2d_array_impl.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\impl\\texture_2d_array_impl.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/impl/texture_2d_array_impl.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\impl\\texture_3d_impl.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\impl\\texture_3d_impl.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/impl/texture_3d_impl.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\impl\\texture_cube_impl.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\impl\\texture_cube_impl.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/impl/texture_cube_impl.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\vertex_layout.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\vertex_layout.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/vertex_layout.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\vertex_structures.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\vertex_structures.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/vertex_structures.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\vertex_buffer.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\vertex_buffer.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/vertex_buffer.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\index_buffer.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\index_buffer.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/index_buffer.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\occlusion_query.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\occlusion_query.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/occlusion_query.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\blend_state.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\blend_state.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/blend_state.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\msaa_description.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\msaa_description.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/msaa_description.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\depth_stencil_state.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\depth_stencil_state.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/depth_stencil_state.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\graphics_resource.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\graphics_resource.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/graphics_resource.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\sampler_state.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\sampler_state.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/sampler_state.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\shader_group.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\shader_group.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/shader_group.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\rasterizer_state.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\rasterizer_state.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/rasterizer_state.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\render_context.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\render_context.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/render_context.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\render_system.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\render_system.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/render_system.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\texture_1d.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\texture_1d.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/texture_1d.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics\\CMakeFiles\\openworld_engine_runtime_graphics.dir\\private\\texture_1d_array.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics\\private\\texture_1d_array.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics/private/texture_1d_array.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP -DGLEW_NO_GLU -DGLEW_STATIC -DVC_EXTRALEAN -DWIN32_MEAN_AND_LEAN -D_CRT_SECURE_NO_WARNINGS -I..\\engine\\src\\runtime\\graphics_gl\\public -I..\\engine\\src\\runtime\\graphics_gl\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\math\\public -I..\\third_party\\glew\\include  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics_gl\\CMakeFiles\\openworld_engine_runtime_graphics_gl.dir\\private\\shader.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics_gl\\private\\shader.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics_gl/private/shader.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP -DGLEW_NO_GLU -DGLEW_STATIC -DVC_EXTRALEAN -DWIN32_MEAN_AND_LEAN -D_CRT_SECURE_NO_WARNINGS -I..\\engine\\src\\runtime\\graphics_gl\\public -I..\\engine\\src\\runtime\\graphics_gl\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\math\\public -I..\\third_party\\glew\\include  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics_gl\\CMakeFiles\\openworld_engine_runtime_graphics_gl.dir\\private\\gl_shader_group.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics_gl\\private\\gl_shader_group.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics_gl/private/gl_shader_group.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP -DGLEW_NO_GLU -DGLEW_STATIC -DVC_EXTRALEAN -DWIN32_MEAN_AND_LEAN -D_CRT_SECURE_NO_WARNINGS -I..\\engine\\src\\runtime\\graphics_gl\\public -I..\\engine\\src\\runtime\\graphics_gl\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\math\\public -I..\\third_party\\glew\\include  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics_gl\\CMakeFiles\\openworld_engine_runtime_graphics_gl.dir\\private\\gl_render_context.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics_gl\\private\\gl_render_context.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics_gl/private/gl_render_context.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP -DGLEW_NO_GLU -DGLEW_STATIC -DVC_EXTRALEAN -DWIN32_MEAN_AND_LEAN -D_CRT_SECURE_NO_WARNINGS -I..\\engine\\src\\runtime\\graphics_gl\\public -I..\\engine\\src\\runtime\\graphics_gl\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\math\\public -I..\\third_party\\glew\\include  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics_gl\\CMakeFiles\\openworld_engine_runtime_graphics_gl.dir\\private\\gl_render_system.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics_gl\\private\\gl_render_system.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics_gl/private/gl_render_system.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP -DGLEW_NO_GLU -DGLEW_STATIC -DVC_EXTRALEAN -DWIN32_MEAN_AND_LEAN -D_CRT_SECURE_NO_WARNINGS -I..\\engine\\src\\runtime\\graphics_gl\\public -I..\\engine\\src\\runtime\\graphics_gl\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\math\\public -I..\\third_party\\glew\\include  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics_gl\\CMakeFiles\\openworld_engine_runtime_graphics_gl.dir\\private\\win32\\gl_swap_chain.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics_gl\\private\\win32\\gl_swap_chain.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics_gl/private/win32/gl_swap_chain.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP -DGLEW_NO_GLU -DGLEW_STATIC -DVC_EXTRALEAN -DWIN32_MEAN_AND_LEAN -D_CRT_SECURE_NO_WARNINGS -I..\\engine\\src\\runtime\\graphics_gl\\public -I..\\engine\\src\\runtime\\graphics_gl\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\math\\public -I..\\third_party\\glew\\include  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics_gl\\CMakeFiles\\openworld_engine_runtime_graphics_gl.dir\\private\\impl\\gl_vertex_buffer_impl.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics_gl\\private\\impl\\gl_vertex_buffer_impl.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics_gl/private/impl/gl_vertex_buffer_impl.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP -DGLEW_NO_GLU -DGLEW_STATIC -DVC_EXTRALEAN -DWIN32_MEAN_AND_LEAN -D_CRT_SECURE_NO_WARNINGS -I..\\engine\\src\\runtime\\graphics_gl\\public -I..\\engine\\src\\runtime\\graphics_gl\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\math\\public -I..\\third_party\\glew\\include  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics_gl\\CMakeFiles\\openworld_engine_runtime_graphics_gl.dir\\private\\impl\\gl_index_buffer_impl.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics_gl\\private\\impl\\gl_index_buffer_impl.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics_gl/private/impl/gl_index_buffer_impl.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP -DGLEW_NO_GLU -DGLEW_STATIC -DVC_EXTRALEAN -DWIN32_MEAN_AND_LEAN -D_CRT_SECURE_NO_WARNINGS -I..\\engine\\src\\runtime\\graphics_gl\\public -I..\\engine\\src\\runtime\\graphics_gl\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\math\\public -I..\\third_party\\glew\\include  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics_gl\\CMakeFiles\\openworld_engine_runtime_graphics_gl.dir\\private\\impl\\gl_vertex_buffer_impl_factory.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics_gl\\private\\impl\\gl_vertex_buffer_impl_factory.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics_gl/private/impl/gl_vertex_buffer_impl_factory.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP -DGLEW_NO_GLU -DGLEW_STATIC -DVC_EXTRALEAN -DWIN32_MEAN_AND_LEAN -D_CRT_SECURE_NO_WARNINGS -I..\\engine\\src\\runtime\\graphics_gl\\public -I..\\engine\\src\\runtime\\graphics_gl\\private -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\math\\public -I..\\third_party\\glew\\include  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\graphics_gl\\CMakeFiles\\openworld_engine_runtime_graphics_gl.dir\\private\\impl\\gl_index_buffer_impl_factory.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\graphics_gl\\private\\impl\\gl_index_buffer_impl_factory.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/graphics_gl/private/impl/gl_index_buffer_impl_factory.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\math\\public -I..\\engine\\src\\runtime\\math\\private -I..\\engine\\src\\runtime\\core\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\math\\CMakeFiles\\openworld_engine_runtime_math.dir\\private\\float4x4.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\math\\private\\float4x4.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/math/private/float4x4.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP  -I..\\engine\\src\\runtime\\math\\public -I..\\engine\\src\\runtime\\math\\private -I..\\engine\\src\\runtime\\core\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Foengine\\src\\runtime\\math\\CMakeFiles\\openworld_engine_runtime_math.dir\\private\\color.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\engine\\src\\runtime\\math\\private\\color.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/engine/src/runtime/math/private/color.cpp"
+},
+
+{
+  "directory": "c:/Users/Matthew/Desktop/K3/K3/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\x64\\bin\\clang-cl.exe  /nologo -TP -DGLEW_NO_GLU -DGLEW_STATIC -DVC_EXTRALEAN -DWIN32_MEAN_AND_LEAN -D_CRT_SECURE_NO_WARNINGS -I..\\third_party\\glew\\include -I..\\engine\\src\\runtime\\core\\public -I..\\engine\\src\\runtime\\math\\public -I..\\engine\\src\\runtime\\ecs\\public -I..\\engine\\src\\runtime\\graphics\\public -I..\\engine\\src\\runtime\\graphics_gl\\public  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   -std:c++latest /Fogame\\CMakeFiles\\K3.dir\\K3.cpp.obj /FdTARGET_COMPILE_PDB -c C:\\Users\\Matthew\\Desktop\\K3\\K3\\game\\K3.cpp",
+  "file": "C:/Users/Matthew/Desktop/K3/K3/game/K3.cpp"
+}
+]

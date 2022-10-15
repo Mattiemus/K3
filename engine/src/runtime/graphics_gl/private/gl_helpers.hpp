@@ -55,9 +55,9 @@ namespace openworld
             return GL_VERTEX_SHADER;
         case shader_stage::pixel_shader:
             return GL_FRAGMENT_SHADER;
+        default:
+            throw std::runtime_error("Unknown shader stage");
         }
-
-        throw std::runtime_error("Unknown shader stage");
     }
 
     constexpr GLenum to_gl_enum(primitive_type prim_type)

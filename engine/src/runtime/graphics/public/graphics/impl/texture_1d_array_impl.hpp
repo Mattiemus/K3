@@ -28,12 +28,15 @@ namespace openworld
 			resource_usage usage,
 			const std::vector<memory_region>& data);
 
-		virtual ~texture_1d_array_impl() = 0 {}
+		virtual ~texture_1d_array_impl() = 0;
 
 		constexpr size_t array_count() const
 		{
 			return m_array_count;
 		}
+
+		using texture_1d_impl::get_data;
+		using texture_1d_impl::set_data;
 
 		virtual void get_data(
 			const memory_region& data,
@@ -65,7 +68,7 @@ namespace openworld
 			graphics_resource_impl_factory(render_system)
 		{}
 
-		virtual ~texture_1d_array_impl_factory() = 0 {}
+		virtual ~texture_1d_array_impl_factory() = 0;
 
 		virtual std::unique_ptr<texture_1d_array_impl> create_impl(
 			size_t width,

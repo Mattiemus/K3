@@ -11,7 +11,7 @@ namespace openworld
 		size_t vertex_offset;
 		size_t instance_frequency;
 
-        constexpr vertex_buffer_binding(vertex_buffer& buffer) :
+        constexpr explicit vertex_buffer_binding(vertex_buffer& buffer) :
             buffer(buffer),
             vertex_offset(0),
             instance_frequency(0)
@@ -42,7 +42,7 @@ namespace openworld
         const vertex_buffer_binding& lhs,
         const vertex_buffer_binding& rhs)
     {
-        return (lhs.buffer == rhs.buffer) &&
+        return (std::addressof(lhs.buffer) == std::addressof(rhs.buffer)) &&
             (lhs.vertex_offset == rhs.vertex_offset) &&
             (lhs.instance_frequency == rhs.instance_frequency);
     }
@@ -51,7 +51,7 @@ namespace openworld
         const vertex_buffer_binding& lhs,
         const vertex_buffer_binding& rhs)
     {
-        return (lhs.buffer != rhs.buffer) ||
+        return (std::addressof(lhs.buffer) != std::addressof(rhs.buffer)) ||
             (lhs.vertex_offset != rhs.vertex_offset) ||
             (lhs.instance_frequency != rhs.instance_frequency);
     }

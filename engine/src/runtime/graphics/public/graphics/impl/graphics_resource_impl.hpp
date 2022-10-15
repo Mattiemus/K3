@@ -13,7 +13,7 @@ namespace openworld
 			m_resource_id(resource_id), m_render_system(render_system)
 		{}
 
-		virtual ~graphics_resource_impl() = 0 {}
+		virtual ~graphics_resource_impl() = 0;
 
 		constexpr size_t resource_id() const
 		{
@@ -37,7 +37,7 @@ namespace openworld
 			m_render_system(render_system)
 		{}
 
-		virtual ~graphics_resource_impl_factory() = 0 {}
+		virtual ~graphics_resource_impl_factory() = 0;
 
 		openworld::render_system& render_system() const
 		{

@@ -108,3 +108,9 @@ vertex_buffer_impl::vertex_buffer_impl(
 		throw graphics_exception("Vertex buffer size mismatch");
 	}
 }
+
+vertex_buffer_impl::~vertex_buffer_impl()
+{}
+
+vertex_buffer_impl_factory::~vertex_buffer_impl_factory()
+{}

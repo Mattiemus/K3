@@ -31,7 +31,7 @@ namespace openworld
 			const std::vector<memory_region>& data,
 			resource_usage usage);
 
-		virtual ~vertex_buffer_impl() = 0 {}
+		virtual ~vertex_buffer_impl() = 0;
 
 		constexpr const vertex_layout& layout() const
 		{
@@ -85,7 +85,7 @@ namespace openworld
 			graphics_resource_impl_factory(render_system)
 		{}
 
-		virtual ~vertex_buffer_impl_factory() = 0 {}
+		virtual ~vertex_buffer_impl_factory() = 0;
 
 		virtual std::unique_ptr<vertex_buffer_impl> create_impl(
 			const vertex_layout& layout,

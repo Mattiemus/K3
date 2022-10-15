@@ -10,7 +10,7 @@ namespace openworld
     class application_host_impl
     {
     public:
-        virtual ~application_host_impl() = 0 {}
+        virtual ~application_host_impl() = 0;
 
         // TODO: main_window
         // TODO: windows

@@ -10,7 +10,7 @@ namespace openworld
 
     public:
         render_system() {}
-        virtual ~render_system() = 0 {}
+        virtual ~render_system() = 0;
 
         virtual std::string platform() = 0;
 
@@ -37,11 +37,11 @@ namespace openworld
         typename graphics_resource_traits<Resource>::impl_factory& get_impl_factory()
         {
             auto& factory = get_impl_factory(graphics_resource_traits<Resource>::resource_type);
-            return dynamic_cast<graphics_resource_traits<Resource>::impl_factory&>(factory);
+            return dynamic_cast<typename graphics_resource_traits<Resource>::impl_factory&>(factory);
         }
 
         template <typename Resource>
-        typename bool is_supported()
+        bool is_supported()
         {
             return is_supported(graphics_resource_traits<Resource>::resource_type);
         }

@@ -14,7 +14,7 @@ namespace openworld
 			graphics_resource_impl(resource_id, render_system)
 		{}
 
-		virtual ~swap_chain_impl() = 0 {}
+		virtual ~swap_chain_impl() = 0;
 
         virtual const openworld::presentation_parameters& presentation_parameters() const = 0;
         virtual const display_mode& current_display_mode() const = 0;
@@ -54,7 +54,7 @@ namespace openworld
 			graphics_resource_impl_factory(render_system)
 		{}
 
-		virtual ~swap_chain_impl_factory() = 0 {}
+		virtual ~swap_chain_impl_factory() = 0;
 
 		virtual std::unique_ptr<swap_chain_impl> create_impl(
 			void* window_handle, 

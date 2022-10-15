@@ -14,7 +14,7 @@ namespace openworld
 			render_state_impl(resource_id, render_system)
 		{}
 
-		virtual ~blend_state_impl() = 0 {}
+		virtual ~blend_state_impl() = 0;
 
 		virtual size_t render_target_blend_count() const = 0;
 		virtual bool is_alpha_to_coverage_supported() const = 0;
@@ -86,7 +86,7 @@ namespace openworld
 			graphics_resource_impl_factory(render_system)
 		{}
 
-		virtual ~blend_state_impl_factory() = 0 {}
+		virtual ~blend_state_impl_factory() = 0;
 
 		virtual std::unique_ptr<blend_state_impl> create_impl() = 0;
 	};

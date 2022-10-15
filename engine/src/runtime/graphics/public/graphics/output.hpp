@@ -5,7 +5,7 @@ namespace openworld
     class output final
     {
     public:
-        constexpr output(void* monitor_handle, const std::string& name, const int_rectangle& bounds) :
+        output(void* monitor_handle, const std::string& name, const int_rectangle& bounds) :
             m_monitor_handle(monitor_handle),
             m_name(name),
             m_bounds(bounds)

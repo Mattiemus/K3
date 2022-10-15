@@ -122,7 +122,7 @@ namespace openworld
         constexpr bool is_pmf_v = std::is_member_function_pointer<T>::value;
 
         template <typename T>
-        constexpr bool is_observer_v = std::is_base_of<::sigslot::detail::observer_type,
+        constexpr bool is_observer_v = std::is_base_of<::openworld::detail::observer_type,
             std::remove_pointer_t<T>>::value;
 
     } // namespace trait

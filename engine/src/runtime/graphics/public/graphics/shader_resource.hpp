@@ -8,7 +8,7 @@ namespace openworld
 
 	public:
 		shader_resource() {}
-		virtual ~shader_resource() = 0 {}
+		virtual ~shader_resource() = 0;
 
 		virtual shader_resource_type resource_type() const = 0;
 	};

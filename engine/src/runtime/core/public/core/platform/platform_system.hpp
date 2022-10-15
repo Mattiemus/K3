@@ -5,7 +5,7 @@ namespace openworld
     class platform_system
     {
     public:
-        virtual ~platform_system() = 0 {}
+        virtual ~platform_system() = 0;
 
         virtual std::string platform() = 0;
 

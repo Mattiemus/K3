@@ -70,7 +70,7 @@ namespace openworld
             float depth,
             int stencil)
         {
-            clear(
+            swap_chain_impl().clear(
                 render_ctx,
                 options,
                 clear_color,

@@ -13,11 +13,11 @@ namespace openworld
 		OPENWORLD_DELETE_COPY_OPERATORS(graphics_resource);
 
 	public:
-		constexpr graphics_resource() :
+		graphics_resource() :
 			m_name("<no name>"), m_tag(nullptr)
 		{}
 
-		virtual ~graphics_resource() = 0 {}
+		virtual ~graphics_resource() = 0;
 
 		graphics_resource_impl& impl() const
 		{

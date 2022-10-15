@@ -30,7 +30,7 @@ namespace openworld
         //event TypedEventHandler<IWindow, KeyboardStateEventArgs> KeyPress;
         //event TypedEventHandler<IWindow, KeyboardStateEventArgs> KeyUp;
 
-        virtual ~window() = 0 {}
+        virtual ~window() = 0;
 
         //bool EnableUserResizing{ get; set; }
         virtual bool enable_input_events() = 0;

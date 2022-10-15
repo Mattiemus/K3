@@ -8,7 +8,7 @@
 class standard_library_content
 {
 public:
-	virtual ~standard_library_content() = 0 {}
+	virtual ~standard_library_content() = 0;
 
 	virtual std::string standard_content_name() = 0;
 	virtual bool is_standard_content() = 0;
@@ -48,8 +48,13 @@ public:
 #include "graphics/impl/depth_stencil_state_impl.hpp"
 #include "graphics/impl/sampler_state_impl.hpp"
 #include "graphics/impl/rasterizer_state_impl.hpp"
+#include "graphics/impl/texture_impl.hpp"
 #include "graphics/impl/texture_1d_impl.hpp"
 #include "graphics/impl/texture_1d_array_impl.hpp"
+#include "graphics/impl/texture_2d_impl.hpp"
+#include "graphics/impl/texture_2d_array_impl.hpp"
+#include "graphics/impl/texture_3d_impl.hpp"
+#include "graphics/impl/texture_cube_impl.hpp"
 
 #include "graphics/swap_chain.hpp"
 #include "graphics/occlusion_query.hpp"

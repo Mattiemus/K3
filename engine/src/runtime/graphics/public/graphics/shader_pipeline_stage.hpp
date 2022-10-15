@@ -7,7 +7,7 @@ namespace openworld
         OPENWORLD_DELETE_COPY_OPERATORS(shader_pipeline_stage);
 
     public:
-        virtual ~shader_pipeline_stage() = 0 {}
+        virtual ~shader_pipeline_stage() = 0;
 
         virtual size_t maximum_sampler_slots() = 0;
         virtual size_t maximum_resource_slots() = 0;

@@ -30,7 +30,7 @@ namespace openworld
 			return static_cast<openworld::sampler_state_impl&>(impl());
 		}
 
-		virtual shader_resource_type resource_type()
+		virtual shader_resource_type resource_type() const override
 		{
 			return shader_resource_type::sampler_state;
 		}

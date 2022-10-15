@@ -10,7 +10,7 @@ namespace openworld
             return s_services;
         }
 
-        static constexpr bool is_initialised()
+        static bool is_initialised()
         {
             return s_is_initialised;
         }

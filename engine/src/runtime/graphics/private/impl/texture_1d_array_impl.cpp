@@ -35,3 +35,9 @@ texture_1d_array_impl::texture_1d_array_impl(
 		throw graphics_exception("Array count cannot be zero");
 	}
 }
+
+texture_1d_array_impl::~texture_1d_array_impl()
+{}
+
+texture_1d_array_impl_factory::~texture_1d_array_impl_factory()
+{}

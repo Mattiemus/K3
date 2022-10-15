@@ -50,3 +50,9 @@ index_buffer_impl::index_buffer_impl(
 
 	m_index_count = totalSize / indexSize;
 }
+
+index_buffer_impl::~index_buffer_impl()
+{}
+
+index_buffer_impl_factory::~index_buffer_impl_factory()
+{}

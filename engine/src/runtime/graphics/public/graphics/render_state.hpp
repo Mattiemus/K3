@@ -10,7 +10,7 @@ namespace openworld
 
 	public:
 		render_state() {}
-		virtual ~render_state() = 0 {}
+		virtual ~render_state() = 0;
 
 		openworld::render_state_impl& render_state_impl() const
 		{

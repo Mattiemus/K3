@@ -14,7 +14,7 @@ namespace openworld
 			graphics_resource_impl(resource_id, render_system)
 		{}
 
-		virtual ~render_state_impl() = 0 {}
+		virtual ~render_state_impl() = 0;
 
 		constexpr bool is_bound() const
 		{

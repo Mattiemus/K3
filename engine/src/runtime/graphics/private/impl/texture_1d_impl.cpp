@@ -9,11 +9,8 @@ texture_1d_impl::texture_1d_impl(
 	bool gen_mip_maps,
 	surface_format format,
 	resource_usage usage) :
-	graphics_resource_impl(resource_id, render_system),
-	m_mip_count(0),
-	m_width(width),
-	m_format(format),
-	m_resource_usage(usage)
+	texture_impl(resource_id, render_system, format, usage),
+	m_width(width)
 {
 	if (usage == resource_usage::immutable)
 	{
@@ -41,11 +38,8 @@ texture_1d_impl::texture_1d_impl(
 	surface_format format,
 	resource_usage usage,
 	const std::vector<memory_region>& data) :
-	graphics_resource_impl(resource_id, render_system),
-	m_mip_count(0),
-	m_width(width),
-	m_format(format),
-	m_resource_usage(usage)
+	texture_impl(resource_id, render_system, format, usage),
+	m_width(width)
 {
 	if (m_width > render_system.adapter().maximum_texture_1d_size())
 	{
@@ -75,3 +69,9 @@ texture_1d_impl::texture_1d_impl(
 		}
 	}
 }
+
+texture_1d_impl::~texture_1d_impl()
+{}
+
+texture_1d_impl_factory::~texture_1d_impl_factory()
+{}

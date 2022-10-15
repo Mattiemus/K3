@@ -24,7 +24,7 @@ namespace openworld
 			const memory_region& data,
 			resource_usage usage);
 
-		virtual ~index_buffer_impl() = 0 {}
+		virtual ~index_buffer_impl() = 0;
 
 		constexpr size_t index_count() const
 		{
@@ -69,7 +69,7 @@ namespace openworld
 			graphics_resource_impl_factory(render_system)
 		{}
 
-		virtual ~index_buffer_impl_factory() = 0 {}
+		virtual ~index_buffer_impl_factory() = 0;
 
 		virtual std::unique_ptr<index_buffer_impl> create_impl(
 			index_format format,

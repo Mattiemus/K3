@@ -429,4 +429,14 @@ namespace openworld
         front = 1,
         back = 2
     };
+
+    enum class cube_map_face
+    {
+        positive_x = 0,
+        negative_x = 1,
+        positive_y = 2,
+        negative_y = 3,
+        positive_z = 4,
+        negative_z = 5
+    };
 }

@@ -7,7 +7,7 @@ namespace openworld
         OPENWORLD_DELETE_COPY_OPERATORS(graphics_adapter);
 
     public:
-        virtual ~graphics_adapter() = 0 {}
+        virtual ~graphics_adapter() = 0;
 
         virtual const std::vector<display_mode>& supported_display_modes() const = 0;
         virtual const std::vector<output>& outputs() const = 0;
